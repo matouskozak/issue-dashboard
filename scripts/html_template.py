@@ -254,10 +254,10 @@ _COLUMNS = [
     ("7d Hits", "number", "70px"),
     ("30d Hits", "number", "70px"),
     ("Assignee", "text", "110px"),
-    ("Last Human Activity", "number", "130px"),
+    ("Last Activity", "number", "110px"),
     ("Area", "text", "140px"),
     ("Age", "number", "60px"),
-    ("Labels", "text", "180px"),
+    ("Labels", "text", "280px"),
 ]
 
 
@@ -343,7 +343,7 @@ def _render_row(issue: dict, repo: str) -> str:
     else:
         cells.append('<td class="no-assignee">—</td>')
 
-    # --- Last Human Activity ---
+    # --- Last Activity ---
     last_human = issue.get("last_human_activity_days")
     if last_human is None:
         cells.append(
@@ -366,7 +366,7 @@ def _render_row(issue: dict, repo: str) -> str:
 
     # --- Labels ---
     labels_html = _render_labels(issue)
-    cells.append(f"<td>{labels_html}</td>")
+    cells.append(f'<td class="labels-cell">{labels_html}</td>')
 
     mobile_attr = ' data-mobile="true"' if _is_mobile_issue(issue) else ""
     return f"<tr{mobile_attr}>" + "".join(cells) + "</tr>"

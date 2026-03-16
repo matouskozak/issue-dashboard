@@ -380,7 +380,7 @@ a:hover {
   border-collapse: collapse;
   font-size: 13px;
   table-layout: fixed;
-  min-width: 1200px;
+  min-width: 1400px;
 }
 
 .data-table thead {
@@ -440,6 +440,13 @@ a:hover {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.data-table td.labels-cell {
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+  line-height: 1.6;
 }
 
 /* Alternating rows */
