@@ -411,6 +411,10 @@ def compute_urgency(issue: ParsedIssue, now: datetime) -> tuple[float, dict]:
 
 
 def compute_staleness(issue: ParsedIssue, now: datetime) -> tuple[float, dict]:
+    # Issues with disabled-test label have intentionally zero hits — not stale
+    if "disabled-test" in issue.labels:
+        return 0.0, {}
+
     signals: list[tuple[str, SignalResult]] = []
 
     # 24h hits = 0
