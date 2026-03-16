@@ -20,6 +20,13 @@
 - **Real data:** 220 open KBE issues in dotnet/runtime as of March 2026. ~104 with active 7d hits, ~116 scoring high on staleness.
 - **Key files:** `scripts/fetch_issues.py` (pipeline entry point), `scripts/requirements.txt` (just `requests`), `docs/runtime/scan.json` (output).
 
+- **build_reports.py architecture:** Reads scan.json, applies four filter functions (needs-attention/unattended/stale/all), calls html_template.render_report() for each, writes meta.json with summary stats and counts dict, appends to history.json with 90-day retention. All scores thresholded at 5.0 for unattended/stale filters.
+- **build_index.py is a verifier:** The existing index.html loads repos.json + meta.json dynamically via JS. build_index.py just validates that meta.json files exist for each repo in repos.json — no HTML generation needed.
+- **regen_html.py:** Thin wrapper around build_reports.build_reports() — checks scan.json exists, then delegates. Dev convenience only.
+- **uv migration:** pyproject.toml at repo root, workflow uses `pip install uv && uv sync`, scripts invoked via `uv run python`. requirements.txt kept as fallback.
+- **Deleted build-dashboard.yml:** Was a stale v1 workflow referencing non-existent `src/`, `data/`, `build/` directories. Only `generate-reports.yml` is the real pipeline.
+- **html_template.py already had filter logic in main():** build_reports.py duplicates the filter definitions intentionally — keeps the pipeline script self-contained and the template engine as a pure renderer.
+
 ## Cross-Team Impact (Wave 1)
 
 - **Fenster (Frontend):** Consumes `scan.json` schema directly. Score breakdowns enable tooltip rendering.

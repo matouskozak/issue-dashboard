@@ -49,6 +49,39 @@ Top-level: `repo`, `org`, `generated_at`, `issue_count`, `issues[]`.
 - **Keaton / scoring:** Score breakdowns expected as `{score_type}_breakdown` list in each issue dict. Format: `[{name, raw, weight, value}, ...]`.
 - **Report asset paths:** Reports at `docs/{repo}/*.html` reference shared assets via `../shared-styles.css` and `../shared-ui.js`.
 
+### 4. Two Spec Deviations Found in fetch_issues.py
+
+**By:** Hockney (Tester)  
+**Date:** 2026-03-16
+
+**What:** During testing, identified two places where McManus's implementation diverges from spec:
+
+1. **Hit Trend 7d==0 + 24h>0 edge case** — Spec says 1.0, implementation returns 0.0
+2. **Comma-separated hit counts** — Spec expects `|1,234|5,678|`, regex only captures `1`
+
+**Why:** Ensures test clarity and marks known issues explicitly.
+
+**Impact:**
+- Both marked `@pytest.mark.xfail(strict=True)` — fail loudly if fixed without tests
+- McManus to decide: fix implementation or update spec
+
+---
+
+### 5. Delete build-dashboard.yml, Keep generate-reports.yml
+
+**By:** McManus  
+**Date:** 2026-03-16
+
+**What:** Deleted stale `build-dashboard.yml`. Two workflows existed:
+- `generate-reports.yml` — real pipeline (fetch → build_reports → build_index, every 6h)
+- `build-dashboard.yml` — v1 orphan (broken paths, stale scripts)
+
+**Why:** One pipeline, one workflow. Single source of truth.
+
+**Impact:** No functional change; `build-dashboard.yml` would fail on every run.
+
+---
+
 ## Governance
 
 - All meaningful changes require team consensus
