@@ -381,15 +381,24 @@ _MOBILE_LABELS_EXACT = frozenset([
 
 _MOBILE_KEYWORDS = ("android", "ios", "mono", "maccatalyst", "tvos")
 
+_WASM_EXCLUDE_KEYWORDS = ("wasm", "browser", "wasi")
+
 
 def _is_mobile_issue(issue: dict) -> bool:
-    """Return True if any label indicates a mobile/mono platform issue."""
+    """Return True if any label indicates a mobile/mono issue, excluding wasm/browser."""
     labels = issue.get("labels", [])
     if not isinstance(labels, list):
         return False
+    lower_labels = []
     for lbl in labels:
         name = lbl if isinstance(lbl, str) else lbl.get("name", "")
-        lower = name.lower()
+        lower_labels.append(name.lower())
+    # Exclude if any label contains wasm/browser/wasi
+    for lower in lower_labels:
+        if any(kw in lower for kw in _WASM_EXCLUDE_KEYWORDS):
+            return False
+    # Check for mobile/mono match
+    for lower in lower_labels:
         if lower in _MOBILE_LABELS_EXACT:
             return True
         if any(kw in lower for kw in _MOBILE_KEYWORDS):
