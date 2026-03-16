@@ -12,4 +12,8 @@
 
 ## Learnings
 
-(none yet)
+- Created `.github/workflows/generate-reports.yml` with 6-hour cadence and workflow_dispatch trigger
+- Created README.md with architecture diagram, scoring explanation, and dev setup instructions
+- Confirmed existing squad workflows (heartbeat, issue-assign, triage, sync-labels) remain untouched
+- GitHub Actions runs full pipeline: fetch → scan.json → build reports → index → git push to docs/
+- GITHUB_TOKEN secret used for GraphQL API auth in fetch_issues and build_reports steps
