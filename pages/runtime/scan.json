@@ -1,9 +1,253 @@
 {
   "repo": "runtime",
   "org": "dotnet",
-  "generated_at": "2026-03-16T19:55:06+00:00",
-  "issue_count": 220,
+  "generated_at": "2026-03-16T20:00:07+00:00",
+  "issue_count": 218,
   "issues": [
+    {
+      "number": 118119,
+      "title": "[ios] net.dot.iOS.Simulator.LibraryMode.Test test crash during runtime initialization",
+      "url": "https://github.com/dotnet/runtime/issues/118119",
+      "state": "OPEN",
+      "created_at": "2025-07-28T10:01:58Z",
+      "updated_at": "2026-03-16T19:59:43Z",
+      "author": "BrzVlad",
+      "assignees": [],
+      "labels": [
+        "disabled-test",
+        "area-Infrastructure-mono",
+        "os-ios",
+        "Known Build Error"
+      ],
+      "area_label": "area-Infrastructure-mono",
+      "comment_count": 3,
+      "human_comment_count": 1,
+      "last_human_comment_date": "2025-07-28T10:03:12Z",
+      "last_human_comment_author": "BrzVlad",
+      "reactions_count": 0,
+      "hits_24h": 0,
+      "hits_7d": 0,
+      "hits_30d": 0,
+      "error_pattern": "{\n  \"ErrorMessage\": [\"Native stacktrace\", \"net.dot.iOS.Simulator.LibraryMode.Test\"],\n  \"BuildRetry\": false,\n  \"ExcludeConsoleLog\": false\n}",
+      "build_link": "https://dev.azure.com/dnceng-public/public/_build/results?buildId=1106900&view=results",
+      "has_blocking_label": false,
+      "has_untriaged_label": false,
+      "age_days": 231,
+      "last_human_activity_days": 231,
+      "assignee_display": "",
+      "urgency_score": 1.0,
+      "urgency_breakdown": {
+        "hits_24h": {
+          "value": 0.0,
+          "weight": 3.0,
+          "contribution": 0.0
+        },
+        "hits_7d": {
+          "value": 0.0,
+          "weight": 2.0,
+          "contribution": 0.0
+        },
+        "hit_trend": {
+          "value": 0.0,
+          "weight": 1.5,
+          "contribution": 0.0
+        },
+        "blocking_label": {
+          "value": 0.0,
+          "weight": 1.5,
+          "contribution": 0.0
+        },
+        "age_vs_hits": {
+          "value": 0.0,
+          "weight": 1.0,
+          "contribution": 0.0
+        },
+        "no_assignee": {
+          "value": 1.0,
+          "weight": 1.0,
+          "contribution": 1.0
+        }
+      },
+      "staleness_score": 8.0,
+      "staleness_breakdown": {
+        "hits_24h_zero": {
+          "value": 1.0,
+          "weight": 3.0,
+          "contribution": 3.0
+        },
+        "hits_7d_zero": {
+          "value": 1.0,
+          "weight": 2.5,
+          "contribution": 2.5
+        },
+        "days_since_update": {
+          "value": 0.0,
+          "weight": 2.0,
+          "contribution": 0.0
+        },
+        "issue_age": {
+          "value": 1.0,
+          "weight": 1.5,
+          "contribution": 1.5
+        },
+        "monthly_count_low": {
+          "value": 1.0,
+          "weight": 1.0,
+          "contribution": 1.0
+        }
+      },
+      "neglect_score": 1.5,
+      "neglect_breakdown": {
+        "hits_no_assignee": {
+          "value": 0.0,
+          "weight": 3.0,
+          "contribution": 0.0
+        },
+        "hits_no_human_comments": {
+          "value": 0.0,
+          "weight": 2.5,
+          "contribution": 0.0
+        },
+        "high_hits_untriaged": {
+          "value": 0.0,
+          "weight": 2.0,
+          "contribution": 0.0
+        },
+        "days_since_human_comment": {
+          "value": 1.0,
+          "weight": 1.5,
+          "contribution": 1.5
+        },
+        "no_area_label": {
+          "value": 0.0,
+          "weight": 1.0,
+          "contribution": 0.0
+        }
+      }
+    },
+    {
+      "number": 121983,
+      "title": "[mono][osx] Swift-interop runtime tests crash/time-out  after finishing",
+      "url": "https://github.com/dotnet/runtime/issues/121983",
+      "state": "OPEN",
+      "created_at": "2025-11-26T10:35:53Z",
+      "updated_at": "2026-03-16T19:57:44Z",
+      "author": "matouskozak",
+      "assignees": [],
+      "labels": [
+        "disabled-test",
+        "os-mac-os-x",
+        "arch-x64",
+        "untriaged",
+        "area-Codegen-JIT-mono",
+        "Known Build Error"
+      ],
+      "area_label": "area-Codegen-JIT-mono",
+      "comment_count": 1,
+      "human_comment_count": 1,
+      "last_human_comment_date": "2026-01-05T17:32:54Z",
+      "last_human_comment_author": "jeffschwMSFT",
+      "reactions_count": 0,
+      "hits_24h": 0,
+      "hits_7d": 0,
+      "hits_30d": 0,
+      "error_pattern": "{\n  \"ErrorMessage\": [\n       \"Running SwiftCallbackFunc99: OK\",\n       \"Got a SIGSEGV while executing native code\",\n       \"src/mono/mono/mini/mini-exceptions.c:488\"\n   ],\n  \"BuildRetry\": false,\n  \"ExcludeConsoleLog\": false\n}",
+      "build_link": "https://dev.azure.com/dnceng-public/cbb18261-c48f-4abb-8651-8cdcb5474649/_build/results?buildId=1212876",
+      "has_blocking_label": false,
+      "has_untriaged_label": true,
+      "age_days": 110,
+      "last_human_activity_days": 70,
+      "assignee_display": "",
+      "urgency_score": 1.0,
+      "urgency_breakdown": {
+        "hits_24h": {
+          "value": 0.0,
+          "weight": 3.0,
+          "contribution": 0.0
+        },
+        "hits_7d": {
+          "value": 0.0,
+          "weight": 2.0,
+          "contribution": 0.0
+        },
+        "hit_trend": {
+          "value": 0.0,
+          "weight": 1.5,
+          "contribution": 0.0
+        },
+        "blocking_label": {
+          "value": 0.0,
+          "weight": 1.5,
+          "contribution": 0.0
+        },
+        "age_vs_hits": {
+          "value": 0.0,
+          "weight": 1.0,
+          "contribution": 0.0
+        },
+        "no_assignee": {
+          "value": 1.0,
+          "weight": 1.0,
+          "contribution": 1.0
+        }
+      },
+      "staleness_score": 8.0,
+      "staleness_breakdown": {
+        "hits_24h_zero": {
+          "value": 1.0,
+          "weight": 3.0,
+          "contribution": 3.0
+        },
+        "hits_7d_zero": {
+          "value": 1.0,
+          "weight": 2.5,
+          "contribution": 2.5
+        },
+        "days_since_update": {
+          "value": 0.0,
+          "weight": 2.0,
+          "contribution": 0.0
+        },
+        "issue_age": {
+          "value": 1.0,
+          "weight": 1.5,
+          "contribution": 1.5
+        },
+        "monthly_count_low": {
+          "value": 1.0,
+          "weight": 1.0,
+          "contribution": 1.0
+        }
+      },
+      "neglect_score": 1.5,
+      "neglect_breakdown": {
+        "hits_no_assignee": {
+          "value": 0.0,
+          "weight": 3.0,
+          "contribution": 0.0
+        },
+        "hits_no_human_comments": {
+          "value": 0.0,
+          "weight": 2.5,
+          "contribution": 0.0
+        },
+        "high_hits_untriaged": {
+          "value": 0.0,
+          "weight": 2.0,
+          "contribution": 0.0
+        },
+        "days_since_human_comment": {
+          "value": 1.0,
+          "weight": 1.5,
+          "contribution": 1.5
+        },
+        "no_area_label": {
+          "value": 0.0,
+          "weight": 1.0,
+          "contribution": 0.0
+        }
+      }
+    },
     {
       "number": 125624,
       "title": "Directory_ReparsePoints_MountVolume test failures",
@@ -6452,128 +6696,6 @@
       }
     },
     {
-      "number": 121983,
-      "title": "[mono][osx] Swift-interop runtime tests crash/time-out  after finishing",
-      "url": "https://github.com/dotnet/runtime/issues/121983",
-      "state": "OPEN",
-      "created_at": "2025-11-26T10:35:53Z",
-      "updated_at": "2026-03-16T19:04:53Z",
-      "author": "matouskozak",
-      "assignees": [],
-      "labels": [
-        "os-mac-os-x",
-        "arch-x64",
-        "untriaged",
-        "area-Codegen-JIT-mono",
-        "Known Build Error"
-      ],
-      "area_label": "area-Codegen-JIT-mono",
-      "comment_count": 1,
-      "human_comment_count": 1,
-      "last_human_comment_date": "2026-01-05T17:32:54Z",
-      "last_human_comment_author": "jeffschwMSFT",
-      "reactions_count": 0,
-      "hits_24h": 0,
-      "hits_7d": 0,
-      "hits_30d": 0,
-      "error_pattern": "{\n  \"ErrorMessage\": [\n       \"Running SwiftCallbackFunc99: OK\",\n       \"Got a SIGSEGV while executing native code\",\n       \"src/mono/mono/mini/mini-exceptions.c:488\"\n   ],\n  \"BuildRetry\": false,\n  \"ExcludeConsoleLog\": false\n}",
-      "build_link": "https://dev.azure.com/dnceng-public/cbb18261-c48f-4abb-8651-8cdcb5474649/_build/results?buildId=1212876",
-      "has_blocking_label": false,
-      "has_untriaged_label": true,
-      "age_days": 110,
-      "last_human_activity_days": 70,
-      "assignee_display": "",
-      "urgency_score": 1.0,
-      "urgency_breakdown": {
-        "hits_24h": {
-          "value": 0.0,
-          "weight": 3.0,
-          "contribution": 0.0
-        },
-        "hits_7d": {
-          "value": 0.0,
-          "weight": 2.0,
-          "contribution": 0.0
-        },
-        "hit_trend": {
-          "value": 0.0,
-          "weight": 1.5,
-          "contribution": 0.0
-        },
-        "blocking_label": {
-          "value": 0.0,
-          "weight": 1.5,
-          "contribution": 0.0
-        },
-        "age_vs_hits": {
-          "value": 0.0,
-          "weight": 1.0,
-          "contribution": 0.0
-        },
-        "no_assignee": {
-          "value": 1.0,
-          "weight": 1.0,
-          "contribution": 1.0
-        }
-      },
-      "staleness_score": 8.0,
-      "staleness_breakdown": {
-        "hits_24h_zero": {
-          "value": 1.0,
-          "weight": 3.0,
-          "contribution": 3.0
-        },
-        "hits_7d_zero": {
-          "value": 1.0,
-          "weight": 2.5,
-          "contribution": 2.5
-        },
-        "days_since_update": {
-          "value": 0.0,
-          "weight": 2.0,
-          "contribution": 0.0
-        },
-        "issue_age": {
-          "value": 1.0,
-          "weight": 1.5,
-          "contribution": 1.5
-        },
-        "monthly_count_low": {
-          "value": 1.0,
-          "weight": 1.0,
-          "contribution": 1.0
-        }
-      },
-      "neglect_score": 1.5,
-      "neglect_breakdown": {
-        "hits_no_assignee": {
-          "value": 0.0,
-          "weight": 3.0,
-          "contribution": 0.0
-        },
-        "hits_no_human_comments": {
-          "value": 0.0,
-          "weight": 2.5,
-          "contribution": 0.0
-        },
-        "high_hits_untriaged": {
-          "value": 0.0,
-          "weight": 2.0,
-          "contribution": 0.0
-        },
-        "days_since_human_comment": {
-          "value": 1.0,
-          "weight": 1.5,
-          "contribution": 1.5
-        },
-        "no_area_label": {
-          "value": 0.0,
-          "weight": 1.0,
-          "contribution": 0.0
-        }
-      }
-    },
-    {
       "number": 121940,
       "title": "[release/10.0] Assert Interop.Sys.LSeek(this, 0, Interop.Sys.SeekWhence.SEEK_CUR) >= 0 in System.Net.XXX tests",
       "url": "https://github.com/dotnet/runtime/issues/121940",
@@ -9012,7 +9134,7 @@
       "has_blocking_label": false,
       "has_untriaged_label": true,
       "age_days": 188,
-      "last_human_activity_days": 139,
+      "last_human_activity_days": 140,
       "assignee_display": "",
       "urgency_score": 1.0,
       "urgency_breakdown": {
@@ -10500,126 +10622,6 @@
           "value": 0.0,
           "weight": 1.0,
           "contribution": 0.0
-        }
-      },
-      "staleness_score": 8.0,
-      "staleness_breakdown": {
-        "hits_24h_zero": {
-          "value": 1.0,
-          "weight": 3.0,
-          "contribution": 3.0
-        },
-        "hits_7d_zero": {
-          "value": 1.0,
-          "weight": 2.5,
-          "contribution": 2.5
-        },
-        "days_since_update": {
-          "value": 0.0,
-          "weight": 2.0,
-          "contribution": 0.0
-        },
-        "issue_age": {
-          "value": 1.0,
-          "weight": 1.5,
-          "contribution": 1.5
-        },
-        "monthly_count_low": {
-          "value": 1.0,
-          "weight": 1.0,
-          "contribution": 1.0
-        }
-      },
-      "neglect_score": 1.5,
-      "neglect_breakdown": {
-        "hits_no_assignee": {
-          "value": 0.0,
-          "weight": 3.0,
-          "contribution": 0.0
-        },
-        "hits_no_human_comments": {
-          "value": 0.0,
-          "weight": 2.5,
-          "contribution": 0.0
-        },
-        "high_hits_untriaged": {
-          "value": 0.0,
-          "weight": 2.0,
-          "contribution": 0.0
-        },
-        "days_since_human_comment": {
-          "value": 1.0,
-          "weight": 1.5,
-          "contribution": 1.5
-        },
-        "no_area_label": {
-          "value": 0.0,
-          "weight": 1.0,
-          "contribution": 0.0
-        }
-      }
-    },
-    {
-      "number": 118119,
-      "title": "[ios] net.dot.iOS.Simulator.LibraryMode.Test test crash during runtime initialization",
-      "url": "https://github.com/dotnet/runtime/issues/118119",
-      "state": "OPEN",
-      "created_at": "2025-07-28T10:01:58Z",
-      "updated_at": "2026-03-16T19:03:56Z",
-      "author": "BrzVlad",
-      "assignees": [],
-      "labels": [
-        "area-Infrastructure-mono",
-        "os-ios",
-        "Known Build Error"
-      ],
-      "area_label": "area-Infrastructure-mono",
-      "comment_count": 3,
-      "human_comment_count": 1,
-      "last_human_comment_date": "2025-07-28T10:03:12Z",
-      "last_human_comment_author": "BrzVlad",
-      "reactions_count": 0,
-      "hits_24h": 0,
-      "hits_7d": 0,
-      "hits_30d": 0,
-      "error_pattern": "{\n  \"ErrorMessage\": [\"Native stacktrace\", \"net.dot.iOS.Simulator.LibraryMode.Test\"],\n  \"BuildRetry\": false,\n  \"ExcludeConsoleLog\": false\n}",
-      "build_link": "https://dev.azure.com/dnceng-public/public/_build/results?buildId=1106900&view=results",
-      "has_blocking_label": false,
-      "has_untriaged_label": false,
-      "age_days": 231,
-      "last_human_activity_days": 231,
-      "assignee_display": "",
-      "urgency_score": 1.0,
-      "urgency_breakdown": {
-        "hits_24h": {
-          "value": 0.0,
-          "weight": 3.0,
-          "contribution": 0.0
-        },
-        "hits_7d": {
-          "value": 0.0,
-          "weight": 2.0,
-          "contribution": 0.0
-        },
-        "hit_trend": {
-          "value": 0.0,
-          "weight": 1.5,
-          "contribution": 0.0
-        },
-        "blocking_label": {
-          "value": 0.0,
-          "weight": 1.5,
-          "contribution": 0.0
-        },
-        "age_vs_hits": {
-          "value": 0.0,
-          "weight": 1.0,
-          "contribution": 0.0
-        },
-        "no_assignee": {
-          "value": 1.0,
-          "weight": 1.0,
-          "contribution": 1.0
         }
       },
       "staleness_score": 8.0,
@@ -19239,7 +19241,7 @@
       "build_link": "https://dev.azure.com/dnceng-public/public/public%20Team/_build/results?buildId=737840",
       "has_blocking_label": false,
       "has_untriaged_label": false,
-      "age_days": 611,
+      "age_days": 612,
       "last_human_activity_days": 606,
       "assignee_display": "",
       "urgency_score": 1.0,
@@ -25535,245 +25537,6 @@
       "has_untriaged_label": false,
       "age_days": 1268,
       "last_human_activity_days": 1039,
-      "assignee_display": "",
-      "urgency_score": 1.0,
-      "urgency_breakdown": {
-        "hits_24h": {
-          "value": 0.0,
-          "weight": 3.0,
-          "contribution": 0.0
-        },
-        "hits_7d": {
-          "value": 0.0,
-          "weight": 2.0,
-          "contribution": 0.0
-        },
-        "hit_trend": {
-          "value": 0.0,
-          "weight": 1.5,
-          "contribution": 0.0
-        },
-        "blocking_label": {
-          "value": 0.0,
-          "weight": 1.5,
-          "contribution": 0.0
-        },
-        "age_vs_hits": {
-          "value": 0.0,
-          "weight": 1.0,
-          "contribution": 0.0
-        },
-        "no_assignee": {
-          "value": 1.0,
-          "weight": 1.0,
-          "contribution": 1.0
-        }
-      },
-      "staleness_score": 8.0,
-      "staleness_breakdown": {
-        "hits_24h_zero": {
-          "value": 1.0,
-          "weight": 3.0,
-          "contribution": 3.0
-        },
-        "hits_7d_zero": {
-          "value": 1.0,
-          "weight": 2.5,
-          "contribution": 2.5
-        },
-        "days_since_update": {
-          "value": 0.0,
-          "weight": 2.0,
-          "contribution": 0.0
-        },
-        "issue_age": {
-          "value": 1.0,
-          "weight": 1.5,
-          "contribution": 1.5
-        },
-        "monthly_count_low": {
-          "value": 1.0,
-          "weight": 1.0,
-          "contribution": 1.0
-        }
-      },
-      "neglect_score": 1.5,
-      "neglect_breakdown": {
-        "hits_no_assignee": {
-          "value": 0.0,
-          "weight": 3.0,
-          "contribution": 0.0
-        },
-        "hits_no_human_comments": {
-          "value": 0.0,
-          "weight": 2.5,
-          "contribution": 0.0
-        },
-        "high_hits_untriaged": {
-          "value": 0.0,
-          "weight": 2.0,
-          "contribution": 0.0
-        },
-        "days_since_human_comment": {
-          "value": 1.0,
-          "weight": 1.5,
-          "contribution": 1.5
-        },
-        "no_area_label": {
-          "value": 0.0,
-          "weight": 1.0,
-          "contribution": 0.0
-        }
-      }
-    },
-    {
-      "number": 48070,
-      "title": "Build on Windows Fails sometimes with fatal error C1090: PDB API call failed",
-      "url": "https://github.com/dotnet/runtime/issues/48070",
-      "state": "OPEN",
-      "created_at": "2021-02-09T18:58:14Z",
-      "updated_at": "2026-03-16T19:00:16Z",
-      "author": "Anipik",
-      "assignees": [],
-      "labels": [
-        "area-Infrastructure-coreclr",
-        "Known Build Error"
-      ],
-      "area_label": "area-Infrastructure-coreclr",
-      "comment_count": 14,
-      "human_comment_count": 14,
-      "last_human_comment_date": "2022-03-09T17:26:01Z",
-      "last_human_comment_author": "hoyosjs",
-      "reactions_count": 0,
-      "hits_24h": 0,
-      "hits_7d": 0,
-      "hits_30d": 0,
-      "error_pattern": "{\r\n  \"ErrorMessage\": \"fatal error C1090: PDB API call failed, error code '23'\",\r\n  \"BuildRetry\": true\r\n}",
-      "build_link": "https://dev.azure.com/dnceng/internal/_build/results?buildId=984686&view=logs&j=128f4634-3e62-52f1-6764-cb4c2b8330d4&t=32fccdd3-9e64-5af0-1f0d-f65712c6c51a",
-      "has_blocking_label": false,
-      "has_untriaged_label": false,
-      "age_days": 1861,
-      "last_human_activity_days": 1468,
-      "assignee_display": "",
-      "urgency_score": 1.0,
-      "urgency_breakdown": {
-        "hits_24h": {
-          "value": 0.0,
-          "weight": 3.0,
-          "contribution": 0.0
-        },
-        "hits_7d": {
-          "value": 0.0,
-          "weight": 2.0,
-          "contribution": 0.0
-        },
-        "hit_trend": {
-          "value": 0.0,
-          "weight": 1.5,
-          "contribution": 0.0
-        },
-        "blocking_label": {
-          "value": 0.0,
-          "weight": 1.5,
-          "contribution": 0.0
-        },
-        "age_vs_hits": {
-          "value": 0.0,
-          "weight": 1.0,
-          "contribution": 0.0
-        },
-        "no_assignee": {
-          "value": 1.0,
-          "weight": 1.0,
-          "contribution": 1.0
-        }
-      },
-      "staleness_score": 8.0,
-      "staleness_breakdown": {
-        "hits_24h_zero": {
-          "value": 1.0,
-          "weight": 3.0,
-          "contribution": 3.0
-        },
-        "hits_7d_zero": {
-          "value": 1.0,
-          "weight": 2.5,
-          "contribution": 2.5
-        },
-        "days_since_update": {
-          "value": 0.0,
-          "weight": 2.0,
-          "contribution": 0.0
-        },
-        "issue_age": {
-          "value": 1.0,
-          "weight": 1.5,
-          "contribution": 1.5
-        },
-        "monthly_count_low": {
-          "value": 1.0,
-          "weight": 1.0,
-          "contribution": 1.0
-        }
-      },
-      "neglect_score": 1.5,
-      "neglect_breakdown": {
-        "hits_no_assignee": {
-          "value": 0.0,
-          "weight": 3.0,
-          "contribution": 0.0
-        },
-        "hits_no_human_comments": {
-          "value": 0.0,
-          "weight": 2.5,
-          "contribution": 0.0
-        },
-        "high_hits_untriaged": {
-          "value": 0.0,
-          "weight": 2.0,
-          "contribution": 0.0
-        },
-        "days_since_human_comment": {
-          "value": 1.0,
-          "weight": 1.5,
-          "contribution": 1.5
-        },
-        "no_area_label": {
-          "value": 0.0,
-          "weight": 1.0,
-          "contribution": 0.0
-        }
-      }
-    },
-    {
-      "number": 75417,
-      "title": "System.Diagnostics.Tests.InstanceDataTests.InstanceDataCollectionCollection tests failing in CI ",
-      "url": "https://github.com/dotnet/runtime/issues/75417",
-      "state": "OPEN",
-      "created_at": "2022-09-11T15:13:40Z",
-      "updated_at": "2026-03-16T19:00:14Z",
-      "author": "jkotas",
-      "assignees": [],
-      "labels": [
-        "needs-further-triage",
-        "area-System.Diagnostics.PerformanceCounter",
-        "Known Build Error"
-      ],
-      "area_label": "area-System.Diagnostics.PerformanceCounter",
-      "comment_count": 5,
-      "human_comment_count": 5,
-      "last_human_comment_date": "2025-04-11T23:10:37Z",
-      "last_human_comment_author": "jkotas",
-      "reactions_count": 0,
-      "hits_24h": 0,
-      "hits_7d": 0,
-      "hits_30d": 0,
-      "error_pattern": "{ \"ErrorMessage\":\"System.Diagnostics.Tests.InstanceDataTests.InstanceDataCollectionCollection_CopyTo [FAIL]\" }",
-      "build_link": null,
-      "has_blocking_label": false,
-      "has_untriaged_label": false,
-      "age_days": 1282,
-      "last_human_activity_days": 338,
       "assignee_display": "",
       "urgency_score": 1.0,
       "urgency_breakdown": {
