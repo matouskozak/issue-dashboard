@@ -79,6 +79,18 @@ query($owner: String!, $repo: String!, $label: String!, $cursor: String) {
             authorAssociation
           }
         }
+        timelineItems(first: 50, itemTypes: [CROSS_REFERENCED_EVENT]) {
+          nodes {
+            ... on CrossReferencedEvent {
+              createdAt
+              actor { login }
+              source {
+                ... on Issue { number title }
+                ... on PullRequest { number title }
+              }
+            }
+          }
+        }
         reactions { totalCount }
       }
     }
@@ -304,10 +316,31 @@ def _is_human_comment(comment: dict[str, Any]) -> bool:
     return True
 
 
+def _is_human_actor(login: str) -> bool:
+    """Return True if an actor login looks human (not a bot).
+
+    Cross-reference events have ``actor.login`` but no ``authorAssociation``,
+    so we check the login against known bot names and the ``[bot]`` suffix.
+    """
+    if not login:
+        return False
+    lower = login.lower()
+    if lower in {b.lower() for b in BOT_LOGINS}:
+        return False
+    if lower.endswith("[bot]"):
+        return False
+    return True
+
+
 def analyse_comments(
     comments: list[dict[str, Any]],
+    timeline_items: list[dict[str, Any]] | None = None,
 ) -> tuple[int, int, Optional[str], Optional[str]]:
-    """Return (total_count, human_count, last_human_date, last_human_author)."""
+    """Return (total_count, human_count, last_human_date, last_human_author).
+
+    Counts both direct comments and cross-reference events from *timeline_items*
+    as activity.  Bot actors are filtered the same way as bot commenters.
+    """
     total = len(comments)
     human_count = 0
     last_human_date: Optional[str] = None
@@ -320,6 +353,19 @@ def analyse_comments(
             if c_date and (last_human_date is None or c_date > last_human_date):
                 last_human_date = c_date
                 last_human_author = (c.get("author") or {}).get("login", "")
+
+    # Cross-reference events (mentions from other issues / PRs)
+    for item in timeline_items or []:
+        if not item.get("createdAt"):
+            continue  # skip empty / malformed nodes
+        total += 1
+        actor_login = (item.get("actor") or {}).get("login", "")
+        if _is_human_actor(actor_login):
+            human_count += 1
+            item_date = item["createdAt"]
+            if last_human_date is None or item_date > last_human_date:
+                last_human_date = item_date
+                last_human_author = actor_login
 
     return total, human_count, last_human_date, last_human_author
 
@@ -517,10 +563,11 @@ def parse_issue_node(node: dict[str, Any], repo: str, now: datetime) -> ParsedIs
         n["login"] for n in (node.get("assignees") or {}).get("nodes", [])
     ]
     comments_nodes = (node.get("comments") or {}).get("nodes", [])
+    timeline_nodes = (node.get("timelineItems") or {}).get("nodes", [])
 
     area_label = next((l for l in labels if l.lower().startswith("area-")), None)
     total_comments, human_comments, last_hc_date, last_hc_author = analyse_comments(
-        comments_nodes
+        comments_nodes, timeline_nodes
     )
 
     hits = parse_hit_counts(body)

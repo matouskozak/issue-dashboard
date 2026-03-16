@@ -77,3 +77,17 @@
 **Test verification:** All 190 tests pass (including 23 new computed field tests from Hockney). No regressions.
 
 **Decision created:** "Computed Display Fields in scan.json" — documents why, how, and backward-compatibility guarantees.
+
+## Cross-Reference Activity Tracking (2026-03-16)
+
+**Task:** Include cross-references (mentions from other issues/PRs) in "last human activity" alongside direct comments.
+
+**Changes to `scripts/fetch_issues.py`:**
+1. **GraphQL query:** Added `timelineItems(first: 50, itemTypes: [CROSS_REFERENCED_EVENT])` alongside existing `comments` field to fetch cross-reference events with `createdAt`, `actor.login`, and `source` info.
+2. **New helper `_is_human_actor(login)`:** Bot detection for cross-reference actors — checks known bot logins and `[bot]` suffix. No `authorAssociation` available on timeline events, only `actor.login`.
+3. **Updated `analyse_comments()`:** Accepts optional `timeline_items` parameter. Counts cross-references in both `total_count` and `human_count`. Tracks latest human activity date across both comments and cross-references. Return shape unchanged: `(total, human, last_date, last_author)`.
+4. **Updated `parse_issue_node()`:** Extracts `timelineItems.nodes` from GraphQL response and passes to `analyse_comments()`. Falls back gracefully if field is missing (empty list default).
+
+**Backward compatibility:** `analyse_comments()` signature uses `timeline_items=None` default — all existing callers (including tests) work unchanged. `ParsedIssue` field names unchanged. Downstream scoring/display unaffected.
+
+**Test status:** All 190 tests pass — no regressions.
