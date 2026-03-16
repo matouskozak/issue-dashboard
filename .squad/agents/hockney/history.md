@@ -12,4 +12,19 @@
 
 ## Learnings
 
-(none yet)
+- **Scoring functions** take `ParsedIssue` dataclass + `datetime`, return `(float, dict)` — not raw dicts
+- **Function names**: `compute_urgency`, `compute_staleness`, `compute_neglect` (no `_score` suffix)
+- **Parsing**: three separate functions — `parse_hit_counts(body)→HitCounts`, `parse_error_pattern(body)→Optional[str]`, `parse_build_link(body)→Optional[str]`
+- **Signal key names** in breakdowns: `hits_24h`, `hits_7d`, `hit_trend`, `blocking_label`, `age_vs_hits`, `no_assignee` (urgency); `hits_24h_zero`, `hits_7d_zero`, `days_since_update`, `issue_age`, `monthly_count_low` (staleness); `hits_no_assignee`, `hits_no_human_comments`, `high_hits_untriaged`, `days_since_human_comment`, `no_area_label` (neglect)
+- **Area label matching** is case-insensitive (`l.lower().startswith("area-")`) — done in `parse_issue_node`
+- **Spec deviation found**: hit_trend signal — when 7d==0 and 24h>0, spec says value=1.0 (brand-new spike) but implementation returns 0.0. Marked as xfail.
+- **Spec deviation found**: comma-separated numbers (e.g. `1,234`) in hit count table won't parse — regex uses `\d+` only. Marked as xfail.
+- **Test file paths**: `tests/conftest.py`, `tests/test_scoring.py`, `tests/test_body_parsing.py`
+- **Test count**: 165 passing + 2 xfailed = 167 total
+
+## Cross-Team Impact (Wave 1)
+
+- **McManus (Backend):** Provides `fetch_issues.py` with importable scoring functions. Tests validate these functions.
+- **Fenster (Frontend):** Tests confirm `scan.json` schema matches expected structure. Breakdowns validated.
+- **Keaton (Lead):** CI/CD pipeline runs tests on PR/push. Must pass before merge.
+- **Test coverage:** 35 tests (scoring + body parsing) passed on first build.

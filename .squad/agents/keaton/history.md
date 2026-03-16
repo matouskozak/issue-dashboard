@@ -17,3 +17,10 @@
 - Confirmed existing squad workflows (heartbeat, issue-assign, triage, sync-labels) remain untouched
 - GitHub Actions runs full pipeline: fetch → scan.json → build reports → index → git push to docs/
 - GITHUB_TOKEN secret used for GraphQL API auth in fetch_issues and build_reports steps
+
+## Cross-Team Impact (Wave 1)
+
+- **McManus (Backend):** Produces `scan.json` via fetch_issues.py. CI orchestrates this step.
+- **Fenster (Frontend):** Renders HTML reports from scan.json. Runs after fetch in pipeline.
+- **Hockney (Tester):** Tests run as validation gate. Must pass before reports published.
+- **Architecture:** Clean pipeline: GitHub API → Python fetch → JSON schema → Python render → HTML → Pages.
