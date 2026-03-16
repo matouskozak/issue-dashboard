@@ -157,29 +157,71 @@
 
   // --- Filtering ---
 
+  function applyFilters() {
+    var input = document.getElementById("filter-input");
+    var checkbox = document.getElementById("mobile-filter-checkbox");
+    var tbody = document.querySelector(".data-table tbody");
+    if (!tbody) return;
+
+    var term = input ? input.value.toLowerCase().trim() : "";
+    var showOnlyMobile = checkbox ? checkbox.checked : false;
+
+    var rows = tbody.querySelectorAll("tr");
+    rows.forEach(function (row) {
+      var hidden = false;
+
+      // Mobile filter
+      if (showOnlyMobile && row.getAttribute("data-mobile") !== "true") {
+        hidden = true;
+      }
+
+      // Text filter
+      if (!hidden && term) {
+        var text = row.textContent.toLowerCase();
+        if (text.indexOf(term) === -1) {
+          hidden = true;
+        }
+      }
+
+      row.style.display = hidden ? "none" : "";
+    });
+
+    updateRowCount();
+  }
+
   function initFiltering() {
     var input = document.getElementById("filter-input");
     if (!input) return;
 
-    var debouncedFilter = debounce(function () {
-      var term = input.value.toLowerCase().trim();
-      var tbody = document.querySelector(".data-table tbody");
-      if (!tbody) return;
-
-      var rows = tbody.querySelectorAll("tr");
-      rows.forEach(function (row) {
-        if (!term) {
-          row.style.display = "";
-          return;
-        }
-        var text = row.textContent.toLowerCase();
-        row.style.display = text.indexOf(term) !== -1 ? "" : "none";
-      });
-
-      updateRowCount();
-    }, 200);
-
+    var debouncedFilter = debounce(applyFilters, 200);
     input.addEventListener("input", debouncedFilter);
+  }
+
+  // --- Mobile Filter Toggle ---
+
+  function initMobileFilter() {
+    var checkbox = document.getElementById("mobile-filter-checkbox");
+    if (!checkbox) return;
+
+    // Restore saved state
+    try {
+      var saved = localStorage.getItem("kbe-show-mobile-only");
+      if (saved === "true") {
+        checkbox.checked = true;
+      }
+    } catch (e) { /* storage unavailable */ }
+
+    checkbox.addEventListener("change", function () {
+      try {
+        localStorage.setItem("kbe-show-mobile-only", checkbox.checked ? "true" : "false");
+      } catch (e) { /* storage unavailable */ }
+      applyFilters();
+    });
+
+    // Apply on load if restored
+    if (checkbox.checked) {
+      applyFilters();
+    }
   }
 
   // --- Row Count ---
@@ -333,6 +375,7 @@
     initSorting();
     initResizing();
     initFiltering();
+    initMobileFilter();
     initTooltips();
     initKeyboardNav();
     initTimestamp();

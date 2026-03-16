@@ -36,3 +36,47 @@
 - **Fenster (Frontend):** Tests confirm `scan.json` schema matches expected structure. Breakdowns validated.
 - **Keaton (Lead):** CI/CD pipeline runs tests on PR/push. Must pass before merge.
 - **Test coverage:** 35 tests (scoring + body parsing) passed on first build.
+
+## Computed Display Fields Tested (2026-03-16T14:30Z)
+
+**Task:** Verify McManus's computed fields fix (`age_days`, `last_human_activity_days`, `assignee_display`)
+
+**Tests written in `tests/test_computed_fields.py`:**
+- `_days_between()` helper — 6 tests covering same-day, 5-day, 100-day, fractional, invalid, and None cases
+- `age_days` computation — 3 tests (5 days, today, 100 days ago)
+- `last_human_activity_days` computation — 4 tests (3 days ago, today, no human comments, no comments at all)
+- `assignee_display` computation — 3 tests (single, multiple, no assignees)
+- HTML template rendering — 7 tests verifying cells show correct values (not "—" or "never" when data exists)
+
+**Edge cases discovered:**
+1. `_days_between(None, now)` raises `AttributeError` (None.replace fails) — current implementation doesn't handle None input gracefully. Documented but not critical (GraphQL always returns strings).
+2. Test data must include `authorAssociation` field for bot detection to work correctly — bot login names alone not sufficient.
+
+**Results:**
+- 23 new tests, all passing
+- Full suite: **190 passed** (167 original + 23 new)
+- Zero failures, zero xfails
+- Computed fields work correctly: McManus's fix verified
+
+**Impact:** Dashboard columns (Assignee, Last Human Activity, Age) will now display correctly instead of showing empty/zero values.
+
+## Wave 2: Agent 18 (2026-03-16T1900Z)
+
+**Task:** Test McManus's computed display fields fix.
+
+**Work:** Created `tests/test_computed_fields.py` with 23 tests covering:
+- `_days_between()` helper — 6 tests (same-day, 5-day, 100-day, fractional days, invalid dates, None handling)
+- `age_days` computation — 3 tests (5 days ago, today, 100 days ago)
+- `last_human_activity_days` computation — 4 tests (3 days ago, today, no human comments, all-bot comments)
+- `assignee_display` computation — 3 tests (single, multiple, no assignees)
+- HTML template rendering — 7 tests (verify cells display computed values vs. fallback dash/never text)
+
+**Edge cases documented:**
+- `_days_between(None, now)` raises AttributeError — not critical since GraphQL always returns strings
+- Test data must include `authorAssociation` field for bot filtering to work
+
+**Results:**
+- **Before:** 167 tests pass
+- **After:** 190 tests pass (167 original + 23 new computed field tests)
+- Zero failures, zero xfails
+- Backward compatibility verified — raw fields remain in scan.json, new fields are additive

@@ -41,3 +41,39 @@
 - **Fenster (Frontend):** Consumes `scan.json` schema directly. Score breakdowns enable tooltip rendering.
 - **Hockney (Tester):** Tests scoring functions imported from `fetch_issues.py`. Validates score consistency.
 - **Keaton (Lead):** Orchestrates fetch_issues in CI/CD pipeline. Outputs staged to docs/ for Pages deployment.
+
+## Computed Display Fields Contract (2026-03-16T17:20Z)
+
+**Fixed field name mismatches** between scan.json producer (fetch_issues.py) and HTML consumer (html_template.py):
+
+**Added to ParsedIssue dataclass:**
+- `age_days: int` — Days since issue creation (computed from `created_at`)
+- `last_human_activity_days: Optional[int]` — Days since last human comment (computed from `last_human_comment_date`, None if no human comments ever)
+- `assignee_display: str` — Comma-joined assignee names for display (computed from `assignees` list)
+
+**Computation location:** `parse_issue_node()` — after creating ParsedIssue but before scoring, using `_days_between()` helper.
+
+**HTML template fallback:** `html_template.py` reads `assignee_display` but falls back to joining `assignees` list if the field is missing (backward compatibility).
+
+**Why:** The live dashboard columns (Assignee, Last Human Activity, Age) were broken because html_template expected computed integers but scan.json only had raw ISO timestamps and lists. Now both sides agree on the contract.
+
+**Test status:** All 167 tests pass — no regressions.
+
+## Wave 2: Agent 17 (2026-03-16T1900Z)
+
+**Task:** Fix field name mismatches breaking three dashboard columns.
+
+**Root cause:** scan.json produced computed integers/strings, but HTML consumer expected a different contract.
+- Assignee column expected `assignee_display` (string) but scan.json only had `assignees` (list)
+- Last Human Activity column expected `last_human_activity_days` (int) but only had `last_human_comment_date` (ISO)
+- Age column expected `age_days` (int) but only had `created_at` (ISO)
+
+**Solution:** Pre-compute display-ready values in `fetch_issues.py` at data generation time.
+
+**Changes:**
+- `scripts/fetch_issues.py`: Added `age_days`, `last_human_activity_days`, `assignee_display` to ParsedIssue dataclass. Computed in `parse_issue_node()` after creating issue, before scoring.
+- `scripts/html_template.py`: Updated assignee rendering to read `assignee_display` with fallback join logic.
+
+**Test verification:** All 190 tests pass (including 23 new computed field tests from Hockney). No regressions.
+
+**Decision created:** "Computed Display Fields in scan.json" — documents why, how, and backward-compatibility guarantees.

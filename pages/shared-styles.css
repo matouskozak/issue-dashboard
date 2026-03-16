@@ -218,6 +218,90 @@ a:hover {
   letter-spacing: 0.5px;
 }
 
+/* --- Score Guide (collapsible) --- */
+.score-guide {
+  margin-bottom: 16px;
+  border: 1px solid var(--border-muted);
+  border-radius: 8px;
+  background: var(--bg-secondary);
+  font-size: 13px;
+}
+
+.score-guide summary {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 16px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--text-secondary);
+  user-select: none;
+  list-style: none;
+}
+
+.score-guide summary::-webkit-details-marker { display: none; }
+
+.score-guide summary::before {
+  content: "ℹ️";
+  font-size: 14px;
+}
+
+.score-guide summary .chevron {
+  margin-left: auto;
+  font-size: 11px;
+  transition: transform 0.15s;
+}
+
+.score-guide[open] summary .chevron {
+  transform: rotate(90deg);
+}
+
+.score-guide summary:hover {
+  color: var(--text-primary);
+}
+
+.score-guide-body {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+  padding: 0 16px 16px;
+}
+
+.score-guide-card {
+  padding: 12px;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-muted);
+  border-radius: 6px;
+}
+
+.score-guide-card h3 {
+  margin: 0 0 4px 0;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.score-guide-card .guide-question {
+  margin: 0 0 6px 0;
+  font-size: 12px;
+  font-style: italic;
+  color: var(--text-secondary);
+}
+
+.score-guide-card ul {
+  margin: 0;
+  padding-left: 18px;
+  font-size: 12px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.score-guide-card .guide-hint {
+  margin: 6px 0 0 0;
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
 /* --- Filter Bar --- */
 .filter-bar {
   display: flex;
@@ -248,6 +332,39 @@ a:hover {
   font-size: 13px;
   color: var(--text-muted);
   margin-left: auto;
+}
+
+/* --- Mobile Filter Toggle --- */
+.mobile-filter-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  color: var(--text-secondary);
+  white-space: nowrap;
+  user-select: none;
+}
+
+.mobile-filter-toggle input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  accent-color: var(--nav-active);
+  cursor: pointer;
+}
+
+.mobile-filter-toggle .toggle-label {
+  transition: color 0.15s;
+}
+
+.mobile-filter-toggle:hover .toggle-label {
+  color: var(--text-primary);
+}
+
+.mobile-filter-toggle input[type="checkbox"]:checked + .toggle-label {
+  color: var(--nav-active);
+  font-weight: 600;
 }
 
 /* --- Table Container (horizontal scroll) --- */

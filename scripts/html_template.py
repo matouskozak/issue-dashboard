@@ -45,6 +45,7 @@ def render_report(
     stats = _compute_stats(issues)
     nav_html = _render_nav(report_type, meta)
     stats_bar_html = _render_stats_bar(stats)
+    score_guide_html = _render_score_guide()
     table_html = _render_table(issues, repo)
 
     return _PAGE_TEMPLATE.format(
@@ -56,6 +57,7 @@ def render_report(
         issue_count=len(issues),
         nav=nav_html,
         stats_bar=stats_bar_html,
+        score_guide=score_guide_html,
         table=table_html,
     )
 
@@ -148,6 +150,64 @@ def _render_stats_bar(stats: dict) -> str:
 
 
 # ---------------------------------------------------------------------------
+# Score guide
+# ---------------------------------------------------------------------------
+
+def _render_score_guide() -> str:
+    """Render a collapsible score explanation section."""
+    return (
+        '<details class="score-guide">'
+        '<summary>Score Guide — what do the numbers mean?'
+        '<span class="chevron">▶</span></summary>'
+        '<div class="score-guide-body">'
+        # Urgency card
+        '<div class="score-guide-card">'
+        '<h3>Urgency (0–10)</h3>'
+        '<p class="guide-question">How urgently does this issue need attention?</p>'
+        "<ul>"
+        "<li>24-hour and 7-day hit counts</li>"
+        "<li>Hit trend (acceleration)</li>"
+        "<li>blocking-clean-ci label</li>"
+        "<li>Issue age vs hit volume</li>"
+        "<li>Whether unassigned</li>"
+        "</ul>"
+        '<p class="guide-hint">Higher = more urgent. Many recent hits, accelerating trends, '
+        "or blocking labels push the score up.</p>"
+        "</div>"
+        # Neglect card
+        '<div class="score-guide-card">'
+        '<h3>Neglect (0–10)</h3>'
+        '<p class="guide-question">Is this issue being ignored despite being active?</p>'
+        "<ul>"
+        "<li>Hits with no assignee</li>"
+        "<li>Hits with no human comments</li>"
+        "<li>High hits + untriaged label</li>"
+        "<li>Days since last human comment</li>"
+        "<li>Missing area label</li>"
+        "</ul>"
+        '<p class="guide-hint">Higher = more neglected. Active issues with no one '
+        "investigating score highest.</p>"
+        "</div>"
+        # Staleness card
+        '<div class="score-guide-card">'
+        '<h3>Staleness (0–10)</h3>'
+        '<p class="guide-question">Is this issue likely resolved or stale?</p>'
+        "<ul>"
+        "<li>Zero 24-hour hits</li>"
+        "<li>Zero 7-day hits</li>"
+        "<li>Days since last update</li>"
+        "<li>Issue age</li>"
+        "<li>Low monthly hit count</li>"
+        "</ul>"
+        '<p class="guide-hint">Higher = more stale. Issues with no recent hits and '
+        "no recent updates score highest.</p>"
+        "</div>"
+        "</div>"
+        "</details>"
+    )
+
+
+# ---------------------------------------------------------------------------
 # Score tooltip breakdown
 # ---------------------------------------------------------------------------
 
@@ -222,6 +282,10 @@ def _render_table(issues: list[dict], repo: str) -> str:
     return (
         f'<div class="filter-bar">'
         f'<input type="text" id="filter-input" placeholder="Filter issues…" aria-label="Filter issues">'
+        f'<label class="mobile-filter-toggle">'
+        f'<input type="checkbox" id="mobile-filter-checkbox">'
+        f'<span class="toggle-label">Show only mobile/mono issues</span>'
+        f'</label>'
         f'<span class="row-count" id="row-count"></span>'
         f"</div>"
         f'<div class="table-container">'
@@ -272,7 +336,7 @@ def _render_row(issue: dict, repo: str) -> str:
         )
 
     # --- Assignee ---
-    assignee = issue.get("assignee") or ""
+    assignee = issue.get("assignee_display") or ", ".join(issue.get("assignees") or [])
     if assignee:
         cells.append(f"<td>{_esc(assignee)}</td>")
     else:
@@ -303,7 +367,34 @@ def _render_row(issue: dict, repo: str) -> str:
     labels_html = _render_labels(issue)
     cells.append(f"<td>{labels_html}</td>")
 
-    return "<tr>" + "".join(cells) + "</tr>"
+    mobile_attr = ' data-mobile="true"' if _is_mobile_issue(issue) else ""
+    return f"<tr{mobile_attr}>" + "".join(cells) + "</tr>"
+
+
+_MOBILE_LABELS_EXACT = frozenset([
+    "area-infrastructure-mono",
+    "os-android",
+    "os-ios",
+    "os-tvos",
+    "os-maccatalyst",
+])
+
+_MOBILE_KEYWORDS = ("android", "ios", "mono", "maccatalyst", "tvos")
+
+
+def _is_mobile_issue(issue: dict) -> bool:
+    """Return True if any label indicates a mobile/mono platform issue."""
+    labels = issue.get("labels", [])
+    if not isinstance(labels, list):
+        return False
+    for lbl in labels:
+        name = lbl if isinstance(lbl, str) else lbl.get("name", "")
+        lower = name.lower()
+        if lower in _MOBILE_LABELS_EXACT:
+            return True
+        if any(kw in lower for kw in _MOBILE_KEYWORDS):
+            return True
+    return False
 
 
 def _extract_area(issue: dict) -> str:
@@ -365,6 +456,8 @@ _PAGE_TEMPLATE = """\
     {nav}
 
     {stats_bar}
+
+    {score_guide}
 
     {table}
   </div>

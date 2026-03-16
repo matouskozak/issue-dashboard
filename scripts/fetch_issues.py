@@ -133,6 +133,10 @@ class ParsedIssue:
     build_link: Optional[str] = None
     has_blocking_label: bool = False
     has_untriaged_label: bool = False
+    # Computed fields for display (added 2026-03-16)
+    age_days: int = 0
+    last_human_activity_days: Optional[int] = None
+    assignee_display: str = ""
     urgency_score: float = 0.0
     urgency_breakdown: dict[str, dict[str, float]] = field(default_factory=dict)
     staleness_score: float = 0.0
@@ -536,6 +540,12 @@ def parse_issue_node(node: dict[str, Any], repo: str, now: datetime) -> ParsedIs
         has_blocking_label="blocking-clean-ci" in labels,
         has_untriaged_label="untriaged" in labels,
     )
+
+    # Compute display fields from raw data
+    issue.age_days = int(_days_between(issue.created_at, now))
+    if issue.last_human_comment_date:
+        issue.last_human_activity_days = int(_days_between(issue.last_human_comment_date, now))
+    issue.assignee_display = ", ".join(issue.assignees) if issue.assignees else ""
 
     issue.urgency_score, issue.urgency_breakdown = compute_urgency(issue, now)
     issue.staleness_score, issue.staleness_breakdown = compute_staleness(issue, now)
