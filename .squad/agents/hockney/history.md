@@ -20,7 +20,15 @@
 - **Spec deviation found**: hit_trend signal — when 7d==0 and 24h>0, spec says value=1.0 (brand-new spike) but implementation returns 0.0. Marked as xfail.
 - **Spec deviation found**: comma-separated numbers (e.g. `1,234`) in hit count table won't parse — regex uses `\d+` only. Marked as xfail.
 - **Test file paths**: `tests/conftest.py`, `tests/test_scoring.py`, `tests/test_body_parsing.py`
-- **Test count**: 165 passing + 2 xfailed = 167 total
+- **Test count**: 167 passing, 0 xfailed (previously 165+2xfail)
+- **McManus fixes verified (2026-03-16T12:17Z):** Both spec deviations resolved — `test_trend_7d_zero_24h_positive` (hit_trend returns 1.0 when 7d==0, 24h>0) and `test_commas_in_counts` (regex handles `|1,234|5,678|12,345|`) now pass. xfail markers removed. Full suite: 167 passed, 0 failed, 0 xfailed.
+
+## Test Suite Updated (2026-03-16T12:17Z)
+
+**Hockney background task outcome:** Removed xfail markers from both spec deviation tests. Full validation run:
+- **Before:** 165 passed, 2 xfailed
+- **After:** 167 passed, 0 failed, 0 xfailed
+- All tests passing including previously-failing edge cases. Backend fixes verified by test suite.
 
 ## Cross-Team Impact (Wave 1)
 

@@ -26,6 +26,15 @@
 - **uv migration:** pyproject.toml at repo root, workflow uses `pip install uv && uv sync`, scripts invoked via `uv run python`. requirements.txt kept as fallback.
 - **Deleted build-dashboard.yml:** Was a stale v1 workflow referencing non-existent `src/`, `data/`, `build/` directories. Only `generate-reports.yml` is the real pipeline.
 - **html_template.py already had filter logic in main():** build_reports.py duplicates the filter definitions intentionally — keeps the pipeline script self-contained and the template engine as a pure renderer.
+- **Hit trend edge case (7d==0, 24h>0):** Spec says return 1.0 — hits appearing in the last 24h with no 7-day baseline is maximum acceleration. Division-by-zero guard must still return 1.0 when 24h > 0, not blanket 0.0.
+- **Comma-formatted hit counts:** Real KBE issue bodies can have comma-formatted numbers like `|1,234|5,678|9,012|`. Regex must use `(\d[\d,]*)` instead of `(\d+)`, and `int()` calls must strip commas first via `.replace(",", "")`.
+
+## Spec Deviations Fixed (2026-03-16T12:17Z)
+
+**McManus background task outcome:** Both spec deviations in fetch_issues.py corrected:
+1. **hit_trend 7d==0 edge case:** Now returns 1.0 when 24h > 0 (brand-new spike signal)
+2. **Comma-formatted hit counts:** Regex updated to `(\d[\d,]*)` and int conversion strips commas
+- Hockney verified: 167 tests pass, 0 xfailed. Both edge cases now pass.
 
 ## Cross-Team Impact (Wave 1)
 
