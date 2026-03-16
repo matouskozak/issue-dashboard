@@ -323,9 +323,8 @@ def _render_row(issue: dict, repo: str) -> str:
 
     # --- Title ---
     title = issue.get("title", "")
-    truncated = title[:80] + "…" if len(title) > 80 else title
     cells.append(
-        f'<td class="title-cell" title="{_esc(title)}">{_esc(truncated)}</td>'
+        f'<td class="title-cell">{_esc(title)}</td>'
     )
 
     # --- Hit counts ---
