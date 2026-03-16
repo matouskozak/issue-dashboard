@@ -162,11 +162,13 @@
   function applyFilters() {
     var input = document.getElementById("filter-input");
     var checkbox = document.getElementById("mobile-filter-checkbox");
+    var noHitsCheckbox = document.getElementById("no-hits-filter-checkbox");
     var tbody = document.querySelector(".data-table tbody");
     if (!tbody) return;
 
     var term = input ? input.value.toLowerCase().trim() : "";
     var showOnlyMobile = checkbox ? checkbox.checked : false;
+    var showOnlyNoHits = noHitsCheckbox ? noHitsCheckbox.checked : false;
 
     var rows = tbody.querySelectorAll("tr");
     rows.forEach(function (row) {
@@ -174,6 +176,11 @@
 
       // Mobile filter
       if (showOnlyMobile && row.getAttribute("data-mobile") !== "true") {
+        hidden = true;
+      }
+
+      // No-hits filter
+      if (!hidden && showOnlyNoHits && row.getAttribute("data-no-hits") !== "true") {
         hidden = true;
       }
 
@@ -272,6 +279,31 @@
     });
 
     // Apply on load if restored
+    if (checkbox.checked) {
+      applyFilters();
+    }
+  }
+
+  // --- No-Hits Filter Toggle ---
+
+  function initNoHitsFilter() {
+    var checkbox = document.getElementById("no-hits-filter-checkbox");
+    if (!checkbox) return;
+
+    try {
+      var saved = localStorage.getItem("kbe-show-no-hits-only");
+      if (saved === "true") {
+        checkbox.checked = true;
+      }
+    } catch (e) { /* storage unavailable */ }
+
+    checkbox.addEventListener("change", function () {
+      try {
+        localStorage.setItem("kbe-show-no-hits-only", checkbox.checked ? "true" : "false");
+      } catch (e) { /* storage unavailable */ }
+      applyFilters();
+    });
+
     if (checkbox.checked) {
       applyFilters();
     }
@@ -429,6 +461,7 @@
     initResizing();
     initFiltering();
     initMobileFilter();
+    initNoHitsFilter();
     initLabelFilter();
     initTooltips();
     initKeyboardNav();

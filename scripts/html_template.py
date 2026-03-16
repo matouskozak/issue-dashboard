@@ -286,6 +286,10 @@ def _render_table(issues: list[dict], repo: str) -> str:
         f'<input type="checkbox" id="mobile-filter-checkbox">'
         f'<span class="toggle-label">Show only mobile/mono issues</span>'
         f'</label>'
+        f'<label class="mobile-filter-toggle">'
+        f'<input type="checkbox" id="no-hits-filter-checkbox">'
+        f'<span class="toggle-label">Show only no-hit issues</span>'
+        f'</label>'
         f'<span class="active-label-filter" id="active-label-filter" style="display:none"></span>'
         f'<span class="row-count" id="row-count"></span>'
         f"</div>"
@@ -368,7 +372,9 @@ def _render_row(issue: dict, repo: str) -> str:
     cells.append(f'<td class="labels-cell">{labels_html}</td>')
 
     mobile_attr = ' data-mobile="true"' if _is_mobile_issue(issue) else ""
-    return f"<tr{mobile_attr}>" + "".join(cells) + "</tr>"
+    no_hits = issue.get("hits_24h", 0) == 0 and issue.get("hits_7d", 0) == 0 and issue.get("hits_30d", 0) == 0
+    no_hits_attr = ' data-no-hits="true"' if no_hits else ""
+    return f"<tr{mobile_attr}{no_hits_attr}>" + "".join(cells) + "</tr>"
 
 
 _MOBILE_LABELS_EXACT = frozenset([
