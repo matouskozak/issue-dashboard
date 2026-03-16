@@ -580,6 +580,8 @@ td.score-td {
   overflow: visible;
   text-overflow: clip;
   line-height: 1.4;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 /* --- Tooltip --- */
