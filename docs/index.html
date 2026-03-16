@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KBE Issue Dashboard</title>
+  <link rel="stylesheet" href="shared-styles.css">
+</head>
+<body>
+  <div class="page-container">
+    <div class="dashboard-hero">
+      <h1>KBE Issue Dashboard</h1>
+      <p class="subtitle">Known Build Error tracking for dotnet/runtime</p>
+    </div>
+
+    <div id="sparklines" class="sparkline-container" style="display:none;">
+      <div class="sparkline-card">
+        <div class="spark-label">Total Issues</div>
+        <div class="spark-value" id="spark-total">—</div>
+        <canvas id="spark-total-chart" height="40"></canvas>
+      </div>
+      <div class="sparkline-card">
+        <div class="spark-label">24h Hits</div>
+        <div class="spark-value" id="spark-hits">—</div>
+        <canvas id="spark-hits-chart" height="40"></canvas>
+      </div>
+      <div class="sparkline-card">
+        <div class="spark-label">Avg Urgency</div>
+        <div class="spark-value" id="spark-urgency">—</div>
+        <canvas id="spark-urgency-chart" height="40"></canvas>
+      </div>
+    </div>
+
+    <div id="repo-cards" class="repo-cards">
+      <!-- Populated by JS -->
+    </div>
+
+    <div class="dashboard-footer">
+      <span id="last-updated-index">Loading…</span><br>
+      <a href="https://github.com/dotnet/runtime" target="_blank">dotnet/runtime on GitHub</a>
+    </div>
+  </div>
+
+  <script src="shared-ui.js"></script>
+  <script>
+  (function () {
+    var REPOS_URL = "repos.json";
+
+    function renderRepoCard(repo, meta) {
+      var card = document.createElement("div");
+      card.className = "repo-card";
+
+      var title = document.createElement("h2");
+      title.textContent = repo.org + "/" + repo.repo;
+      card.appendChild(title);
+
+      var links = document.createElement("div");
+      links.className = "repo-links";
+
+      var reports = [
+        { name: "Needs Attention", file: "needs-attention.html", key: "needs_attention", badgeClass: "danger" },
+        { name: "Unattended", file: "unattended.html", key: "unattended", badgeClass: "warn" },
+        { name: "Stale", file: "stale.html", key: "stale", badgeClass: "" },
+        { name: "All Issues", file: "all.html", key: "all", badgeClass: "" },
+      ];
+
+      reports.forEach(function (r) {
+        var a = document.createElement("a");
+        a.className = "repo-link";
+        a.href = repo.path + "/" + r.file;
+
+        var label = document.createElement("span");
+        label.textContent = r.name;
+        a.appendChild(label);
+
+        var badge = document.createElement("span");
+        var count = meta && meta.counts ? meta.counts[r.key] : null;
+        badge.className = "count-badge" + (count > 0 && r.badgeClass ? " " + r.badgeClass : "");
+        badge.textContent = count !== null && count !== undefined ? count : "—";
+        a.appendChild(badge);
+
+        links.appendChild(a);
+      });
+
+      card.appendChild(links);
+      return card;
+    }
+
+    function loadMeta(repo) {
+      return fetch(repo.path + "/meta.json")
+        .then(function (r) { return r.ok ? r.json() : null; })
+        .catch(function () { return null; });
+    }
+
+    function renderDashboard() {
+      fetch(REPOS_URL)
+        .then(function (r) { return r.json(); })
+        .then(function (repos) {
+          var container = document.getElementById("repo-cards");
+          var promises = repos.map(function (repo) {
+            return loadMeta(repo).then(function (meta) {
+              return { repo: repo, meta: meta };
+            });
+          });
+
+          Promise.all(promises).then(function (results) {
+            results.forEach(function (r) {
+              container.appendChild(renderRepoCard(r.repo, r.meta));
+            });
+
+            // Show sparklines if history data is available
+            var firstMeta = results[0] && results[0].meta;
+            if (firstMeta && firstMeta.history) {
+              var sparkContainer = document.getElementById("sparklines");
+              sparkContainer.style.display = "";
+
+              var h = firstMeta.history;
+              if (h.total_issues) {
+                document.getElementById("spark-total").textContent = h.total_issues[h.total_issues.length - 1];
+                KBE.drawSparkline(document.getElementById("spark-total-chart"), h.total_issues, "#0969da");
+              }
+              if (h.hits_24h) {
+                document.getElementById("spark-hits").textContent = h.hits_24h[h.hits_24h.length - 1];
+                KBE.drawSparkline(document.getElementById("spark-hits-chart"), h.hits_24h, "#cf222e");
+              }
+              if (h.avg_urgency) {
+                document.getElementById("spark-urgency").textContent = h.avg_urgency[h.avg_urgency.length - 1].toFixed(1);
+                KBE.drawSparkline(document.getElementById("spark-urgency-chart"), h.avg_urgency, "#bf8700");
+              }
+            }
+
+            // Timestamp
+            var ts = (firstMeta && firstMeta.generated_at) || null;
+            var tsEl = document.getElementById("last-updated-index");
+            if (ts) {
+              var d = new Date(ts);
+              tsEl.textContent = "Last updated: " + d.toLocaleString();
+            } else {
+              tsEl.textContent = "Reports not yet generated. Run the pipeline to populate data.";
+            }
+          });
+        })
+        .catch(function () {
+          document.getElementById("repo-cards").innerHTML =
+            '<p style="text-align:center;color:var(--text-muted);">Could not load repos.json. Run the pipeline to generate reports.</p>';
+          document.getElementById("last-updated-index").textContent = "No data available.";
+        });
+    }
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", renderDashboard);
+    } else {
+      renderDashboard();
+    }
+  })();
+  </script>
+</body>
+</html>

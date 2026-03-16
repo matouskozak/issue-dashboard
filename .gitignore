@@ -5,3 +5,12 @@
 .squad/sessions/
 # Squad: SubSquad activation file (local to this machine)
 .squad-workstream
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# uv
+.venv/

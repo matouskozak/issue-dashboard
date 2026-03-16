@@ -1,0 +1,13 @@
+[project]
+name = "issue-dashboard-v2"
+version = "0.1.0"
+description = "KBE Issue Dashboard for dotnet/runtime"
+requires-python = ">=3.11"
+dependencies = [
+    "requests",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+]
