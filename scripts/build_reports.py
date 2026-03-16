@@ -4,14 +4,14 @@
 Usage:
     python scripts/build_reports.py runtime
 
-Reads docs/<repo>/scan.json (produced by fetch_issues.py).
+Reads pages/<repo>/scan.json (produced by fetch_issues.py).
 Outputs:
-  - docs/<repo>/needs-attention.html
-  - docs/<repo>/unattended.html
-  - docs/<repo>/stale.html
-  - docs/<repo>/all.html
-  - docs/<repo>/meta.json
-  - docs/<repo>/history.json  (appends, keeps last 90 days)
+  - pages/<repo>/needs-attention.html
+  - pages/<repo>/unattended.html
+  - pages/<repo>/stale.html
+  - pages/<repo>/all.html
+  - pages/<repo>/meta.json
+  - pages/<repo>/history.json  (appends, keeps last 90 days)
 """
 
 from __future__ import annotations
@@ -196,7 +196,7 @@ def _update_history(
 
 def build_reports(repo: str) -> None:
     """Full report generation pipeline for a single repo."""
-    repo_dir = Path(__file__).resolve().parent.parent / "docs" / repo
+    repo_dir = Path(__file__).resolve().parent.parent / "pages" / repo
     repo_dir.mkdir(parents=True, exist_ok=True)
 
     print(f"Building reports for {ORG}/{repo}...")

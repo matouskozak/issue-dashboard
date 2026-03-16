@@ -21,7 +21,7 @@ from build_reports import build_reports
 def main() -> None:
     repo = sys.argv[1] if len(sys.argv) > 1 else "runtime"
 
-    scan_path = Path(__file__).resolve().parent.parent / "docs" / repo / "scan.json"
+    scan_path = Path(__file__).resolve().parent.parent / "pages" / repo / "scan.json"
     if not scan_path.exists():
         print(
             f"✗ No cached data at {scan_path}\n"

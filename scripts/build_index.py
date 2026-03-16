@@ -4,8 +4,8 @@
 Usage:
     python scripts/build_index.py
 
-Reads docs/repos.json for the repo list, verifies each repo's meta.json
-exists. The existing docs/index.html loads dynamically from repos.json +
+Reads pages/repos.json for the repo list, verifies each repo's meta.json
+exists. The existing pages/index.html loads dynamically from repos.json +
 meta.json via JavaScript, so this script just validates that all data
 files are in place.
 """
@@ -16,11 +16,11 @@ import json
 import sys
 from pathlib import Path
 
-DOCS_DIR = Path(__file__).resolve().parent.parent / "docs"
+PAGES_DIR = Path(__file__).resolve().parent.parent / "pages"
 
 
 def main() -> None:
-    repos_path = DOCS_DIR / "repos.json"
+    repos_path = PAGES_DIR / "repos.json"
     if not repos_path.exists():
         print(f"✗ {repos_path} not found.", file=sys.stderr)
         sys.exit(1)
@@ -28,9 +28,9 @@ def main() -> None:
     with open(repos_path, "r", encoding="utf-8") as f:
         repos = json.load(f)
 
-    index_path = DOCS_DIR / "index.html"
+    index_path = PAGES_DIR / "index.html"
     if not index_path.exists():
-        print("✗ docs/index.html not found.", file=sys.stderr)
+        print("✗ pages/index.html not found.", file=sys.stderr)
         sys.exit(1)
 
     print("Verifying dashboard index data...")
@@ -38,7 +38,7 @@ def main() -> None:
     ok = True
     for entry in repos:
         repo_path = entry.get("path", entry.get("repo", ""))
-        meta_file = DOCS_DIR / repo_path / "meta.json"
+        meta_file = PAGES_DIR / repo_path / "meta.json"
         if meta_file.exists():
             with open(meta_file, "r", encoding="utf-8") as f:
                 meta = json.load(f)

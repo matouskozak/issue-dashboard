@@ -383,7 +383,7 @@ def main() -> None:
     """Generate HTML reports from a scan.json file."""
     if len(sys.argv) < 3:
         print("Usage: python html_template.py <scan.json> <output_dir> [repo]")
-        print("Example: python html_template.py scan.json docs/runtime runtime")
+        print("Example: python html_template.py scan.json pages/runtime runtime")
         sys.exit(1)
 
     scan_path = Path(sys.argv[1])

@@ -5,7 +5,7 @@ Usage:
     python scripts/fetch_issues.py runtime
 
 Requires GITHUB_TOKEN environment variable.
-Outputs to docs/<repo>/scan.json.
+Outputs to pages/<repo>/scan.json.
 """
 
 from __future__ import annotations
@@ -577,7 +577,7 @@ def main() -> None:
     # Ensure output directory exists
     script_dir = Path(__file__).resolve().parent
     repo_root = script_dir.parent
-    out_dir = repo_root / "docs" / repo
+    out_dir = repo_root / "pages" / repo
     out_dir.mkdir(parents=True, exist_ok=True)
     out_path = out_dir / "scan.json"
 

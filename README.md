@@ -20,7 +20,7 @@ issue-dashboard-v2/
 │   ├── build_index.py        # Verify dashboard index data
 │   ├── regen_html.py         # Dev convenience: regenerate HTML from cached data
 │   └── html_template.py      # HTML report template engine
-├── docs/
+├── pages/
 │   ├── index.html            # Dashboard landing page (loads data dynamically)
 │   ├── repos.json            # Repo configuration
 │   ├── shared-styles.css     # Shared CSS
@@ -86,8 +86,8 @@ uv run pytest tests/
 GitHub Actions (`generate-reports.yml`) runs every 6 hours:
 1. Fetches KBE issues from dotnet/runtime
 2. Builds HTML reports + metadata
-3. Commits generated files to `docs/`
-4. Served via GitHub Pages
+3. Commits generated files to `pages/`
+4. Deployed via GitHub Pages (Actions deployment)
 
 ## License
 
