@@ -246,14 +246,19 @@ _BUILD_LINK_RE = re.compile(r"https?://dev\.azure\.com/[^\s\)>\]]+")
 
 
 def parse_hit_counts(body: str) -> HitCounts:
-    """Extract 24h, 7d, and 30d hit counts from the issue body."""
+    """Extract 24h, 7d, and 30d hit counts from the issue body.
+
+    Uses the LAST match if multiple hit tables exist (the body may contain
+    historical snapshots; the most recent table is at the bottom).
+    """
     if not body:
         return HitCounts()
 
-    m = _HIT_TABLE_RE.search(body)
-    if not m:
-        m = _HIT_TABLE_FALLBACK_RE.search(body)
-    if m:
+    matches = list(_HIT_TABLE_RE.finditer(body))
+    if not matches:
+        matches = list(_HIT_TABLE_FALLBACK_RE.finditer(body))
+    if matches:
+        m = matches[-1]  # last occurrence = most recent
         try:
             return HitCounts(
                 hits_24h=int(m.group(1).replace(",", "")),
