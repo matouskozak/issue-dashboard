@@ -157,6 +157,8 @@
 
   // --- Filtering ---
 
+  var activeLabelFilter = null;
+
   function applyFilters() {
     var input = document.getElementById("filter-input");
     var checkbox = document.getElementById("mobile-filter-checkbox");
@@ -183,10 +185,61 @@
         }
       }
 
+      // Label filter
+      if (!hidden && activeLabelFilter) {
+        var badges = row.querySelectorAll(".label-badge[data-label]");
+        var hasLabel = false;
+        for (var i = 0; i < badges.length; i++) {
+          if (badges[i].getAttribute("data-label") === activeLabelFilter) {
+            hasLabel = true;
+            break;
+          }
+        }
+        if (!hasLabel) hidden = true;
+      }
+
       row.style.display = hidden ? "none" : "";
     });
 
     updateRowCount();
+  }
+
+  function updateLabelFilterIndicator() {
+    var el = document.getElementById("active-label-filter");
+    if (!el) return;
+    if (activeLabelFilter) {
+      el.innerHTML = "Filtering: " + activeLabelFilter + ' <span class="label-filter-clear">✕</span>';
+      el.style.display = "";
+    } else {
+      el.innerHTML = "";
+      el.style.display = "none";
+    }
+  }
+
+  function initLabelFilter() {
+    document.addEventListener("click", function (e) {
+      // Clear button
+      var clearBtn = e.target.closest(".label-filter-clear");
+      if (clearBtn) {
+        activeLabelFilter = null;
+        updateLabelFilterIndicator();
+        applyFilters();
+        return;
+      }
+
+      // Label badge click
+      var badge = e.target.closest(".label-badge[data-label]");
+      if (badge) {
+        var label = badge.getAttribute("data-label");
+        if (activeLabelFilter === label) {
+          activeLabelFilter = null;
+        } else {
+          activeLabelFilter = label;
+        }
+        updateLabelFilterIndicator();
+        applyFilters();
+      }
+    });
   }
 
   function initFiltering() {
@@ -376,6 +429,7 @@
     initResizing();
     initFiltering();
     initMobileFilter();
+    initLabelFilter();
     initTooltips();
     initKeyboardNav();
     initTimestamp();

@@ -36,7 +36,9 @@ HISTORY_RETENTION_DAYS = 90
 
 REPORT_FILTERS = {
     "needs-attention": lambda issues: sorted(
-        issues, key=lambda i: i.get("urgency_score", 0) or 0, reverse=True
+        [i for i in issues if (i.get("urgency_score", 0) or 0) > 2.0],
+        key=lambda i: i.get("urgency_score", 0) or 0,
+        reverse=True,
     ),
     "unattended": lambda issues: sorted(
         [i for i in issues if (i.get("neglect_score", 0) or 0) > 5.0],

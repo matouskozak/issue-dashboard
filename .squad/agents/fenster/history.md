@@ -63,3 +63,5 @@
 - **Substring keywords:** android, ios, wasm, browser, mono, maccatalyst, tvos
 
 **Impact:** Users can hide mobile/mono/wasm issues. Preference persists across page reloads via localStorage.
+
+- **All-labels rendering + click-to-filter:** Expanded `_render_labels()` to show ALL issue labels as badge pills (skipping "Known Build Error" noise). Special styling preserved for `blocking-clean-ci` (red) and `untriaged` (amber). All other labels get generic subtle pill styling. Each badge has `data-label` attribute and `clickable` class. JS-side: clicking any label badge filters the table to only show rows with that label. Active filter shown as a blue indicator badge in the filter bar with ✕ to clear. Ephemeral state (module-level var, not localStorage). Integrates with existing `applyFilters()` as a third filter condition alongside text and mobile filters. Removed unused `.label-badge.area` and `.label-badge.default` CSS classes in favor of a single generic rule for non-special labels.

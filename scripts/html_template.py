@@ -286,6 +286,7 @@ def _render_table(issues: list[dict], repo: str) -> str:
         f'<input type="checkbox" id="mobile-filter-checkbox">'
         f'<span class="toggle-label">Show only mobile/mono issues</span>'
         f'</label>'
+        f'<span class="active-label-filter" id="active-label-filter" style="display:none"></span>'
         f'<span class="row-count" id="row-count"></span>'
         f"</div>"
         f'<div class="table-container">'
@@ -409,7 +410,7 @@ def _extract_area(issue: dict) -> str:
 
 
 def _render_labels(issue: dict) -> str:
-    """Render key labels as badge pills."""
+    """Render all labels as badge pills (skip 'Known Build Error' noise)."""
     labels = issue.get("labels", [])
     if not isinstance(labels, list):
         return ""
@@ -417,14 +418,23 @@ def _render_labels(issue: dict) -> str:
     badges = []
     for lbl in labels:
         name = lbl if isinstance(lbl, str) else lbl.get("name", "")
+        if not name:
+            continue
         lower = name.lower()
+        if lower == "known build error":
+            continue
+        escaped = _esc(name)
         if lower == "blocking-clean-ci":
             badges.append(
-                f'<span class="label-badge blocking">{_esc(name)}</span>'
+                f'<span class="label-badge blocking clickable" data-label="{escaped}">{escaped}</span>'
             )
         elif lower == "untriaged":
             badges.append(
-                f'<span class="label-badge untriaged">{_esc(name)}</span>'
+                f'<span class="label-badge untriaged clickable" data-label="{escaped}">{escaped}</span>'
+            )
+        else:
+            badges.append(
+                f'<span class="label-badge clickable" data-label="{escaped}">{escaped}</span>'
             )
     return "".join(badges)
 

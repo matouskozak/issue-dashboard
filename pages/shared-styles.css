@@ -525,15 +525,45 @@ td.score-td {
   color: #fff;
 }
 
-.label-badge.area {
-  background: var(--bg-nav);
-  color: var(--text-secondary);
-  border: 1px solid var(--border-default);
-}
-
-.label-badge.default {
+.label-badge:not(.blocking):not(.untriaged) {
   background: var(--bg-nav);
   color: var(--badge-default);
+  border: 1px solid var(--border-muted);
+}
+
+.label-badge.clickable {
+  cursor: pointer;
+  transition: opacity 0.15s, box-shadow 0.15s;
+}
+
+.label-badge.clickable:hover {
+  opacity: 0.85;
+  box-shadow: 0 0 0 2px var(--focus-ring);
+}
+
+/* Active label filter indicator in filter bar */
+.active-label-filter {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  background: var(--nav-active);
+  color: #fff;
+  white-space: nowrap;
+}
+
+.label-filter-clear {
+  cursor: pointer;
+  margin-left: 2px;
+  font-size: 13px;
+  opacity: 0.8;
+}
+
+.label-filter-clear:hover {
+  opacity: 1;
 }
 
 /* --- Title Cell --- */
