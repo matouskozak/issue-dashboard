@@ -37,6 +37,10 @@
   var lastSortAsc = true;
   var lastSortType = "text";
 
+  // Capture original server-rendered row order so we can restore it
+  // when the Copilot filter is toggled off and no manual sort exists.
+  var originalRowOrder = null;
+
   function initSorting() {
     const table = document.querySelector(".data-table");
     if (!table) return;
@@ -186,9 +190,15 @@
 
     var rows = Array.from(tbody.querySelectorAll("tr"));
 
+    // Capture initial row order on first call (before any sort changes it).
+    if (!originalRowOrder) {
+      originalRowOrder = Array.from(tbody.querySelectorAll("tr"));
+    }
+
     // When the Copilot filter is active, sort rows by staleness ascending
     // so the freshest (most likely reproducible) candidates appear first.
-    // When toggled off, restore the user's last manual column sort.
+    // When toggled off, restore the user's last manual column sort or
+    // the original server-rendered order.
     if (showOnlyCopilot) {
       var stalenessColIdx = findColumnByName("Staleness");
       if (stalenessColIdx >= 0) {
@@ -202,6 +212,8 @@
     } else if (lastSortCol !== null) {
       var table = tbody.closest("table");
       if (table) sortTable(table, lastSortCol, lastSortAsc, lastSortType);
+    } else if (originalRowOrder) {
+      originalRowOrder.forEach(function (row) { tbody.appendChild(row); });
     }
 
     rows.forEach(function (row) {

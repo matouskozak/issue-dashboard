@@ -440,9 +440,9 @@ _COPILOT_EXCLUDE_LABELS = frozenset([
 def _is_copilot_candidate(issue: dict) -> bool:
     """Return True if the issue looks suitable for investigation by a Copilot agent.
 
-    Good candidates are managed-code test failures on standard platforms (Windows/
-    Linux x64) that don't require special hardware, device provisioning, or deep
-    VM/GC/AOT internals knowledge.
+    Good candidates have a known area label and are not mobile/mono, not tied to
+    special environments (iOS, Android, WASI, wasm), and not in infrastructure,
+    VM-internals, AOT, or GC areas.
     """
     labels = issue.get("labels", [])
     if not isinstance(labels, list):
