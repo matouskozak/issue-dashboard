@@ -1,6 +1,10 @@
-# Issue Dashboard v2
+# Issue Dashboard
 
 Automated dashboard for tracking **Known Build Error** (KBE) issues in `dotnet/runtime`. Fetches issue data via GitHub GraphQL API, scores issues by urgency/staleness/neglect, and generates an interactive HTML dashboard published via GitHub Pages.
+
+## **[Issue Dashboard](https://matouskozak.github.io/issue-dashboard/)**
+
+## **[PR Dashboard](https://danmoseley.github.io/pr-dashboard/)**
 
 ## Pipeline
 

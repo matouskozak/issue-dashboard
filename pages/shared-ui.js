@@ -163,12 +163,14 @@
     var input = document.getElementById("filter-input");
     var checkbox = document.getElementById("mobile-filter-checkbox");
     var noHitsCheckbox = document.getElementById("no-hits-filter-checkbox");
+    var copilotCheckbox = document.getElementById("copilot-candidate-filter-checkbox");
     var tbody = document.querySelector(".data-table tbody");
     if (!tbody) return;
 
     var term = input ? input.value.toLowerCase().trim() : "";
     var showOnlyMobile = checkbox ? checkbox.checked : false;
     var showOnlyNoHits = noHitsCheckbox ? noHitsCheckbox.checked : false;
+    var showOnlyCopilot = copilotCheckbox ? copilotCheckbox.checked : false;
 
     var rows = tbody.querySelectorAll("tr");
     rows.forEach(function (row) {
@@ -181,6 +183,11 @@
 
       // No-hits filter
       if (!hidden && showOnlyNoHits && row.getAttribute("data-no-hits") !== "true") {
+        hidden = true;
+      }
+
+      // Copilot candidate filter
+      if (!hidden && showOnlyCopilot && row.getAttribute("data-copilot-candidate") !== "true") {
         hidden = true;
       }
 
@@ -300,6 +307,31 @@
     checkbox.addEventListener("change", function () {
       try {
         localStorage.setItem("kbe-show-no-hits-only", checkbox.checked ? "true" : "false");
+      } catch (e) { /* storage unavailable */ }
+      applyFilters();
+    });
+
+    if (checkbox.checked) {
+      applyFilters();
+    }
+  }
+
+  // --- Copilot Candidate Filter Toggle ---
+
+  function initCopilotFilter() {
+    var checkbox = document.getElementById("copilot-candidate-filter-checkbox");
+    if (!checkbox) return;
+
+    try {
+      var saved = localStorage.getItem("kbe-show-copilot-only");
+      if (saved === "true") {
+        checkbox.checked = true;
+      }
+    } catch (e) { /* storage unavailable */ }
+
+    checkbox.addEventListener("change", function () {
+      try {
+        localStorage.setItem("kbe-show-copilot-only", checkbox.checked ? "true" : "false");
       } catch (e) { /* storage unavailable */ }
       applyFilters();
     });
@@ -462,6 +494,7 @@
     initFiltering();
     initMobileFilter();
     initNoHitsFilter();
+    initCopilotFilter();
     initLabelFilter();
     initTooltips();
     initKeyboardNav();

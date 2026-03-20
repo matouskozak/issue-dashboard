@@ -290,6 +290,10 @@ def _render_table(issues: list[dict], repo: str) -> str:
         f'<input type="checkbox" id="no-hits-filter-checkbox">'
         f'<span class="toggle-label">Show only no-hit issues</span>'
         f'</label>'
+        f'<label class="mobile-filter-toggle">'
+        f'<input type="checkbox" id="copilot-candidate-filter-checkbox">'
+        f'<span class="toggle-label">Show only Copilot candidates</span>'
+        f'</label>'
         f'<span class="active-label-filter" id="active-label-filter" style="display:none"></span>'
         f'<span class="row-count" id="row-count"></span>'
         f"</div>"
@@ -374,7 +378,8 @@ def _render_row(issue: dict, repo: str) -> str:
     mobile_attr = ' data-mobile="true"' if _is_mobile_issue(issue) else ""
     no_hits = issue.get("hits_24h", 0) == 0 and issue.get("hits_7d", 0) == 0 and issue.get("hits_30d", 0) == 0
     no_hits_attr = ' data-no-hits="true"' if no_hits else ""
-    return f"<tr{mobile_attr}{no_hits_attr}>" + "".join(cells) + "</tr>"
+    copilot_attr = ' data-copilot-candidate="true"' if _is_copilot_candidate(issue) else ""
+    return f"<tr{mobile_attr}{no_hits_attr}{copilot_attr}>" + "".join(cells) + "</tr>"
 
 
 _MOBILE_LABELS_EXACT = frozenset([
@@ -410,6 +415,69 @@ def _is_mobile_issue(issue: dict) -> bool:
         if any(kw in lower for kw in _MOBILE_KEYWORDS):
             return True
     return False
+
+
+_COPILOT_EXCLUDE_AREA_PREFIXES = (
+    "area-infrastructure",
+    "area-vm-",
+    "area-codegen-aot-mono",
+    "area-crossgen2-",
+    "area-build-mono",
+    "area-gc-coreclr",
+)
+
+_COPILOT_EXCLUDE_LABELS = frozenset([
+    "tracking-external-issue",
+    "os-ios",
+    "os-android",
+    "os-tvos",
+    "os-maccatalyst",
+    "os-wasi",
+    "arch-wasm",
+])
+
+
+def _is_copilot_candidate(issue: dict) -> bool:
+    """Return True if the issue looks suitable for investigation by a Copilot agent.
+
+    Good candidates are managed-code test failures on standard platforms (Windows/
+    Linux x64) that don't require special hardware, device provisioning, or deep
+    VM/GC/AOT internals knowledge.
+    """
+    labels = issue.get("labels", [])
+    if not isinstance(labels, list):
+        return False
+
+    lower_labels = []
+    for lbl in labels:
+        name = lbl if isinstance(lbl, str) else lbl.get("name", "")
+        lower_labels.append(name.lower())
+
+    # Exclude issues with labels that indicate special environments
+    for lower in lower_labels:
+        if lower in _COPILOT_EXCLUDE_LABELS:
+            return False
+
+    # Exclude mobile/mono issues (already detected by _is_mobile_issue)
+    if _is_mobile_issue(issue):
+        return False
+
+    # Exclude area labels for infrastructure, VM internals, AOT, GC
+    area = (issue.get("area_label") or _extract_area(issue)).lower()
+    if not area:
+        return False
+    for prefix in _COPILOT_EXCLUDE_AREA_PREFIXES:
+        if area.startswith(prefix):
+            return False
+
+    # Exclude very stale issues (unlikely to be reproducible)
+    staleness = issue.get("staleness_score", 0) or 0
+    if staleness > 7.0:
+        return False
+
+    # Remaining issues have a known area, are on standard platforms,
+    # and are not too stale — good Copilot candidates
+    return True
 
 
 def _extract_area(issue: dict) -> str:
