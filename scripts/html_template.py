@@ -470,13 +470,10 @@ def _is_copilot_candidate(issue: dict) -> bool:
         if area.startswith(prefix):
             return False
 
-    # Exclude very stale issues (unlikely to be reproducible)
-    staleness = issue.get("staleness_score", 0) or 0
-    if staleness > 7.0:
-        return False
-
     # Remaining issues have a known area, are on standard platforms,
-    # and are not too stale — good Copilot candidates
+    # and are not infrastructure/VM/AOT/GC — good Copilot candidates.
+    # Staleness is NOT a hard filter; the JS UI sorts candidates by
+    # ascending staleness so the freshest issues appear first.
     return True
 
 

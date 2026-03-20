@@ -22,15 +22,26 @@
     return isNaN(n) ? -Infinity : n;
   }
 
+  function findColumnByName(name) {
+    var headers = document.querySelectorAll(".data-table th[data-sortable]");
+    for (var i = 0; i < headers.length; i++) {
+      if (headers[i].textContent.trim().replace(/[⇅▲▼]/g, "").trim() === name) return i;
+    }
+    return -1;
+  }
+
   // --- Column Sorting ---
+
+  // Track the user's last manual sort so filters can restore it.
+  var lastSortCol = null;
+  var lastSortAsc = true;
+  var lastSortType = "text";
 
   function initSorting() {
     const table = document.querySelector(".data-table");
     if (!table) return;
 
     const headers = table.querySelectorAll("th[data-sortable]");
-    let currentCol = null;
-    let ascending = true;
 
     headers.forEach(function (th, idx) {
       const indicator = th.querySelector(".sort-indicator");
@@ -38,12 +49,13 @@
       th.addEventListener("click", function (e) {
         if (e.target.classList.contains("col-resize")) return;
 
-        if (currentCol === idx) {
-          ascending = !ascending;
+        if (lastSortCol === idx) {
+          lastSortAsc = !lastSortAsc;
         } else {
-          currentCol = idx;
-          ascending = true;
+          lastSortCol = idx;
+          lastSortAsc = true;
         }
+        lastSortType = th.dataset.sortType || "text";
 
         // Reset all indicators
         headers.forEach(function (h) {
@@ -53,9 +65,9 @@
         });
 
         th.classList.add("sorted");
-        if (indicator) indicator.textContent = ascending ? "▲" : "▼";
+        if (indicator) indicator.textContent = lastSortAsc ? "▲" : "▼";
 
-        sortTable(table, idx, ascending, th.dataset.sortType || "text");
+        sortTable(table, lastSortCol, lastSortAsc, lastSortType);
         updateRowCount();
       });
     });
@@ -172,7 +184,26 @@
     var showOnlyNoHits = noHitsCheckbox ? noHitsCheckbox.checked : false;
     var showOnlyCopilot = copilotCheckbox ? copilotCheckbox.checked : false;
 
-    var rows = tbody.querySelectorAll("tr");
+    var rows = Array.from(tbody.querySelectorAll("tr"));
+
+    // When the Copilot filter is active, sort rows by staleness ascending
+    // so the freshest (most likely reproducible) candidates appear first.
+    // When toggled off, restore the user's last manual column sort.
+    if (showOnlyCopilot) {
+      var stalenessColIdx = findColumnByName("Staleness");
+      if (stalenessColIdx >= 0) {
+        rows.sort(function (a, b) {
+          var valA = parseFloat((a.cells[stalenessColIdx] || {}).dataset.sortValue || "0");
+          var valB = parseFloat((b.cells[stalenessColIdx] || {}).dataset.sortValue || "0");
+          return valA - valB;
+        });
+        rows.forEach(function (row) { tbody.appendChild(row); });
+      }
+    } else if (lastSortCol !== null) {
+      var table = tbody.closest("table");
+      if (table) sortTable(table, lastSortCol, lastSortAsc, lastSortType);
+    }
+
     rows.forEach(function (row) {
       var hidden = false;
 
