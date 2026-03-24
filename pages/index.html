@@ -129,12 +129,29 @@
               }
             }
 
-            // Timestamp
+            // Timestamp — show relative "X mins ago"
             var ts = (firstMeta && firstMeta.generated_at) || null;
             var tsEl = document.getElementById("last-updated-index");
             if (ts) {
-              var d = new Date(ts);
-              tsEl.textContent = "Last updated: " + d.toLocaleString();
+              var generated = new Date(ts);
+              function updateRelativeTime() {
+                var diff = Math.floor((Date.now() - generated.getTime()) / 60000);
+                var text;
+                if (diff < 1) {
+                  text = "just now";
+                } else if (diff < 60) {
+                  text = diff + " min" + (diff === 1 ? "" : "s") + " ago";
+                } else if (diff < 1440) {
+                  var hours = Math.floor(diff / 60);
+                  text = hours + " hour" + (hours === 1 ? "" : "s") + " ago";
+                } else {
+                  var days = Math.floor(diff / 1440);
+                  text = days + " day" + (days === 1 ? "" : "s") + " ago";
+                }
+                tsEl.textContent = "Updated " + text;
+              }
+              updateRelativeTime();
+              setInterval(updateRelativeTime, 60000);
             } else {
               tsEl.textContent = "Reports not yet generated. Run the pipeline to populate data.";
             }
