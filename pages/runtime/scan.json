@@ -1,1329 +1,16 @@
 {
   "repo": "runtime",
   "org": "dotnet",
-  "generated_at": "2026-04-24T12:00:35+00:00",
-  "issue_count": 191,
+  "generated_at": "2026-04-24T14:28:45+00:00",
+  "issue_count": 198,
   "issues": [
-    {
-      "number": 29683,
-      "title": "STATUS_UNSUCCESSFUL in  RsaCryptRoundtrip_OaepSHA1",
-      "url": "https://github.com/dotnet/runtime/issues/29683",
-      "state": "OPEN",
-      "created_at": "2019-05-28T20:54:50Z",
-      "updated_at": "2026-04-24T12:00:35Z",
-      "author": "danmoseley",
-      "assignees": [],
-      "labels": [
-        "area-System.Security",
-        "tracking-external-issue",
-        "Known Build Error"
-      ],
-      "area_label": "area-System.Security",
-      "comment_count": 99,
-      "human_comment_count": 99,
-      "last_human_comment_date": "2025-12-04T17:01:34Z",
-      "last_human_comment_author": "steveisok",
-      "reactions_count": 1,
-      "hits_24h": 0,
-      "hits_7d": 0,
-      "hits_30d": 0,
-      "error_pattern": "{\r\n  \"ErrorMessage\": \"CryptographicException : Unknown error (0x\",\r\n  \"BuildRetry\": false,\r\n  \"ExcludeConsoleLog\": false\r\n}",
-      "build_link": "https://dev.azure.com/dnceng-public/public/_build/results?buildId=565017&view=results",
-      "has_blocking_label": false,
-      "has_untriaged_label": false,
-      "age_days": 2522,
-      "last_human_activity_days": 140,
-      "assignee_display": "",
-      "urgency_score": 1.0,
-      "urgency_breakdown": {
-        "hits_24h": {
-          "value": 0.0,
-          "weight": 3.0,
-          "contribution": 0.0
-        },
-        "hits_7d": {
-          "value": 0.0,
-          "weight": 2.0,
-          "contribution": 0.0
-        },
-        "hit_trend": {
-          "value": 0.0,
-          "weight": 1.5,
-          "contribution": 0.0
-        },
-        "blocking_label": {
-          "value": 0.0,
-          "weight": 1.5,
-          "contribution": 0.0
-        },
-        "age_vs_hits": {
-          "value": 0.0,
-          "weight": 1.0,
-          "contribution": 0.0
-        },
-        "no_assignee": {
-          "value": 1.0,
-          "weight": 1.0,
-          "contribution": 1.0
-        }
-      },
-      "staleness_score": 8.0,
-      "staleness_breakdown": {
-        "hits_24h_zero": {
-          "value": 1.0,
-          "weight": 3.0,
-          "contribution": 3.0
-        },
-        "hits_7d_zero": {
-          "value": 1.0,
-          "weight": 2.5,
-          "contribution": 2.5
-        },
-        "days_since_update": {
-          "value": 0.0,
-          "weight": 2.0,
-          "contribution": 0.0
-        },
-        "issue_age": {
-          "value": 1.0,
-          "weight": 1.5,
-          "contribution": 1.5
-        },
-        "monthly_count_low": {
-          "value": 1.0,
-          "weight": 1.0,
-          "contribution": 1.0
-        }
-      },
-      "neglect_score": 1.5,
-      "neglect_breakdown": {
-        "hits_no_assignee": {
-          "value": 0.0,
-          "weight": 3.0,
-          "contribution": 0.0
-        },
-        "hits_no_human_comments": {
-          "value": 0.0,
-          "weight": 2.5,
-          "contribution": 0.0
-        },
-        "high_hits_untriaged": {
-          "value": 0.0,
-          "weight": 2.0,
-          "contribution": 0.0
-        },
-        "days_since_human_comment": {
-          "value": 1.0,
-          "weight": 1.5,
-          "contribution": 1.5
-        },
-        "no_area_label": {
-          "value": 0.0,
-          "weight": 1.0,
-          "contribution": 0.0
-        }
-      }
-    },
-    {
-      "number": 90605,
-      "title": "tracing/runtimeeventsource/nativeruntimeeventsource/nativeruntimeeventsource failing in CI",
-      "url": "https://github.com/dotnet/runtime/issues/90605",
-      "state": "OPEN",
-      "created_at": "2023-08-15T16:02:45Z",
-      "updated_at": "2026-04-24T12:00:34Z",
-      "author": "ericstj",
-      "assignees": [],
-      "labels": [
-        "disabled-test",
-        "blocking-clean-ci",
-        "area-Tracing-mono",
-        "Known Build Error"
-      ],
-      "area_label": "area-Tracing-mono",
-      "comment_count": 20,
-      "human_comment_count": 20,
-      "last_human_comment_date": "2026-04-14T01:36:16Z",
-      "last_human_comment_author": "VincentBu",
-      "reactions_count": 0,
-      "hits_24h": 1,
-      "hits_7d": 2,
-      "hits_30d": 10,
-      "error_pattern": "{\r\n  \"ErrorMessage\": \"System.Exception: Condition 'listener.EventCount > 0' is not true\",\r\n  \"ErrorPattern\": \"\",\r\n  \"BuildRetry\": false,\r\n  \"ExcludeConsoleLog\": false\r\n}",
-      "build_link": "https://dev.azure.com/dnceng-public/cbb18261-c48f-4abb-8651-8cdcb5474649/_build/results?buildId=374041",
-      "has_blocking_label": true,
-      "has_untriaged_label": false,
-      "age_days": 982,
-      "last_human_activity_days": 10,
-      "assignee_display": "",
-      "urgency_score": 5.5,
-      "urgency_breakdown": {
-        "hits_24h": {
-          "value": 0.5,
-          "weight": 3.0,
-          "contribution": 1.5
-        },
-        "hits_7d": {
-          "value": 0.0,
-          "weight": 2.0,
-          "contribution": 0.0
-        },
-        "hit_trend": {
-          "value": 1.0,
-          "weight": 1.5,
-          "contribution": 1.5
-        },
-        "blocking_label": {
-          "value": 1.0,
-          "weight": 1.5,
-          "contribution": 1.5
-        },
-        "age_vs_hits": {
-          "value": 0.0,
-          "weight": 1.0,
-          "contribution": 0.0
-        },
-        "no_assignee": {
-          "value": 1.0,
-          "weight": 1.0,
-          "contribution": 1.0
-        }
-      },
-      "staleness_score": 0.0,
-      "staleness_breakdown": {},
-      "neglect_score": 4.12,
-      "neglect_breakdown": {
-        "hits_no_assignee": {
-          "value": 1.0,
-          "weight": 3.0,
-          "contribution": 3.0
-        },
-        "hits_no_human_comments": {
-          "value": 0.0,
-          "weight": 2.5,
-          "contribution": 0.0
-        },
-        "high_hits_untriaged": {
-          "value": 0.0,
-          "weight": 2.0,
-          "contribution": 0.0
-        },
-        "days_since_human_comment": {
-          "value": 0.75,
-          "weight": 1.5,
-          "contribution": 1.125
-        },
-        "no_area_label": {
-          "value": 0.0,
-          "weight": 1.0,
-          "contribution": 0.0
-        }
-      }
-    },
-    {
-      "number": 90019,
-      "title": "Crash in Microsoft.Extensions.Logging.Generators.Roslyn4.0.Tests.WorkItemExecution",
-      "url": "https://github.com/dotnet/runtime/issues/90019",
-      "state": "OPEN",
-      "created_at": "2023-08-04T13:17:00Z",
-      "updated_at": "2026-04-24T12:00:33Z",
-      "author": "stephentoub",
-      "assignees": [],
-      "labels": [
-        "area-VM-meta-mono",
-        "Known Build Error"
-      ],
-      "area_label": "area-VM-meta-mono",
-      "comment_count": 15,
-      "human_comment_count": 15,
-      "last_human_comment_date": "2025-04-21T15:59:43Z",
-      "last_human_comment_author": "jeffschwMSFT",
-      "reactions_count": 0,
-      "hits_24h": 0,
-      "hits_7d": 0,
-      "hits_30d": 0,
-      "error_pattern": "{\r\n  \"ErrorMessage\": \"System.Object:__icall_wrapper_mono_marshal_isinst_with_cache\",\r\n  \"ErrorPattern\": \"\",\r\n  \"BuildRetry\": false,\r\n  \"ExcludeConsoleLog\": false\r\n}",
-      "build_link": "https://dev.azure.com/dnceng-public/cbb18261-c48f-4abb-8651-8cdcb5474649/_build/results?buildId=363089",
-      "has_blocking_label": false,
-      "has_untriaged_label": false,
-      "age_days": 993,
-      "last_human_activity_days": 367,
-      "assignee_display": "",
-      "urgency_score": 1.0,
-      "urgency_breakdown": {
-        "hits_24h": {
-          "value": 0.0,
-          "weight": 3.0,
-          "contribution": 0.0
-        },
-        "hits_7d": {
-          "value": 0.0,
-          "weight": 2.0,
-          "contribution": 0.0
-        },
-        "hit_trend": {
-          "value": 0.0,
-          "weight": 1.5,
-          "contribution": 0.0
-        },
-        "blocking_label": {
-          "value": 0.0,
-          "weight": 1.5,
-          "contribution": 0.0
-        },
-        "age_vs_hits": {
-          "value": 0.0,
-          "weight": 1.0,
-          "contribution": 0.0
-        },
-        "no_assignee": {
-          "value": 1.0,
-          "weight": 1.0,
-          "contribution": 1.0
-        }
-      },
-      "staleness_score": 8.0,
-      "staleness_breakdown": {
-        "hits_24h_zero": {
-          "value": 1.0,
-          "weight": 3.0,
-          "contribution": 3.0
-        },
-        "hits_7d_zero": {
-          "value": 1.0,
-          "weight": 2.5,
-          "contribution": 2.5
-        },
-        "days_since_update": {
-          "value": 0.0,
-          "weight": 2.0,
-          "contribution": 0.0
-        },
-        "issue_age": {
-          "value": 1.0,
-          "weight": 1.5,
-          "contribution": 1.5
-        },
-        "monthly_count_low": {
-          "value": 1.0,
-          "weight": 1.0,
-          "contribution": 1.0
-        }
-      },
-      "neglect_score": 1.5,
-      "neglect_breakdown": {
-        "hits_no_assignee": {
-          "value": 0.0,
-          "weight": 3.0,
-          "contribution": 0.0
-        },
-        "hits_no_human_comments": {
-          "value": 0.0,
-          "weight": 2.5,
-          "contribution": 0.0
-        },
-        "high_hits_untriaged": {
-          "value": 0.0,
-          "weight": 2.0,
-          "contribution": 0.0
-        },
-        "days_since_human_comment": {
-          "value": 1.0,
-          "weight": 1.5,
-          "contribution": 1.5
-        },
-        "no_area_label": {
-          "value": 0.0,
-          "weight": 1.0,
-          "contribution": 0.0
-        }
-      }
-    },
-    {
-      "number": 88272,
-      "title": "OOM on  System.Text.Json.Tests.Utf8JsonWriterTests.WriteRawLargeJsonToStreamWithoutFlushing",
-      "url": "https://github.com/dotnet/runtime/issues/88272",
-      "state": "OPEN",
-      "created_at": "2023-06-30T21:02:50Z",
-      "updated_at": "2026-04-24T12:00:32Z",
-      "author": "steveharter",
-      "assignees": [],
-      "labels": [
-        "test-failure",
-        "area-System.Text.Json",
-        "disabled-test",
-        "Known Build Error"
-      ],
-      "area_label": "area-System.Text.Json",
-      "comment_count": 5,
-      "human_comment_count": 5,
-      "last_human_comment_date": "2026-03-03T15:17:08Z",
-      "last_human_comment_author": "copilot-swe-agent",
-      "reactions_count": 0,
-      "hits_24h": 0,
-      "hits_7d": 0,
-      "hits_30d": 0,
-      "error_pattern": "{\r\n  \"ErrorMessage\": \"\",\r\n  \"ErrorPattern\": \"System.Text.Json.Tests.Utf8JsonWriterTests.WriteRawLargeJsonToStreamWithoutFlushing.*System.OutOfMemoryException : Exception of type 'System.OutOfMemoryException' was thrown\",\r\n  \"BuildRetry\": false,\r\n  \"ExcludeConsoleLog\": false\r\n}",
-      "build_link": "https://dev.azure.com/dnceng-public/cbb18261-c48f-4abb-8651-8cdcb5474649/_build/results?buildId=326554",
-      "has_blocking_label": false,
-      "has_untriaged_label": false,
-      "age_days": 1028,
-      "last_human_activity_days": 51,
-      "assignee_display": "",
-      "urgency_score": 1.0,
-      "urgency_breakdown": {
-        "hits_24h": {
-          "value": 0.0,
-          "weight": 3.0,
-          "contribution": 0.0
-        },
-        "hits_7d": {
-          "value": 0.0,
-          "weight": 2.0,
-          "contribution": 0.0
-        },
-        "hit_trend": {
-          "value": 0.0,
-          "weight": 1.5,
-          "contribution": 0.0
-        },
-        "blocking_label": {
-          "value": 0.0,
-          "weight": 1.5,
-          "contribution": 0.0
-        },
-        "age_vs_hits": {
-          "value": 0.0,
-          "weight": 1.0,
-          "contribution": 0.0
-        },
-        "no_assignee": {
-          "value": 1.0,
-          "weight": 1.0,
-          "contribution": 1.0
-        }
-      },
-      "staleness_score": 0.0,
-      "staleness_breakdown": {},
-      "neglect_score": 1.5,
-      "neglect_breakdown": {
-        "hits_no_assignee": {
-          "value": 0.0,
-          "weight": 3.0,
-          "contribution": 0.0
-        },
-        "hits_no_human_comments": {
-          "value": 0.0,
-          "weight": 2.5,
-          "contribution": 0.0
-        },
-        "high_hits_untriaged": {
-          "value": 0.0,
-          "weight": 2.0,
-          "contribution": 0.0
-        },
-        "days_since_human_comment": {
-          "value": 1.0,
-          "weight": 1.5,
-          "contribution": 1.5
-        },
-        "no_area_label": {
-          "value": 0.0,
-          "weight": 1.0,
-          "contribution": 0.0
-        }
-      }
-    },
-    {
-      "number": 82837,
-      "title": "System.Security.Cryptography.X509Certificates.Tests.ChainTests.BuildInvalidSignatureTwice failure",
-      "url": "https://github.com/dotnet/runtime/issues/82837",
-      "state": "OPEN",
-      "created_at": "2023-03-01T15:28:40Z",
-      "updated_at": "2026-04-24T12:00:31Z",
-      "author": "steveisok",
-      "assignees": [],
-      "labels": [
-        "area-System.Security",
-        "disabled-test",
-        "runtime-mono",
-        "Known Build Error"
-      ],
-      "area_label": "area-System.Security",
-      "comment_count": 11,
-      "human_comment_count": 11,
-      "last_human_comment_date": "2023-08-24T19:54:35Z",
-      "last_human_comment_author": "elinor-fung",
-      "reactions_count": 0,
-      "hits_24h": 0,
-      "hits_7d": 1,
-      "hits_30d": 3,
-      "error_pattern": "{\r\n  \"ErrorMessage\": \"Chain is valid on execution 1\",\r\n  \"BuildRetry\": false,\r\n  \"ErrorPattern\": \"\",\r\n  \"ExcludeConsoleLog\": false\r\n}",
-      "build_link": "https://dev.azure.com/dnceng-public/cbb18261-c48f-4abb-8651-8cdcb5474649/_build/results?buildId=189217",
-      "has_blocking_label": false,
-      "has_untriaged_label": false,
-      "age_days": 1149,
-      "last_human_activity_days": 973,
-      "assignee_display": "",
-      "urgency_score": 1.0,
-      "urgency_breakdown": {
-        "hits_24h": {
-          "value": 0.0,
-          "weight": 3.0,
-          "contribution": 0.0
-        },
-        "hits_7d": {
-          "value": 0.0,
-          "weight": 2.0,
-          "contribution": 0.0
-        },
-        "hit_trend": {
-          "value": 0.0,
-          "weight": 1.5,
-          "contribution": 0.0
-        },
-        "blocking_label": {
-          "value": 0.0,
-          "weight": 1.5,
-          "contribution": 0.0
-        },
-        "age_vs_hits": {
-          "value": 0.0,
-          "weight": 1.0,
-          "contribution": 0.0
-        },
-        "no_assignee": {
-          "value": 1.0,
-          "weight": 1.0,
-          "contribution": 1.0
-        }
-      },
-      "staleness_score": 0.0,
-      "staleness_breakdown": {},
-      "neglect_score": 4.5,
-      "neglect_breakdown": {
-        "hits_no_assignee": {
-          "value": 1.0,
-          "weight": 3.0,
-          "contribution": 3.0
-        },
-        "hits_no_human_comments": {
-          "value": 0.0,
-          "weight": 2.5,
-          "contribution": 0.0
-        },
-        "high_hits_untriaged": {
-          "value": 0.0,
-          "weight": 2.0,
-          "contribution": 0.0
-        },
-        "days_since_human_comment": {
-          "value": 1.0,
-          "weight": 1.5,
-          "contribution": 1.5
-        },
-        "no_area_label": {
-          "value": 0.0,
-          "weight": 1.0,
-          "contribution": 0.0
-        }
-      }
-    },
-    {
-      "number": 83422,
-      "title": "[6.0] Android test failure: Failed to install mobile app",
-      "url": "https://github.com/dotnet/runtime/issues/83422",
-      "state": "OPEN",
-      "created_at": "2023-03-14T21:53:07Z",
-      "updated_at": "2026-04-24T12:00:30Z",
-      "author": "carlossanlop",
-      "assignees": [],
-      "labels": [
-        "arch-x64",
-        "os-android",
-        "area-VM-meta-mono",
-        "Known Build Error"
-      ],
-      "area_label": "area-VM-meta-mono",
-      "comment_count": 23,
-      "human_comment_count": 23,
-      "last_human_comment_date": "2024-07-26T16:14:12Z",
-      "last_human_comment_author": "fanyang-mono",
-      "reactions_count": 0,
-      "hits_24h": 0,
-      "hits_7d": 1,
-      "hits_30d": 5,
-      "error_pattern": "{\r\n  \"ErrorMessage\": \"The following constructor parameters did not have matching fixture data: _Global globalVar\",\r\n  \"BuildRetry\": false,\r\n  \"ErrorPattern\": \"\",\r\n  \"ExcludeConsoleLog\": false\r\n}",
-      "build_link": "https://dev.azure.com/dnceng-public/public/_build/results?buildId=204115&view=logs&j=b6f63eff-75cc-59ca-fdbf-d2121601a613&t=92df95dc-ad7c-5fec-a8b4-c8301b7a2225",
-      "has_blocking_label": false,
-      "has_untriaged_label": false,
-      "age_days": 1136,
-      "last_human_activity_days": 636,
-      "assignee_display": "",
-      "urgency_score": 1.0,
-      "urgency_breakdown": {
-        "hits_24h": {
-          "value": 0.0,
-          "weight": 3.0,
-          "contribution": 0.0
-        },
-        "hits_7d": {
-          "value": 0.0,
-          "weight": 2.0,
-          "contribution": 0.0
-        },
-        "hit_trend": {
-          "value": 0.0,
-          "weight": 1.5,
-          "contribution": 0.0
-        },
-        "blocking_label": {
-          "value": 0.0,
-          "weight": 1.5,
-          "contribution": 0.0
-        },
-        "age_vs_hits": {
-          "value": 0.0,
-          "weight": 1.0,
-          "contribution": 0.0
-        },
-        "no_assignee": {
-          "value": 1.0,
-          "weight": 1.0,
-          "contribution": 1.0
-        }
-      },
-      "staleness_score": 5.0,
-      "staleness_breakdown": {
-        "hits_24h_zero": {
-          "value": 1.0,
-          "weight": 3.0,
-          "contribution": 3.0
-        },
-        "hits_7d_zero": {
-          "value": 0.0,
-          "weight": 2.5,
-          "contribution": 0.0
-        },
-        "days_since_update": {
-          "value": 0.0,
-          "weight": 2.0,
-          "contribution": 0.0
-        },
-        "issue_age": {
-          "value": 1.0,
-          "weight": 1.5,
-          "contribution": 1.5
-        },
-        "monthly_count_low": {
-          "value": 0.5,
-          "weight": 1.0,
-          "contribution": 0.5
-        }
-      },
-      "neglect_score": 4.5,
-      "neglect_breakdown": {
-        "hits_no_assignee": {
-          "value": 1.0,
-          "weight": 3.0,
-          "contribution": 3.0
-        },
-        "hits_no_human_comments": {
-          "value": 0.0,
-          "weight": 2.5,
-          "contribution": 0.0
-        },
-        "high_hits_untriaged": {
-          "value": 0.0,
-          "weight": 2.0,
-          "contribution": 0.0
-        },
-        "days_since_human_comment": {
-          "value": 1.0,
-          "weight": 1.5,
-          "contribution": 1.5
-        },
-        "no_area_label": {
-          "value": 0.0,
-          "weight": 1.0,
-          "contribution": 0.0
-        }
-      }
-    },
-    {
-      "number": 81383,
-      "title": "[6.0] GC test failures: Handle collector count overflows or underflows",
-      "url": "https://github.com/dotnet/runtime/issues/81383",
-      "state": "OPEN",
-      "created_at": "2023-01-30T22:11:40Z",
-      "updated_at": "2026-04-24T12:00:29Z",
-      "author": "buyaa-n",
-      "assignees": [],
-      "labels": [
-        "area-GC-coreclr",
-        "Known Build Error"
-      ],
-      "area_label": "area-GC-coreclr",
-      "comment_count": 18,
-      "human_comment_count": 18,
-      "last_human_comment_date": "2024-09-02T03:32:57Z",
-      "last_human_comment_author": "jeffhandley",
-      "reactions_count": 0,
-      "hits_24h": 0,
-      "hits_7d": 0,
-      "hits_30d": 0,
-      "error_pattern": "{\r\n  \"ErrorMessage\": \"System.InvalidOperationException: Handle collector count overflows or underflows.\",\r\n  \"BuildRetry\": false,\r\n  \"ErrorPattern\": \"\",\r\n  \"ExcludeConsoleLog\": false\r\n}",
-      "build_link": "https://dev.azure.com/dnceng-public/public/_build/results?buildId=603897",
-      "has_blocking_label": false,
-      "has_untriaged_label": false,
-      "age_days": 1179,
-      "last_human_activity_days": 599,
-      "assignee_display": "",
-      "urgency_score": 1.0,
-      "urgency_breakdown": {
-        "hits_24h": {
-          "value": 0.0,
-          "weight": 3.0,
-          "contribution": 0.0
-        },
-        "hits_7d": {
-          "value": 0.0,
-          "weight": 2.0,
-          "contribution": 0.0
-        },
-        "hit_trend": {
-          "value": 0.0,
-          "weight": 1.5,
-          "contribution": 0.0
-        },
-        "blocking_label": {
-          "value": 0.0,
-          "weight": 1.5,
-          "contribution": 0.0
-        },
-        "age_vs_hits": {
-          "value": 0.0,
-          "weight": 1.0,
-          "contribution": 0.0
-        },
-        "no_assignee": {
-          "value": 1.0,
-          "weight": 1.0,
-          "contribution": 1.0
-        }
-      },
-      "staleness_score": 8.0,
-      "staleness_breakdown": {
-        "hits_24h_zero": {
-          "value": 1.0,
-          "weight": 3.0,
-          "contribution": 3.0
-        },
-        "hits_7d_zero": {
-          "value": 1.0,
-          "weight": 2.5,
-          "contribution": 2.5
-        },
-        "days_since_update": {
-          "value": 0.0,
-          "weight": 2.0,
-          "contribution": 0.0
-        },
-        "issue_age": {
-          "value": 1.0,
-          "weight": 1.5,
-          "contribution": 1.5
-        },
-        "monthly_count_low": {
-          "value": 1.0,
-          "weight": 1.0,
-          "contribution": 1.0
-        }
-      },
-      "neglect_score": 1.5,
-      "neglect_breakdown": {
-        "hits_no_assignee": {
-          "value": 0.0,
-          "weight": 3.0,
-          "contribution": 0.0
-        },
-        "hits_no_human_comments": {
-          "value": 0.0,
-          "weight": 2.5,
-          "contribution": 0.0
-        },
-        "high_hits_untriaged": {
-          "value": 0.0,
-          "weight": 2.0,
-          "contribution": 0.0
-        },
-        "days_since_human_comment": {
-          "value": 1.0,
-          "weight": 1.5,
-          "contribution": 1.5
-        },
-        "no_area_label": {
-          "value": 0.0,
-          "weight": 1.0,
-          "contribution": 0.0
-        }
-      }
-    },
-    {
-      "number": 69101,
-      "title": "`System.IO.Pipes.Tests.NamedPipeTest_Specific.ClientConnectAsync_Cancel_With_InfiniteTimeout` failing on `Libraries Test Run release coreclr windows x86 Release`",
-      "url": "https://github.com/dotnet/runtime/issues/69101",
-      "state": "OPEN",
-      "created_at": "2022-05-10T04:50:28Z",
-      "updated_at": "2026-04-24T12:00:24Z",
-      "author": "radical",
-      "assignees": [],
-      "labels": [
-        "test-failure",
-        "area-System.IO",
-        "disabled-test",
-        "os-windows",
-        "Known Build Error"
-      ],
-      "area_label": "area-System.IO",
-      "comment_count": 11,
-      "human_comment_count": 11,
-      "last_human_comment_date": "2024-03-01T18:26:08Z",
-      "last_human_comment_author": "jeffschwMSFT",
-      "reactions_count": 0,
-      "hits_24h": 0,
-      "hits_7d": 0,
-      "hits_30d": 0,
-      "error_pattern": "{\r\n  \"ErrorMessage\": \"System.IO.Pipes.Tests.NamedPipeTest_Specific.ClientConnectAsync_Cancel_With_InfiniteTimeout [FAIL]\",\r\n  \"BuildRetry\": false\r\n}",
-      "build_link": "https://dev.azure.com/dnceng/public/_build/results?buildId=1761080&view=logs&jobId=ab70ab4f-0cf4-5814-7190-28e4ead6a7bf&j=ab70ab4f-0cf4-5814-7190-28e4ead6a7bf&t=7397d5bd-c86f-542b-6ad4-5cdbdcdf155e",
-      "has_blocking_label": false,
-      "has_untriaged_label": false,
-      "age_days": 1445,
-      "last_human_activity_days": 783,
-      "assignee_display": "",
-      "urgency_score": 1.0,
-      "urgency_breakdown": {
-        "hits_24h": {
-          "value": 0.0,
-          "weight": 3.0,
-          "contribution": 0.0
-        },
-        "hits_7d": {
-          "value": 0.0,
-          "weight": 2.0,
-          "contribution": 0.0
-        },
-        "hit_trend": {
-          "value": 0.0,
-          "weight": 1.5,
-          "contribution": 0.0
-        },
-        "blocking_label": {
-          "value": 0.0,
-          "weight": 1.5,
-          "contribution": 0.0
-        },
-        "age_vs_hits": {
-          "value": 0.0,
-          "weight": 1.0,
-          "contribution": 0.0
-        },
-        "no_assignee": {
-          "value": 1.0,
-          "weight": 1.0,
-          "contribution": 1.0
-        }
-      },
-      "staleness_score": 0.0,
-      "staleness_breakdown": {},
-      "neglect_score": 1.5,
-      "neglect_breakdown": {
-        "hits_no_assignee": {
-          "value": 0.0,
-          "weight": 3.0,
-          "contribution": 0.0
-        },
-        "hits_no_human_comments": {
-          "value": 0.0,
-          "weight": 2.5,
-          "contribution": 0.0
-        },
-        "high_hits_untriaged": {
-          "value": 0.0,
-          "weight": 2.0,
-          "contribution": 0.0
-        },
-        "days_since_human_comment": {
-          "value": 1.0,
-          "weight": 1.5,
-          "contribution": 1.5
-        },
-        "no_area_label": {
-          "value": 0.0,
-          "weight": 1.0,
-          "contribution": 0.0
-        }
-      }
-    },
-    {
-      "number": 76488,
-      "title": "Intermittent build failure in AfterSourceBuild: \"Could not write state file\"",
-      "url": "https://github.com/dotnet/runtime/issues/76488",
-      "state": "OPEN",
-      "created_at": "2022-10-01T17:52:48Z",
-      "updated_at": "2026-04-24T12:00:22Z",
-      "author": "jkotas",
-      "assignees": [],
-      "labels": [
-        "area-Infrastructure",
-        "Known Build Error"
-      ],
-      "area_label": "area-Infrastructure",
-      "comment_count": 3,
-      "human_comment_count": 3,
-      "last_human_comment_date": "2026-04-17T16:12:12Z",
-      "last_human_comment_author": "steveisok",
-      "reactions_count": 0,
-      "hits_24h": 0,
-      "hits_7d": 2,
-      "hits_30d": 2,
-      "error_pattern": "{\r\n    \"ErrorMessage\" : \"Could not write state file\",\r\n    \"BuildRetry\": true\r\n }",
-      "build_link": "https://dev.azure.com/dnceng-public/cbb18261-c48f-4abb-8651-8cdcb5474649/_apis/build/builds/37592/logs/106",
-      "has_blocking_label": false,
-      "has_untriaged_label": false,
-      "age_days": 1300,
-      "last_human_activity_days": 6,
-      "assignee_display": "",
-      "urgency_score": 1.0,
-      "urgency_breakdown": {
-        "hits_24h": {
-          "value": 0.0,
-          "weight": 3.0,
-          "contribution": 0.0
-        },
-        "hits_7d": {
-          "value": 0.0,
-          "weight": 2.0,
-          "contribution": 0.0
-        },
-        "hit_trend": {
-          "value": 0.0,
-          "weight": 1.5,
-          "contribution": 0.0
-        },
-        "blocking_label": {
-          "value": 0.0,
-          "weight": 1.5,
-          "contribution": 0.0
-        },
-        "age_vs_hits": {
-          "value": 0.0,
-          "weight": 1.0,
-          "contribution": 0.0
-        },
-        "no_assignee": {
-          "value": 1.0,
-          "weight": 1.0,
-          "contribution": 1.0
-        }
-      },
-      "staleness_score": 5.5,
-      "staleness_breakdown": {
-        "hits_24h_zero": {
-          "value": 1.0,
-          "weight": 3.0,
-          "contribution": 3.0
-        },
-        "hits_7d_zero": {
-          "value": 0.0,
-          "weight": 2.5,
-          "contribution": 0.0
-        },
-        "days_since_update": {
-          "value": 0.0,
-          "weight": 2.0,
-          "contribution": 0.0
-        },
-        "issue_age": {
-          "value": 1.0,
-          "weight": 1.5,
-          "contribution": 1.5
-        },
-        "monthly_count_low": {
-          "value": 1.0,
-          "weight": 1.0,
-          "contribution": 1.0
-        }
-      },
-      "neglect_score": 3.75,
-      "neglect_breakdown": {
-        "hits_no_assignee": {
-          "value": 1.0,
-          "weight": 3.0,
-          "contribution": 3.0
-        },
-        "hits_no_human_comments": {
-          "value": 0.0,
-          "weight": 2.5,
-          "contribution": 0.0
-        },
-        "high_hits_untriaged": {
-          "value": 0.0,
-          "weight": 2.0,
-          "contribution": 0.0
-        },
-        "days_since_human_comment": {
-          "value": 0.5,
-          "weight": 1.5,
-          "contribution": 0.75
-        },
-        "no_area_label": {
-          "value": 0.0,
-          "weight": 1.0,
-          "contribution": 0.0
-        }
-      }
-    },
-    {
-      "number": 76140,
-      "title": "3 System.Diagnostics tests failing - System.FormatException : The input is not a valid Base-64",
-      "url": "https://github.com/dotnet/runtime/issues/76140",
-      "state": "OPEN",
-      "created_at": "2022-09-24T21:53:44Z",
-      "updated_at": "2026-04-24T12:00:20Z",
-      "author": "karelz",
-      "assignees": [],
-      "labels": [
-        "area-System.Diagnostics.Process",
-        "disabled-test",
-        "os-android",
-        "Known Build Error"
-      ],
-      "area_label": "area-System.Diagnostics.Process",
-      "comment_count": 14,
-      "human_comment_count": 14,
-      "last_human_comment_date": "2023-05-12T08:39:59Z",
-      "last_human_comment_author": "adamsitnik",
-      "reactions_count": 0,
-      "hits_24h": 1,
-      "hits_7d": 1,
-      "hits_30d": 2,
-      "error_pattern": "{\r\n    \"ErrorMessage\" : \" The input is not a valid Base-64 string as it contains a non-base 64 character\",\r\n    \"BuildRetry\": false\r\n }",
-      "build_link": "https://dev.azure.com/dnceng-public/public/_build/results?buildId=1393710",
-      "has_blocking_label": false,
-      "has_untriaged_label": false,
-      "age_days": 1307,
-      "last_human_activity_days": 1078,
-      "assignee_display": "",
-      "urgency_score": 4.0,
-      "urgency_breakdown": {
-        "hits_24h": {
-          "value": 0.5,
-          "weight": 3.0,
-          "contribution": 1.5
-        },
-        "hits_7d": {
-          "value": 0.0,
-          "weight": 2.0,
-          "contribution": 0.0
-        },
-        "hit_trend": {
-          "value": 1.0,
-          "weight": 1.5,
-          "contribution": 1.5
-        },
-        "blocking_label": {
-          "value": 0.0,
-          "weight": 1.5,
-          "contribution": 0.0
-        },
-        "age_vs_hits": {
-          "value": 0.0,
-          "weight": 1.0,
-          "contribution": 0.0
-        },
-        "no_assignee": {
-          "value": 1.0,
-          "weight": 1.0,
-          "contribution": 1.0
-        }
-      },
-      "staleness_score": 0.0,
-      "staleness_breakdown": {},
-      "neglect_score": 4.5,
-      "neglect_breakdown": {
-        "hits_no_assignee": {
-          "value": 1.0,
-          "weight": 3.0,
-          "contribution": 3.0
-        },
-        "hits_no_human_comments": {
-          "value": 0.0,
-          "weight": 2.5,
-          "contribution": 0.0
-        },
-        "high_hits_untriaged": {
-          "value": 0.0,
-          "weight": 2.0,
-          "contribution": 0.0
-        },
-        "days_since_human_comment": {
-          "value": 1.0,
-          "weight": 1.5,
-          "contribution": 1.5
-        },
-        "no_area_label": {
-          "value": 0.0,
-          "weight": 1.0,
-          "contribution": 0.0
-        }
-      }
-    },
-    {
-      "number": 48070,
-      "title": "Build on Windows Fails sometimes with fatal error C1090: PDB API call failed",
-      "url": "https://github.com/dotnet/runtime/issues/48070",
-      "state": "OPEN",
-      "created_at": "2021-02-09T18:58:14Z",
-      "updated_at": "2026-04-24T12:00:19Z",
-      "author": "Anipik",
-      "assignees": [],
-      "labels": [
-        "area-Infrastructure",
-        "Known Build Error"
-      ],
-      "area_label": "area-Infrastructure",
-      "comment_count": 21,
-      "human_comment_count": 20,
-      "last_human_comment_date": "2026-04-17T16:12:12Z",
-      "last_human_comment_author": "steveisok",
-      "reactions_count": 0,
-      "hits_24h": 0,
-      "hits_7d": 0,
-      "hits_30d": 0,
-      "error_pattern": "{\r\n  \"ErrorMessage\": \"fatal error C1090: PDB API call failed, error code '23'\",\r\n  \"BuildRetry\": true\r\n}",
-      "build_link": "https://dev.azure.com/dnceng/internal/_build/results?buildId=984686&view=logs&j=128f4634-3e62-52f1-6764-cb4c2b8330d4&t=32fccdd3-9e64-5af0-1f0d-f65712c6c51a",
-      "has_blocking_label": false,
-      "has_untriaged_label": false,
-      "age_days": 1899,
-      "last_human_activity_days": 6,
-      "assignee_display": "",
-      "urgency_score": 1.0,
-      "urgency_breakdown": {
-        "hits_24h": {
-          "value": 0.0,
-          "weight": 3.0,
-          "contribution": 0.0
-        },
-        "hits_7d": {
-          "value": 0.0,
-          "weight": 2.0,
-          "contribution": 0.0
-        },
-        "hit_trend": {
-          "value": 0.0,
-          "weight": 1.5,
-          "contribution": 0.0
-        },
-        "blocking_label": {
-          "value": 0.0,
-          "weight": 1.5,
-          "contribution": 0.0
-        },
-        "age_vs_hits": {
-          "value": 0.0,
-          "weight": 1.0,
-          "contribution": 0.0
-        },
-        "no_assignee": {
-          "value": 1.0,
-          "weight": 1.0,
-          "contribution": 1.0
-        }
-      },
-      "staleness_score": 8.0,
-      "staleness_breakdown": {
-        "hits_24h_zero": {
-          "value": 1.0,
-          "weight": 3.0,
-          "contribution": 3.0
-        },
-        "hits_7d_zero": {
-          "value": 1.0,
-          "weight": 2.5,
-          "contribution": 2.5
-        },
-        "days_since_update": {
-          "value": 0.0,
-          "weight": 2.0,
-          "contribution": 0.0
-        },
-        "issue_age": {
-          "value": 1.0,
-          "weight": 1.5,
-          "contribution": 1.5
-        },
-        "monthly_count_low": {
-          "value": 1.0,
-          "weight": 1.0,
-          "contribution": 1.0
-        }
-      },
-      "neglect_score": 0.75,
-      "neglect_breakdown": {
-        "hits_no_assignee": {
-          "value": 0.0,
-          "weight": 3.0,
-          "contribution": 0.0
-        },
-        "hits_no_human_comments": {
-          "value": 0.0,
-          "weight": 2.5,
-          "contribution": 0.0
-        },
-        "high_hits_untriaged": {
-          "value": 0.0,
-          "weight": 2.0,
-          "contribution": 0.0
-        },
-        "days_since_human_comment": {
-          "value": 0.5,
-          "weight": 1.5,
-          "contribution": 0.75
-        },
-        "no_area_label": {
-          "value": 0.0,
-          "weight": 1.0,
-          "contribution": 0.0
-        }
-      }
-    },
-    {
-      "number": 75417,
-      "title": "System.Diagnostics.Tests.InstanceDataTests.InstanceDataCollectionCollection tests failing in CI ",
-      "url": "https://github.com/dotnet/runtime/issues/75417",
-      "state": "OPEN",
-      "created_at": "2022-09-11T15:13:40Z",
-      "updated_at": "2026-04-24T12:00:18Z",
-      "author": "jkotas",
-      "assignees": [],
-      "labels": [
-        "needs-further-triage",
-        "area-System.Diagnostics.PerformanceCounter",
-        "Known Build Error"
-      ],
-      "area_label": "area-System.Diagnostics.PerformanceCounter",
-      "comment_count": 5,
-      "human_comment_count": 5,
-      "last_human_comment_date": "2025-04-11T23:10:37Z",
-      "last_human_comment_author": "jkotas",
-      "reactions_count": 0,
-      "hits_24h": 0,
-      "hits_7d": 0,
-      "hits_30d": 0,
-      "error_pattern": "{ \"ErrorMessage\":\"System.Diagnostics.Tests.InstanceDataTests.InstanceDataCollectionCollection_CopyTo [FAIL]\" }",
-      "build_link": null,
-      "has_blocking_label": false,
-      "has_untriaged_label": false,
-      "age_days": 1320,
-      "last_human_activity_days": 377,
-      "assignee_display": "",
-      "urgency_score": 1.0,
-      "urgency_breakdown": {
-        "hits_24h": {
-          "value": 0.0,
-          "weight": 3.0,
-          "contribution": 0.0
-        },
-        "hits_7d": {
-          "value": 0.0,
-          "weight": 2.0,
-          "contribution": 0.0
-        },
-        "hit_trend": {
-          "value": 0.0,
-          "weight": 1.5,
-          "contribution": 0.0
-        },
-        "blocking_label": {
-          "value": 0.0,
-          "weight": 1.5,
-          "contribution": 0.0
-        },
-        "age_vs_hits": {
-          "value": 0.0,
-          "weight": 1.0,
-          "contribution": 0.0
-        },
-        "no_assignee": {
-          "value": 1.0,
-          "weight": 1.0,
-          "contribution": 1.0
-        }
-      },
-      "staleness_score": 8.0,
-      "staleness_breakdown": {
-        "hits_24h_zero": {
-          "value": 1.0,
-          "weight": 3.0,
-          "contribution": 3.0
-        },
-        "hits_7d_zero": {
-          "value": 1.0,
-          "weight": 2.5,
-          "contribution": 2.5
-        },
-        "days_since_update": {
-          "value": 0.0,
-          "weight": 2.0,
-          "contribution": 0.0
-        },
-        "issue_age": {
-          "value": 1.0,
-          "weight": 1.5,
-          "contribution": 1.5
-        },
-        "monthly_count_low": {
-          "value": 1.0,
-          "weight": 1.0,
-          "contribution": 1.0
-        }
-      },
-      "neglect_score": 1.5,
-      "neglect_breakdown": {
-        "hits_no_assignee": {
-          "value": 0.0,
-          "weight": 3.0,
-          "contribution": 0.0
-        },
-        "hits_no_human_comments": {
-          "value": 0.0,
-          "weight": 2.5,
-          "contribution": 0.0
-        },
-        "high_hits_untriaged": {
-          "value": 0.0,
-          "weight": 2.0,
-          "contribution": 0.0
-        },
-        "days_since_human_comment": {
-          "value": 1.0,
-          "weight": 1.5,
-          "contribution": 1.5
-        },
-        "no_area_label": {
-          "value": 0.0,
-          "weight": 1.0,
-          "contribution": 0.0
-        }
-      }
-    },
     {
       "number": 127341,
       "title": "System.Diagnostics.Tests.ProcessWaitingTests.ProcessSafeHandle_WaitForExitOrKillOnTimeout_KillsOnTimeout failure on linux-x64 with checked CoreCLR",
       "url": "https://github.com/dotnet/runtime/issues/127341",
       "state": "OPEN",
       "created_at": "2026-04-23T20:29:29Z",
-      "updated_at": "2026-04-24T11:06:09Z",
+      "updated_at": "2026-04-24T14:06:38Z",
       "author": "jkoritzinsky",
       "assignees": [],
       "labels": [
@@ -1443,7 +130,7 @@
       "url": "https://github.com/dotnet/runtime/issues/127257",
       "state": "OPEN",
       "created_at": "2026-04-22T01:24:50Z",
-      "updated_at": "2026-04-24T11:06:04Z",
+      "updated_at": "2026-04-24T14:06:32Z",
       "author": "ericstj",
       "assignees": [
         "maraf"
@@ -1458,7 +145,7 @@
       "last_human_comment_date": "2026-04-22T16:03:36Z",
       "last_human_comment_author": "maraf",
       "reactions_count": 0,
-      "hits_24h": 5,
+      "hits_24h": 2,
       "hits_7d": 72,
       "hits_30d": 72,
       "error_pattern": "{\n  \"ErrorMessage\": \"MONO_WASM: Failed to fetch dynamically imported module: \",\n  \"ErrorPattern\": \"\",\n  \"BuildRetry\": false,\n  \"ExcludeConsoleLog\": false\n}",
@@ -1564,7 +251,7 @@
       "url": "https://github.com/dotnet/runtime/issues/127255",
       "state": "OPEN",
       "created_at": "2026-04-22T01:01:06Z",
-      "updated_at": "2026-04-24T11:06:03Z",
+      "updated_at": "2026-04-24T14:06:30Z",
       "author": "MichalStrehovsky",
       "assignees": [],
       "labels": [
@@ -1685,7 +372,7 @@
       "url": "https://github.com/dotnet/runtime/issues/127234",
       "state": "OPEN",
       "created_at": "2026-04-21T18:17:03Z",
-      "updated_at": "2026-04-24T11:06:01Z",
+      "updated_at": "2026-04-24T14:06:28Z",
       "author": "jkotas",
       "assignees": [
         "VSadov"
@@ -1810,7 +497,7 @@
       "url": "https://github.com/dotnet/runtime/issues/127231",
       "state": "OPEN",
       "created_at": "2026-04-21T17:25:46Z",
-      "updated_at": "2026-04-24T11:06:00Z",
+      "updated_at": "2026-04-24T14:06:27Z",
       "author": "jkotas",
       "assignees": [
         "jkoritzinsky"
@@ -1933,7 +620,7 @@
       "url": "https://github.com/dotnet/runtime/issues/127226",
       "state": "OPEN",
       "created_at": "2026-04-21T14:30:00Z",
-      "updated_at": "2026-04-24T11:05:59Z",
+      "updated_at": "2026-04-24T14:06:25Z",
       "author": "rzikm",
       "assignees": [],
       "labels": [
@@ -2053,7 +740,7 @@
       "url": "https://github.com/dotnet/runtime/issues/127212",
       "state": "OPEN",
       "created_at": "2026-04-21T09:42:35Z",
-      "updated_at": "2026-04-24T11:05:58Z",
+      "updated_at": "2026-04-24T14:06:24Z",
       "author": "MichalStrehovsky",
       "assignees": [
         "radekdoulik"
@@ -2176,7 +863,7 @@
       "url": "https://github.com/dotnet/runtime/issues/127160",
       "state": "OPEN",
       "created_at": "2026-04-20T14:02:34Z",
-      "updated_at": "2026-04-24T11:05:56Z",
+      "updated_at": "2026-04-24T14:06:23Z",
       "author": "svick",
       "assignees": [],
       "labels": [
@@ -2198,8 +885,8 @@
       "build_link": "https://dev.azure.com/dnceng-public/cbb18261-c48f-4abb-8651-8cdcb5474649/_build/results?buildId=1383510",
       "has_blocking_label": true,
       "has_untriaged_label": false,
-      "age_days": 3,
-      "last_human_activity_days": 0,
+      "age_days": 4,
+      "last_human_activity_days": 1,
       "assignee_display": "",
       "urgency_score": 2.5,
       "urgency_breakdown": {
@@ -2297,7 +984,7 @@
       "url": "https://github.com/dotnet/runtime/issues/127155",
       "state": "OPEN",
       "created_at": "2026-04-20T13:11:39Z",
-      "updated_at": "2026-04-24T11:05:55Z",
+      "updated_at": "2026-04-24T14:06:22Z",
       "author": "jakobbotsch",
       "assignees": [],
       "labels": [
@@ -2319,7 +1006,7 @@
       "build_link": "https://dev.azure.com/dnceng-public/cbb18261-c48f-4abb-8651-8cdcb5474649/_build/results?buildId=1386813",
       "has_blocking_label": true,
       "has_untriaged_label": false,
-      "age_days": 3,
+      "age_days": 4,
       "last_human_activity_days": null,
       "assignee_display": "",
       "urgency_score": 2.5,
@@ -2418,7 +1105,7 @@
       "url": "https://github.com/dotnet/runtime/issues/127070",
       "state": "OPEN",
       "created_at": "2026-04-17T10:14:34Z",
-      "updated_at": "2026-04-24T11:05:53Z",
+      "updated_at": "2026-04-24T14:06:19Z",
       "author": "kotlarmilos",
       "assignees": [
         "bartonjs"
@@ -2435,7 +1122,7 @@
       "last_human_comment_author": "danmoseley",
       "reactions_count": 0,
       "hits_24h": 1,
-      "hits_7d": 158,
+      "hits_7d": 149,
       "hits_30d": 164,
       "error_pattern": "{\n  \"ErrorMessage\": \"System.DirectoryServices.Protocols.LdapException : The LDAP server is unavailable.\",\n  \"ErrorPattern\": \"\",\n  \"BuildRetry\": false,\n  \"ExcludeConsoleLog\": false\n}",
       "build_link": "https://dev.azure.com/dnceng-public/cbb18261-c48f-4abb-8651-8cdcb5474649/_build/results?buildId=1383425",
@@ -2540,7 +1227,7 @@
       "url": "https://github.com/dotnet/runtime/issues/126997",
       "state": "OPEN",
       "created_at": "2026-04-16T11:19:02Z",
-      "updated_at": "2026-04-24T11:05:50Z",
+      "updated_at": "2026-04-24T14:06:16Z",
       "author": "pavelsavara",
       "assignees": [],
       "labels": [
@@ -2557,7 +1244,7 @@
       "last_human_comment_author": "maraf",
       "reactions_count": 0,
       "hits_24h": 0,
-      "hits_7d": 10,
+      "hits_7d": 6,
       "hits_30d": 57,
       "error_pattern": "{\r\n  \"ErrorMessage\": \"Could not resolve type with token\",\r\n  \"BuildRetry\": false,\r\n  \"ExcludeConsoleLog\": false\r\n}",
       "build_link": "https://dev.azure.com/dnceng-public/public/_build/results?buildId=1381687",
@@ -2662,7 +1349,7 @@
       "url": "https://github.com/dotnet/runtime/issues/126882",
       "state": "OPEN",
       "created_at": "2026-04-14T15:27:27Z",
-      "updated_at": "2026-04-24T11:05:44Z",
+      "updated_at": "2026-04-24T14:06:09Z",
       "author": "kotlarmilos",
       "assignees": [],
       "labels": [
@@ -2785,7 +1472,7 @@
       "url": "https://github.com/dotnet/runtime/issues/126936",
       "state": "OPEN",
       "created_at": "2026-04-15T06:23:56Z",
-      "updated_at": "2026-04-24T11:05:43Z",
+      "updated_at": "2026-04-24T14:06:08Z",
       "author": "adamsitnik",
       "assignees": [
         "adamsitnik"
@@ -2908,7 +1595,7 @@
       "url": "https://github.com/dotnet/runtime/issues/126867",
       "state": "OPEN",
       "created_at": "2026-04-14T06:47:07Z",
-      "updated_at": "2026-04-24T11:05:40Z",
+      "updated_at": "2026-04-24T14:06:05Z",
       "author": "rzikm",
       "assignees": [],
       "labels": [
@@ -3029,7 +1716,7 @@
       "url": "https://github.com/dotnet/runtime/issues/126754",
       "state": "OPEN",
       "created_at": "2026-04-10T16:58:03Z",
-      "updated_at": "2026-04-24T11:05:39Z",
+      "updated_at": "2026-04-24T14:06:04Z",
       "author": "vitek-karas",
       "assignees": [],
       "labels": [
@@ -3150,7 +1837,7 @@
       "url": "https://github.com/dotnet/runtime/issues/126714",
       "state": "OPEN",
       "created_at": "2026-04-09T15:35:31Z",
-      "updated_at": "2026-04-24T11:05:38Z",
+      "updated_at": "2026-04-24T14:06:03Z",
       "author": "danmoseley",
       "assignees": [
         "radekdoulik"
@@ -3273,7 +1960,7 @@
       "url": "https://github.com/dotnet/runtime/issues/126675",
       "state": "OPEN",
       "created_at": "2026-04-09T00:05:28Z",
-      "updated_at": "2026-04-24T11:05:36Z",
+      "updated_at": "2026-04-24T14:06:00Z",
       "author": "danmoseley",
       "assignees": [],
       "labels": [
@@ -3296,7 +1983,7 @@
       "has_blocking_label": true,
       "has_untriaged_label": true,
       "age_days": 15,
-      "last_human_activity_days": 8,
+      "last_human_activity_days": 9,
       "assignee_display": "",
       "urgency_score": 2.5,
       "urgency_breakdown": {
@@ -3394,7 +2081,7 @@
       "url": "https://github.com/dotnet/runtime/issues/126641",
       "state": "OPEN",
       "created_at": "2026-04-08T12:37:15Z",
-      "updated_at": "2026-04-24T11:05:35Z",
+      "updated_at": "2026-04-24T14:05:59Z",
       "author": "kotlarmilos",
       "assignees": [
         "wfurt"
@@ -3412,13 +2099,13 @@
       "last_human_comment_author": "max-charlamb",
       "reactions_count": 0,
       "hits_24h": 1,
-      "hits_7d": 257,
+      "hits_7d": 245,
       "hits_30d": 747,
       "error_pattern": "{\n  \"ErrorMessage\": \"\",\n  \"ErrorPattern\": \"System\\\\.Net\\\\.Sockets\\\\.SocketException : Name or service not known|System\\\\.Exception : Failed for empty hostname\",\n  \"BuildRetry\": false,\n  \"ExcludeConsoleLog\": false\n}",
       "build_link": "https://dev.azure.com/dnceng-public/cbb18261-c48f-4abb-8651-8cdcb5474649/_build/results?buildId=1368622",
       "has_blocking_label": true,
       "has_untriaged_label": false,
-      "age_days": 15,
+      "age_days": 16,
       "last_human_activity_days": 2,
       "assignee_display": "wfurt",
       "urgency_score": 5.0,
@@ -3517,7 +2204,7 @@
       "url": "https://github.com/dotnet/runtime/issues/126636",
       "state": "OPEN",
       "created_at": "2026-04-08T10:20:32Z",
-      "updated_at": "2026-04-24T11:05:33Z",
+      "updated_at": "2026-04-24T14:05:57Z",
       "author": "vitek-karas",
       "assignees": [],
       "labels": [
@@ -3532,9 +2219,9 @@
       "last_human_comment_date": "2026-04-17T09:43:53Z",
       "last_human_comment_author": "maraf",
       "reactions_count": 0,
-      "hits_24h": 3,
+      "hits_24h": 4,
       "hits_7d": 28,
-      "hits_30d": 64,
+      "hits_30d": 65,
       "error_pattern": "{\n  \"ErrorMessage\": [\n    \"CanReadArrayOfAnySize\",\n    \"Executor timed out after 900 seconds and was killed\"\n  ],\n  \"BuildRetry\": false,\n  \"ExcludeConsoleLog\": false\n}",
       "build_link": "https://dev.azure.com/dnceng-public/public/_build/results?buildId=1367085",
       "has_blocking_label": false,
@@ -3638,7 +2325,7 @@
       "url": "https://github.com/dotnet/runtime/issues/126489",
       "state": "OPEN",
       "created_at": "2026-04-02T20:58:35Z",
-      "updated_at": "2026-04-24T11:05:32Z",
+      "updated_at": "2026-04-24T14:05:55Z",
       "author": "lewing",
       "assignees": [
         "ilonatommy"
@@ -3759,7 +2446,7 @@
       "url": "https://github.com/dotnet/runtime/issues/126461",
       "state": "OPEN",
       "created_at": "2026-04-02T10:16:31Z",
-      "updated_at": "2026-04-24T11:05:31Z",
+      "updated_at": "2026-04-24T14:05:54Z",
       "author": "kotlarmilos",
       "assignees": [],
       "labels": [
@@ -3879,7 +2566,7 @@
       "url": "https://github.com/dotnet/runtime/issues/126460",
       "state": "OPEN",
       "created_at": "2026-04-02T10:16:23Z",
-      "updated_at": "2026-04-24T11:05:30Z",
+      "updated_at": "2026-04-24T14:05:53Z",
       "author": "kotlarmilos",
       "assignees": [],
       "labels": [
@@ -3895,9 +2582,9 @@
       "last_human_comment_date": "2026-04-08T10:03:39Z",
       "last_human_comment_author": "vitek-karas",
       "reactions_count": 0,
-      "hits_24h": 8,
-      "hits_7d": 39,
-      "hits_30d": 133,
+      "hits_24h": 10,
+      "hits_7d": 40,
+      "hits_30d": 135,
       "error_pattern": "{\n  \"ErrorMessage\": \"\",\n  \"ErrorPattern\": \"Work item (Microsoft\\\\.Extensions\\\\.DependencyInjection\\\\.ExternalContainers\\\\.Tests|Microsoft\\\\.Extensions\\\\.Hosting\\\\.Unit\\\\.Tests|System\\\\.Diagnostics\\\\.TraceSource\\\\.Config\\\\.Tests|System\\\\.Reflection\\\\.Emit\\\\.ILGeneration\\\\.Tests|System\\\\.Reflection\\\\.Emit\\\\.Tests|System\\\\.Reflection\\\\.Metadata\\\\.Tests|System\\\\.Security\\\\.Cryptography\\\\.Tests) in job .* has failed\",\n  \"BuildRetry\": false,\n  \"ExcludeConsoleLog\": true\n}",
       "build_link": "https://dev.azure.com/dnceng-public/cbb18261-c48f-4abb-8651-8cdcb5474649/_build/results?buildId=1362636",
       "has_blocking_label": false,
@@ -3905,7 +2592,7 @@
       "age_days": 22,
       "last_human_activity_days": 16,
       "assignee_display": "",
-      "urgency_score": 5.88,
+      "urgency_score": 6.25,
       "urgency_breakdown": {
         "hits_24h": {
           "value": 0.75,
@@ -3918,9 +2605,9 @@
           "contribution": 1.5
         },
         "hit_trend": {
-          "value": 0.75,
+          "value": 1.0,
           "weight": 1.5,
-          "contribution": 1.125
+          "contribution": 1.5
         },
         "blocking_label": {
           "value": 0.0,
@@ -4001,7 +2688,7 @@
       "url": "https://github.com/dotnet/runtime/issues/126459",
       "state": "OPEN",
       "created_at": "2026-04-02T10:16:15Z",
-      "updated_at": "2026-04-24T11:05:29Z",
+      "updated_at": "2026-04-24T14:05:51Z",
       "author": "kotlarmilos",
       "assignees": [],
       "labels": [
@@ -4122,7 +2809,7 @@
       "url": "https://github.com/dotnet/runtime/issues/126458",
       "state": "OPEN",
       "created_at": "2026-04-02T10:16:06Z",
-      "updated_at": "2026-04-24T11:05:28Z",
+      "updated_at": "2026-04-24T14:05:50Z",
       "author": "kotlarmilos",
       "assignees": [],
       "labels": [
@@ -4136,7 +2823,7 @@
       "last_human_comment_date": "2026-04-02T11:05:29Z",
       "last_human_comment_author": "kotlarmilos",
       "reactions_count": 0,
-      "hits_24h": 6,
+      "hits_24h": 5,
       "hits_7d": 24,
       "hits_30d": 46,
       "error_pattern": "{\n  \"ErrorMessage\": \"Precompiling failed\",\n  \"ErrorPattern\": \"\",\n  \"BuildRetry\": false,\n  \"ExcludeConsoleLog\": false\n}",
@@ -4146,12 +2833,12 @@
       "age_days": 22,
       "last_human_activity_days": 22,
       "assignee_display": "",
-      "urgency_score": 6.25,
+      "urgency_score": 5.12,
       "urgency_breakdown": {
         "hits_24h": {
-          "value": 0.75,
+          "value": 0.5,
           "weight": 3.0,
-          "contribution": 2.25
+          "contribution": 1.5
         },
         "hits_7d": {
           "value": 0.75,
@@ -4159,9 +2846,9 @@
           "contribution": 1.5
         },
         "hit_trend": {
-          "value": 1.0,
+          "value": 0.75,
           "weight": 1.5,
-          "contribution": 1.5
+          "contribution": 1.125
         },
         "blocking_label": {
           "value": 0.0,
@@ -4242,7 +2929,7 @@
       "url": "https://github.com/dotnet/runtime/issues/126457",
       "state": "OPEN",
       "created_at": "2026-04-02T10:15:57Z",
-      "updated_at": "2026-04-24T11:05:26Z",
+      "updated_at": "2026-04-24T14:05:49Z",
       "author": "kotlarmilos",
       "assignees": [
         "dhartglassMSFT"
@@ -4364,7 +3051,7 @@
       "url": "https://github.com/dotnet/runtime/issues/126456",
       "state": "OPEN",
       "created_at": "2026-04-02T10:15:48Z",
-      "updated_at": "2026-04-24T11:05:25Z",
+      "updated_at": "2026-04-24T14:05:48Z",
       "author": "kotlarmilos",
       "assignees": [],
       "labels": [
@@ -4461,7 +3148,7 @@
       "url": "https://github.com/dotnet/runtime/issues/126439",
       "state": "OPEN",
       "created_at": "2026-04-02T00:08:38Z",
-      "updated_at": "2026-04-24T11:05:24Z",
+      "updated_at": "2026-04-24T14:05:47Z",
       "author": "lewing",
       "assignees": [],
       "labels": [
@@ -4582,7 +3269,7 @@
       "url": "https://github.com/dotnet/runtime/issues/126430",
       "state": "OPEN",
       "created_at": "2026-04-01T19:40:07Z",
-      "updated_at": "2026-04-24T11:05:23Z",
+      "updated_at": "2026-04-24T14:05:45Z",
       "author": "kotlarmilos",
       "assignees": [],
       "labels": [
@@ -4703,7 +3390,7 @@
       "url": "https://github.com/dotnet/runtime/issues/126356",
       "state": "OPEN",
       "created_at": "2026-03-31T14:37:44Z",
-      "updated_at": "2026-04-24T11:05:19Z",
+      "updated_at": "2026-04-24T14:05:41Z",
       "author": "janvorli",
       "assignees": [],
       "labels": [
@@ -4718,15 +3405,15 @@
       "last_human_comment_date": "2026-04-21T12:06:41Z",
       "last_human_comment_author": "simonrozsival",
       "reactions_count": 0,
-      "hits_24h": 3,
+      "hits_24h": 4,
       "hits_7d": 31,
-      "hits_30d": 95,
+      "hits_30d": 96,
       "error_pattern": "{\n  \"ErrorMessage\": \"'System.Formats.Nrbf.Tests' END OF WORK ITEM LOG: Command timed out, and was killed\",\n  \"ErrorPattern\": \"\",\n  \"BuildRetry\": false,\n  \"ExcludeConsoleLog\": false\n}",
       "build_link": "https://dev.azure.com/dnceng-public/cbb18261-c48f-4abb-8651-8cdcb5474649/_build/results?buildId=1353436",
       "has_blocking_label": true,
       "has_untriaged_label": true,
       "age_days": 23,
-      "last_human_activity_days": 2,
+      "last_human_activity_days": 3,
       "assignee_display": "",
       "urgency_score": 6.25,
       "urgency_breakdown": {
@@ -4789,7 +3476,7 @@
           "contribution": 0.0
         }
       },
-      "neglect_score": 5.0,
+      "neglect_score": 5.75,
       "neglect_breakdown": {
         "hits_no_assignee": {
           "value": 1.0,
@@ -4807,9 +3494,9 @@
           "contribution": 2.0
         },
         "days_since_human_comment": {
-          "value": 0.0,
+          "value": 0.5,
           "weight": 1.5,
-          "contribution": 0.0
+          "contribution": 0.75
         },
         "no_area_label": {
           "value": 0.0,
@@ -4824,7 +3511,7 @@
       "url": "https://github.com/dotnet/runtime/issues/126304",
       "state": "OPEN",
       "created_at": "2026-03-30T10:49:15Z",
-      "updated_at": "2026-04-24T11:05:17Z",
+      "updated_at": "2026-04-24T14:05:39Z",
       "author": "jakobbotsch",
       "assignees": [],
       "labels": [
@@ -4946,7 +3633,7 @@
       "url": "https://github.com/dotnet/runtime/issues/126183",
       "state": "OPEN",
       "created_at": "2026-03-27T04:35:19Z",
-      "updated_at": "2026-04-24T11:05:15Z",
+      "updated_at": "2026-04-24T14:05:37Z",
       "author": "danmoseley",
       "assignees": [
         "liveans"
@@ -5068,7 +3755,7 @@
       "url": "https://github.com/dotnet/runtime/issues/126067",
       "state": "OPEN",
       "created_at": "2026-03-25T02:04:42Z",
-      "updated_at": "2026-04-24T11:05:14Z",
+      "updated_at": "2026-04-24T14:05:36Z",
       "author": "danmoseley",
       "assignees": [],
       "labels": [
@@ -5083,9 +3770,9 @@
       "last_human_comment_date": "2026-04-07T22:35:28Z",
       "last_human_comment_author": "danmoseley",
       "reactions_count": 0,
-      "hits_24h": 0,
-      "hits_7d": 2,
-      "hits_30d": 20,
+      "hits_24h": 1,
+      "hits_7d": 3,
+      "hits_30d": 21,
       "error_pattern": "{\n  \"ErrorMessage\": [\"System.Data.OleDb.Tests\", \"Command timed out, and was killed\"],\n  \"ErrorPattern\": \"\",\n  \"BuildRetry\": false,\n  \"ExcludeConsoleLog\": false\n}",
       "build_link": "https://dev.azure.com/dnceng-public/cbb18261-c48f-4abb-8651-8cdcb5474649/_build/results?buildId=1349565",
       "has_blocking_label": true,
@@ -5093,12 +3780,12 @@
       "age_days": 30,
       "last_human_activity_days": 16,
       "assignee_display": "",
-      "urgency_score": 2.5,
+      "urgency_score": 5.5,
       "urgency_breakdown": {
         "hits_24h": {
-          "value": 0.0,
+          "value": 0.5,
           "weight": 3.0,
-          "contribution": 0.0
+          "contribution": 1.5
         },
         "hits_7d": {
           "value": 0.0,
@@ -5106,9 +3793,9 @@
           "contribution": 0.0
         },
         "hit_trend": {
-          "value": 0.0,
+          "value": 1.0,
           "weight": 1.5,
-          "contribution": 0.0
+          "contribution": 1.5
         },
         "blocking_label": {
           "value": 1.0,
@@ -5126,12 +3813,12 @@
           "contribution": 1.0
         }
       },
-      "staleness_score": 4.12,
+      "staleness_score": 1.12,
       "staleness_breakdown": {
         "hits_24h_zero": {
-          "value": 1.0,
+          "value": 0.0,
           "weight": 3.0,
-          "contribution": 3.0
+          "contribution": 0.0
         },
         "hits_7d_zero": {
           "value": 0.0,
@@ -5189,7 +3876,7 @@
       "url": "https://github.com/dotnet/runtime/issues/125953",
       "state": "OPEN",
       "created_at": "2026-03-23T10:36:44Z",
-      "updated_at": "2026-04-24T11:04:58Z",
+      "updated_at": "2026-04-24T14:05:29Z",
       "author": "svick",
       "assignees": [
         "mrek-msft"
@@ -5312,7 +3999,7 @@
       "url": "https://github.com/dotnet/runtime/issues/125933",
       "state": "OPEN",
       "created_at": "2026-03-22T21:38:29Z",
-      "updated_at": "2026-04-24T11:04:57Z",
+      "updated_at": "2026-04-24T14:05:28Z",
       "author": "lewing",
       "assignees": [],
       "labels": [
@@ -5327,22 +4014,22 @@
       "last_human_comment_date": "2026-04-14T12:36:41Z",
       "last_human_comment_author": "rzikm",
       "reactions_count": 0,
-      "hits_24h": 0,
+      "hits_24h": 1,
       "hits_7d": 10,
-      "hits_30d": 47,
+      "hits_30d": 48,
       "error_pattern": "{\n    \"ErrorPattern\": \"NumberFormatInfoMiscTests\\\\.TestNativeDigits.*(?:failed|FAIL)\",\n    \"BuildRetry\": false,\n    \"ExcludeConsoleLog\": false\n}",
       "build_link": "https://dev.azure.com/dnceng-public/public/_build/results?buildId=1347187",
       "has_blocking_label": false,
       "has_untriaged_label": false,
       "age_days": 32,
-      "last_human_activity_days": 9,
+      "last_human_activity_days": 10,
       "assignee_display": "",
-      "urgency_score": 2.0,
+      "urgency_score": 4.25,
       "urgency_breakdown": {
         "hits_24h": {
-          "value": 0.0,
+          "value": 0.5,
           "weight": 3.0,
-          "contribution": 0.0
+          "contribution": 1.5
         },
         "hits_7d": {
           "value": 0.5,
@@ -5350,9 +4037,9 @@
           "contribution": 1.0
         },
         "hit_trend": {
-          "value": 0.0,
+          "value": 0.5,
           "weight": 1.5,
-          "contribution": 0.0
+          "contribution": 0.75
         },
         "blocking_label": {
           "value": 0.0,
@@ -5370,12 +4057,12 @@
           "contribution": 1.0
         }
       },
-      "staleness_score": 4.12,
+      "staleness_score": 1.12,
       "staleness_breakdown": {
         "hits_24h_zero": {
-          "value": 1.0,
+          "value": 0.0,
           "weight": 3.0,
-          "contribution": 3.0
+          "contribution": 0.0
         },
         "hits_7d_zero": {
           "value": 0.0,
@@ -5433,7 +4120,7 @@
       "url": "https://github.com/dotnet/runtime/issues/125825",
       "state": "OPEN",
       "created_at": "2026-03-20T10:19:25Z",
-      "updated_at": "2026-04-24T11:04:54Z",
+      "updated_at": "2026-04-24T14:05:23Z",
       "author": "MatousBot",
       "assignees": [],
       "labels": [
@@ -5454,7 +4141,7 @@
       "last_human_comment_author": "wfurt",
       "reactions_count": 0,
       "hits_24h": 1,
-      "hits_7d": 19,
+      "hits_7d": 18,
       "hits_30d": 57,
       "error_pattern": "{\n  \"ErrorMessage\": \"System.Net.Sockets.Tests.SocketBlockingModeTransitionTests.ConnectAsync_WithBuffer_Succeeds\",\n  \"BuildRetry\": false,\n  \"ExcludeConsoleLog\": false\n}",
       "build_link": "https://dev.azure.com/dnceng-public/public/_build/results?buildId=1340346",
@@ -5559,7 +4246,7 @@
       "url": "https://github.com/dotnet/runtime/issues/125522",
       "state": "OPEN",
       "created_at": "2026-03-13T15:34:34Z",
-      "updated_at": "2026-04-24T11:04:51Z",
+      "updated_at": "2026-04-24T14:05:19Z",
       "author": "jozkee",
       "assignees": [],
       "labels": [
@@ -5575,9 +4262,9 @@
       "last_human_comment_date": "2026-04-10T08:23:20Z",
       "last_human_comment_author": "kotlarmilos",
       "reactions_count": 0,
-      "hits_24h": 0,
-      "hits_7d": 7,
-      "hits_30d": 40,
+      "hits_24h": 1,
+      "hits_7d": 8,
+      "hits_30d": 41,
       "error_pattern": "{\n  \"ErrorMessage\": [\"Failed to find a suitable device for target tvos-device\", \"81 (DEVICE_NOT_FOUND)\"],\n  \"ErrorPattern\": \"\",\n  \"BuildRetry\": false,\n  \"ExcludeConsoleLog\": false\n}",
       "build_link": "https://dev.azure.com/dnceng-public/cbb18261-c48f-4abb-8651-8cdcb5474649/_build/results?buildId=1333497",
       "has_blocking_label": true,
@@ -5585,12 +4272,12 @@
       "age_days": 41,
       "last_human_activity_days": 14,
       "assignee_display": "",
-      "urgency_score": 3.5,
+      "urgency_score": 5.75,
       "urgency_breakdown": {
         "hits_24h": {
-          "value": 0.0,
+          "value": 0.5,
           "weight": 3.0,
-          "contribution": 0.0
+          "contribution": 1.5
         },
         "hits_7d": {
           "value": 0.5,
@@ -5598,9 +4285,9 @@
           "contribution": 1.0
         },
         "hit_trend": {
-          "value": 0.0,
+          "value": 0.5,
           "weight": 1.5,
-          "contribution": 0.0
+          "contribution": 0.75
         },
         "blocking_label": {
           "value": 1.0,
@@ -5618,12 +4305,12 @@
           "contribution": 1.0
         }
       },
-      "staleness_score": 4.12,
+      "staleness_score": 1.12,
       "staleness_breakdown": {
         "hits_24h_zero": {
-          "value": 1.0,
+          "value": 0.0,
           "weight": 3.0,
-          "contribution": 3.0
+          "contribution": 0.0
         },
         "hits_7d_zero": {
           "value": 0.0,
@@ -5681,7 +4368,7 @@
       "url": "https://github.com/dotnet/runtime/issues/125440",
       "state": "OPEN",
       "created_at": "2026-03-11T13:41:56Z",
-      "updated_at": "2026-04-24T11:04:50Z",
+      "updated_at": "2026-04-24T14:05:18Z",
       "author": "matouskozak",
       "assignees": [],
       "labels": [
@@ -5698,13 +4385,13 @@
       "last_human_comment_author": "kotlarmilos",
       "reactions_count": 0,
       "hits_24h": 10,
-      "hits_7d": 49,
-      "hits_30d": 272,
+      "hits_7d": 47,
+      "hits_30d": 273,
       "error_pattern": "{\n  \"ErrorMessage\": [\n    \"fail: No attached device supports one of required architectures\",\n    \"armeabi-v7a\"\n  ],\n  \"BuildRetry\": false,\n  \"ExcludeConsoleLog\": false\n}",
       "build_link": "https://dev.azure.com/dnceng-public/public/_build/results?buildId=1327554",
       "has_blocking_label": false,
       "has_untriaged_label": true,
-      "age_days": 43,
+      "age_days": 44,
       "last_human_activity_days": 22,
       "assignee_display": "",
       "urgency_score": 5.88,
@@ -5803,7 +4490,7 @@
       "url": "https://github.com/dotnet/runtime/issues/125371",
       "state": "OPEN",
       "created_at": "2026-03-10T09:51:36Z",
-      "updated_at": "2026-04-24T11:04:49Z",
+      "updated_at": "2026-04-24T14:05:16Z",
       "author": "MatousBot",
       "assignees": [
         "kotlarmilos"
@@ -5821,14 +4508,14 @@
       "last_human_comment_author": "kotlarmilos",
       "reactions_count": 0,
       "hits_24h": 0,
-      "hits_7d": 10,
+      "hits_7d": 9,
       "hits_30d": 34,
       "error_pattern": "{\n  \"ErrorMessage\": \"System.Exception: Failed to list devices.\",\n  \"BuildRetry\": false,\n  \"ExcludeConsoleLog\": false\n}",
       "build_link": "https://dev.azure.com/dnceng-public/public/_build/results?buildId=1321402",
       "has_blocking_label": false,
       "has_untriaged_label": false,
       "age_days": 45,
-      "last_human_activity_days": 37,
+      "last_human_activity_days": 38,
       "assignee_display": "kotlarmilos",
       "urgency_score": 1.0,
       "urgency_breakdown": {
@@ -5926,7 +4613,7 @@
       "url": "https://github.com/dotnet/runtime/issues/125339",
       "state": "OPEN",
       "created_at": "2026-03-09T17:12:07Z",
-      "updated_at": "2026-04-24T11:04:47Z",
+      "updated_at": "2026-04-24T14:05:14Z",
       "author": "jkotas",
       "assignees": [],
       "labels": [
@@ -6048,7 +4735,7 @@
       "url": "https://github.com/dotnet/runtime/issues/125244",
       "state": "OPEN",
       "created_at": "2026-03-05T22:17:01Z",
-      "updated_at": "2026-04-24T11:04:45Z",
+      "updated_at": "2026-04-24T14:05:11Z",
       "author": "sbomer",
       "assignees": [],
       "labels": [
@@ -6169,7 +4856,7 @@
       "url": "https://github.com/dotnet/runtime/issues/125233",
       "state": "OPEN",
       "created_at": "2026-03-05T19:14:50Z",
-      "updated_at": "2026-04-24T11:04:44Z",
+      "updated_at": "2026-04-24T14:05:00Z",
       "author": "agocke",
       "assignees": [],
       "labels": [
@@ -6288,7 +4975,7 @@
       "url": "https://github.com/dotnet/runtime/issues/125150",
       "state": "OPEN",
       "created_at": "2026-03-03T22:30:54Z",
-      "updated_at": "2026-04-24T11:04:43Z",
+      "updated_at": "2026-04-24T14:04:59Z",
       "author": "jozkee",
       "assignees": [],
       "labels": [
@@ -6409,7 +5096,7 @@
       "url": "https://github.com/dotnet/runtime/issues/125135",
       "state": "OPEN",
       "created_at": "2026-03-03T17:32:45Z",
-      "updated_at": "2026-04-24T11:04:41Z",
+      "updated_at": "2026-04-24T14:04:57Z",
       "author": "jozkee",
       "assignees": [],
       "labels": [
@@ -6426,7 +5113,7 @@
       "last_human_comment_author": "steveisok",
       "reactions_count": 0,
       "hits_24h": 0,
-      "hits_7d": 10,
+      "hits_7d": 9,
       "hits_30d": 34,
       "error_pattern": "{\n  \"ErrorMessage\": \"System.Exception: Failed to list devices\",\n  \"ErrorPattern\": \"\",\n  \"BuildRetry\": false,\n  \"ExcludeConsoleLog\": false\n}",
       "build_link": "https://dev.azure.com/dnceng-public/cbb18261-c48f-4abb-8651-8cdcb5474649/_build/results?buildId=1311394",
@@ -6531,7 +5218,7 @@
       "url": "https://github.com/dotnet/runtime/issues/125052",
       "state": "OPEN",
       "created_at": "2026-03-02T13:53:19Z",
-      "updated_at": "2026-04-24T11:04:40Z",
+      "updated_at": "2026-04-24T14:04:56Z",
       "author": "MatousBot",
       "assignees": [],
       "labels": [
@@ -6555,7 +5242,7 @@
       "build_link": "https://dev.azure.com/dnceng-public/public/_build/results?buildId=1314142",
       "has_blocking_label": false,
       "has_untriaged_label": false,
-      "age_days": 52,
+      "age_days": 53,
       "last_human_activity_days": 52,
       "assignee_display": "",
       "urgency_score": 1.0,
@@ -6654,7 +5341,7 @@
       "url": "https://github.com/dotnet/runtime/issues/124976",
       "state": "OPEN",
       "created_at": "2026-02-27T15:29:45Z",
-      "updated_at": "2026-04-24T11:04:39Z",
+      "updated_at": "2026-04-24T14:04:55Z",
       "author": "AndyAyersMS",
       "assignees": [],
       "labels": [
@@ -6669,9 +5356,9 @@
       "last_human_comment_date": "2026-04-17T16:12:12Z",
       "last_human_comment_author": "steveisok",
       "reactions_count": 0,
-      "hits_24h": 0,
-      "hits_7d": 5,
-      "hits_30d": 11,
+      "hits_24h": 1,
+      "hits_7d": 6,
+      "hits_30d": 12,
       "error_pattern": "{\n  \"ErrorMessage\": \"\",\n  \"ErrorPattern\": \"ilc.*exited with code 57005\",\n  \"BuildRetry\": false,\n  \"ExcludeConsoleLog\": false\n}",
       "build_link": "https://dev.azure.com/dnceng-public/cbb18261-c48f-4abb-8651-8cdcb5474649/_build/results?buildId=1312043&view=logs&j=ea7d6d51-d18d-5306-47bd-e3b7db04467e",
       "has_blocking_label": true,
@@ -6679,22 +5366,22 @@
       "age_days": 55,
       "last_human_activity_days": 6,
       "assignee_display": "",
-      "urgency_score": 2.5,
+      "urgency_score": 6.12,
       "urgency_breakdown": {
         "hits_24h": {
-          "value": 0.0,
+          "value": 0.5,
           "weight": 3.0,
-          "contribution": 0.0
+          "contribution": 1.5
         },
         "hits_7d": {
-          "value": 0.0,
+          "value": 0.5,
           "weight": 2.0,
-          "contribution": 0.0
+          "contribution": 1.0
         },
         "hit_trend": {
-          "value": 0.0,
+          "value": 0.75,
           "weight": 1.5,
-          "contribution": 0.0
+          "contribution": 1.125
         },
         "blocking_label": {
           "value": 1.0,
@@ -6712,12 +5399,12 @@
           "contribution": 1.0
         }
       },
-      "staleness_score": 4.62,
+      "staleness_score": 1.62,
       "staleness_breakdown": {
         "hits_24h_zero": {
-          "value": 1.0,
+          "value": 0.0,
           "weight": 3.0,
-          "contribution": 3.0
+          "contribution": 0.0
         },
         "hits_7d_zero": {
           "value": 0.0,
@@ -6775,7 +5462,7 @@
       "url": "https://github.com/dotnet/runtime/issues/124751",
       "state": "OPEN",
       "created_at": "2026-02-23T12:24:25Z",
-      "updated_at": "2026-04-24T11:04:37Z",
+      "updated_at": "2026-04-24T14:04:53Z",
       "author": "rzikm",
       "assignees": [
         "simonrozsival"
@@ -6799,7 +5486,7 @@
       "build_link": "https://dev.azure.com/dnceng-public/public/_build/results?buildId=1304943",
       "has_blocking_label": false,
       "has_untriaged_label": false,
-      "age_days": 59,
+      "age_days": 60,
       "last_human_activity_days": 22,
       "assignee_display": "simonrozsival",
       "urgency_score": 0.0,
@@ -6872,7 +5559,7 @@
       "url": "https://github.com/dotnet/runtime/issues/124526",
       "state": "OPEN",
       "created_at": "2026-02-17T20:00:11Z",
-      "updated_at": "2026-04-24T11:04:36Z",
+      "updated_at": "2026-04-24T14:04:51Z",
       "author": "matouskozak",
       "assignees": [
         "simonrozsival"
@@ -6971,7 +5658,7 @@
       "url": "https://github.com/dotnet/runtime/issues/124462",
       "state": "OPEN",
       "created_at": "2026-02-16T11:47:34Z",
-      "updated_at": "2026-04-24T11:04:34Z",
+      "updated_at": "2026-04-24T14:04:50Z",
       "author": "jakobbotsch",
       "assignees": [],
       "labels": [
@@ -7092,7 +5779,7 @@
       "url": "https://github.com/dotnet/runtime/issues/123982",
       "state": "OPEN",
       "created_at": "2026-02-04T05:11:34Z",
-      "updated_at": "2026-04-24T11:04:33Z",
+      "updated_at": "2026-04-24T14:04:49Z",
       "author": "shimingsg",
       "assignees": [
         "EgorBo"
@@ -7213,7 +5900,7 @@
       "url": "https://github.com/dotnet/runtime/issues/123957",
       "state": "OPEN",
       "created_at": "2026-02-03T19:01:25Z",
-      "updated_at": "2026-04-24T11:04:31Z",
+      "updated_at": "2026-04-24T14:04:46Z",
       "author": "matouskozak",
       "assignees": [],
       "labels": [
@@ -7231,7 +5918,7 @@
       "last_human_comment_author": "danmoseley",
       "reactions_count": 0,
       "hits_24h": 3,
-      "hits_7d": 21,
+      "hits_7d": 20,
       "hits_30d": 80,
       "error_pattern": "{\n  \"ErrorMessage\": [\n      \"Failed test: JIT/SIMD/Vector3Interop_r/Vector3Interop_r.cmd\",\n      \"Actual: 134\"\n  ],\n  \"BuildRetry\": false,\n  \"ExcludeConsoleLog\": false\n}",
       "build_link": "https://dev.azure.com/dnceng-public/public/_build/results?buildId=1275559",
@@ -7240,7 +5927,7 @@
       "age_days": 79,
       "last_human_activity_days": 32,
       "assignee_display": "",
-      "urgency_score": 4.75,
+      "urgency_score": 4.62,
       "urgency_breakdown": {
         "hits_24h": {
           "value": 0.5,
@@ -7248,14 +5935,14 @@
           "contribution": 1.5
         },
         "hits_7d": {
-          "value": 0.75,
+          "value": 0.5,
           "weight": 2.0,
-          "contribution": 1.5
+          "contribution": 1.0
         },
         "hit_trend": {
-          "value": 0.5,
+          "value": 0.75,
           "weight": 1.5,
-          "contribution": 0.75
+          "contribution": 1.125
         },
         "blocking_label": {
           "value": 0.0,
@@ -7301,7 +5988,7 @@
           "contribution": 0.0
         }
       },
-      "neglect_score": 6.5,
+      "neglect_score": 4.5,
       "neglect_breakdown": {
         "hits_no_assignee": {
           "value": 1.0,
@@ -7314,9 +6001,9 @@
           "contribution": 0.0
         },
         "high_hits_untriaged": {
-          "value": 1.0,
+          "value": 0.0,
           "weight": 2.0,
-          "contribution": 2.0
+          "contribution": 0.0
         },
         "days_since_human_comment": {
           "value": 1.0,
@@ -7336,7 +6023,7 @@
       "url": "https://github.com/dotnet/runtime/issues/123796",
       "state": "OPEN",
       "created_at": "2026-01-30T12:14:18Z",
-      "updated_at": "2026-04-24T11:04:26Z",
+      "updated_at": "2026-04-24T14:04:41Z",
       "author": "matouskozak",
       "assignees": [
         "kotlarmilos"
@@ -7356,13 +6043,13 @@
       "last_human_comment_author": "vitek-karas",
       "reactions_count": 0,
       "hits_24h": 13,
-      "hits_7d": 69,
-      "hits_30d": 350,
+      "hits_7d": 70,
+      "hits_30d": 352,
       "error_pattern": "{\r\n  \"ErrorMessage\": \"Can\\u0027t assign requested address (NSPOSIXErrorDomain error 49 (0x31))\",\r\n  \"BuildRetry\": false,\r\n  \"ExcludeConsoleLog\": false\r\n}",
       "build_link": "https://dev.azure.com/dnceng-public/public/_build/results?buildId=1271034",
       "has_blocking_label": false,
       "has_untriaged_label": false,
-      "age_days": 83,
+      "age_days": 84,
       "last_human_activity_days": 20,
       "assignee_display": "kotlarmilos",
       "urgency_score": 6.12,
@@ -7461,7 +6148,7 @@
       "url": "https://github.com/dotnet/runtime/issues/123572",
       "state": "OPEN",
       "created_at": "2026-01-24T03:24:16Z",
-      "updated_at": "2026-04-24T11:04:25Z",
+      "updated_at": "2026-04-24T14:04:40Z",
       "author": "jkotas",
       "assignees": [
         "pavelsavara"
@@ -7584,7 +6271,7 @@
       "url": "https://github.com/dotnet/runtime/issues/123490",
       "state": "OPEN",
       "created_at": "2026-01-22T13:01:00Z",
-      "updated_at": "2026-04-24T11:04:24Z",
+      "updated_at": "2026-04-24T14:04:38Z",
       "author": "MichalStrehovsky",
       "assignees": [],
       "labels": [
@@ -7605,7 +6292,7 @@
       "build_link": "https://dev.azure.com/dnceng-public/cbb18261-c48f-4abb-8651-8cdcb5474649/_build/results?buildId=1262530",
       "has_blocking_label": false,
       "has_untriaged_label": true,
-      "age_days": 91,
+      "age_days": 92,
       "last_human_activity_days": 59,
       "assignee_display": "",
       "urgency_score": 1.0,
@@ -7704,7 +6391,7 @@
       "url": "https://github.com/dotnet/runtime/issues/123396",
       "state": "OPEN",
       "created_at": "2026-01-20T18:51:48Z",
-      "updated_at": "2026-04-24T11:04:23Z",
+      "updated_at": "2026-04-24T14:04:37Z",
       "author": "matouskozak",
       "assignees": [],
       "labels": [
@@ -7826,7 +6513,7 @@
       "url": "https://github.com/dotnet/runtime/issues/123035",
       "state": "OPEN",
       "created_at": "2026-01-09T15:36:19Z",
-      "updated_at": "2026-04-24T11:04:21Z",
+      "updated_at": "2026-04-24T14:04:36Z",
       "author": "richlander",
       "assignees": [],
       "labels": [
@@ -7946,7 +6633,7 @@
       "url": "https://github.com/dotnet/runtime/issues/123013",
       "state": "OPEN",
       "created_at": "2026-01-08T20:35:36Z",
-      "updated_at": "2026-04-24T11:04:21Z",
+      "updated_at": "2026-04-24T14:04:35Z",
       "author": "PranavSenthilnathan",
       "assignees": [],
       "labels": [
@@ -8065,7 +6752,7 @@
       "url": "https://github.com/dotnet/runtime/issues/122979",
       "state": "OPEN",
       "created_at": "2026-01-07T17:28:39Z",
-      "updated_at": "2026-04-24T11:04:20Z",
+      "updated_at": "2026-04-24T14:04:34Z",
       "author": "jozkee",
       "assignees": [],
       "labels": [
@@ -8185,7 +6872,7 @@
       "url": "https://github.com/dotnet/runtime/issues/122845",
       "state": "OPEN",
       "created_at": "2026-01-04T01:33:18Z",
-      "updated_at": "2026-04-24T11:04:19Z",
+      "updated_at": "2026-04-24T14:04:33Z",
       "author": "am11",
       "assignees": [],
       "labels": [
@@ -8306,7 +6993,7 @@
       "url": "https://github.com/dotnet/runtime/issues/122671",
       "state": "OPEN",
       "created_at": "2025-12-19T20:58:12Z",
-      "updated_at": "2026-04-24T11:04:18Z",
+      "updated_at": "2026-04-24T14:04:32Z",
       "author": "pavelsavara",
       "assignees": [],
       "labels": [
@@ -8426,7 +7113,7 @@
       "url": "https://github.com/dotnet/runtime/issues/122669",
       "state": "OPEN",
       "created_at": "2025-12-19T20:53:32Z",
-      "updated_at": "2026-04-24T11:04:17Z",
+      "updated_at": "2026-04-24T14:04:31Z",
       "author": "pavelsavara",
       "assignees": [],
       "labels": [
@@ -8547,7 +7234,7 @@
       "url": "https://github.com/dotnet/runtime/issues/122617",
       "state": "OPEN",
       "created_at": "2025-12-17T19:26:48Z",
-      "updated_at": "2026-04-24T11:04:13Z",
+      "updated_at": "2026-04-24T14:04:26Z",
       "author": "matouskozak",
       "assignees": [],
       "labels": [
@@ -8571,7 +7258,7 @@
       "has_blocking_label": false,
       "has_untriaged_label": false,
       "age_days": 127,
-      "last_human_activity_days": 126,
+      "last_human_activity_days": 127,
       "assignee_display": "",
       "urgency_score": 1.0,
       "urgency_breakdown": {
@@ -8669,7 +7356,7 @@
       "url": "https://github.com/dotnet/runtime/issues/122522",
       "state": "OPEN",
       "created_at": "2025-12-13T09:35:04Z",
-      "updated_at": "2026-04-24T11:04:10Z",
+      "updated_at": "2026-04-24T14:04:23Z",
       "author": "jkotas",
       "assignees": [],
       "labels": [
@@ -8789,7 +7476,7 @@
       "url": "https://github.com/dotnet/runtime/issues/122494",
       "state": "OPEN",
       "created_at": "2025-12-12T13:17:03Z",
-      "updated_at": "2026-04-24T11:04:09Z",
+      "updated_at": "2026-04-24T14:04:22Z",
       "author": "matouskozak",
       "assignees": [],
       "labels": [
@@ -8812,7 +7499,7 @@
       "build_link": "https://dev.azure.com/dnceng-public/public/_build/results?buildId=1227826",
       "has_blocking_label": false,
       "has_untriaged_label": false,
-      "age_days": 132,
+      "age_days": 133,
       "last_human_activity_days": 22,
       "assignee_display": "",
       "urgency_score": 1.0,
@@ -8911,7 +7598,7 @@
       "url": "https://github.com/dotnet/runtime/issues/122493",
       "state": "OPEN",
       "created_at": "2025-12-12T13:11:12Z",
-      "updated_at": "2026-04-24T11:04:07Z",
+      "updated_at": "2026-04-24T14:04:21Z",
       "author": "matouskozak",
       "assignees": [],
       "labels": [
@@ -8929,13 +7616,13 @@
       "last_human_comment_author": "eduardo-vp",
       "reactions_count": 0,
       "hits_24h": 0,
-      "hits_7d": 2,
+      "hits_7d": 1,
       "hits_30d": 21,
       "error_pattern": "{\r\n  \"ErrorMessage\": \"System.Net.Sockets.SocketException : Connection reset by peer\",\r\n  \"BuildRetry\": false,\r\n  \"ExcludeConsoleLog\": false\r\n}",
       "build_link": "https://dev.azure.com/dnceng-public/public/_build/results?buildId=1228756",
       "has_blocking_label": false,
       "has_untriaged_label": false,
-      "age_days": 132,
+      "age_days": 133,
       "last_human_activity_days": 3,
       "assignee_display": "",
       "urgency_score": 1.0,
@@ -9034,7 +7721,7 @@
       "url": "https://github.com/dotnet/runtime/issues/122345",
       "state": "OPEN",
       "created_at": "2025-12-09T15:50:28Z",
-      "updated_at": "2026-04-24T11:04:06Z",
+      "updated_at": "2026-04-24T14:04:19Z",
       "author": "AndyAyersMS",
       "assignees": [],
       "labels": [
@@ -9154,7 +7841,7 @@
       "url": "https://github.com/dotnet/runtime/issues/121983",
       "state": "OPEN",
       "created_at": "2025-11-26T10:35:53Z",
-      "updated_at": "2026-04-24T11:04:05Z",
+      "updated_at": "2026-04-24T14:04:18Z",
       "author": "matouskozak",
       "assignees": [],
       "labels": [
@@ -9251,7 +7938,7 @@
       "url": "https://github.com/dotnet/runtime/issues/121940",
       "state": "OPEN",
       "created_at": "2025-11-24T23:01:19Z",
-      "updated_at": "2026-04-24T11:04:04Z",
+      "updated_at": "2026-04-24T14:04:17Z",
       "author": "ericstj",
       "assignees": [],
       "labels": [
@@ -9370,7 +8057,7 @@
       "url": "https://github.com/dotnet/runtime/issues/121873",
       "state": "OPEN",
       "created_at": "2025-11-21T07:51:26Z",
-      "updated_at": "2026-04-24T11:04:03Z",
+      "updated_at": "2026-04-24T14:04:16Z",
       "author": "MichalStrehovsky",
       "assignees": [],
       "labels": [
@@ -9490,7 +8177,7 @@
       "url": "https://github.com/dotnet/runtime/issues/121518",
       "state": "OPEN",
       "created_at": "2025-11-11T07:45:57Z",
-      "updated_at": "2026-04-24T11:04:02Z",
+      "updated_at": "2026-04-24T14:04:15Z",
       "author": "ManickaP",
       "assignees": [],
       "labels": [
@@ -9505,9 +8192,9 @@
       "last_human_comment_date": "2026-03-03T15:17:08Z",
       "last_human_comment_author": "copilot-swe-agent",
       "reactions_count": 0,
-      "hits_24h": 2,
-      "hits_7d": 6,
-      "hits_30d": 27,
+      "hits_24h": 1,
+      "hits_7d": 7,
+      "hits_30d": 28,
       "error_pattern": "{\n  \"ErrorMessage\": \"[FAIL] System.Net.WebSockets.Client.Tests\",\n  \"ErrorPattern\": \"\",\n  \"BuildRetry\": false,\n  \"ExcludeConsoleLog\": false\n}",
       "build_link": "https://dev.azure.com/dnceng-public/cbb18261-c48f-4abb-8651-8cdcb5474649/_build/results?buildId=1197968",
       "has_blocking_label": true,
@@ -9515,7 +8202,7 @@
       "age_days": 164,
       "last_human_activity_days": 51,
       "assignee_display": "",
-      "urgency_score": 6.5,
+      "urgency_score": 5.75,
       "urgency_breakdown": {
         "hits_24h": {
           "value": 0.5,
@@ -9528,9 +8215,9 @@
           "contribution": 1.0
         },
         "hit_trend": {
-          "value": 1.0,
+          "value": 0.5,
           "weight": 1.5,
-          "contribution": 1.5
+          "contribution": 0.75
         },
         "blocking_label": {
           "value": 1.0,
@@ -9611,7 +8298,7 @@
       "url": "https://github.com/dotnet/runtime/issues/121404",
       "state": "OPEN",
       "created_at": "2025-11-06T12:16:40Z",
-      "updated_at": "2026-04-24T11:04:00Z",
+      "updated_at": "2026-04-24T14:04:12Z",
       "author": "vitek-karas",
       "assignees": [
         "BrzVlad"
@@ -9633,7 +8320,7 @@
       "build_link": "https://dev.azure.com/dnceng-public/public/_build/results?buildId=1194873",
       "has_blocking_label": false,
       "has_untriaged_label": false,
-      "age_days": 168,
+      "age_days": 169,
       "last_human_activity_days": 30,
       "assignee_display": "BrzVlad",
       "urgency_score": 0.0,
@@ -9732,7 +8419,7 @@
       "url": "https://github.com/dotnet/runtime/issues/121157",
       "state": "OPEN",
       "created_at": "2025-10-29T03:08:49Z",
-      "updated_at": "2026-04-24T11:03:54Z",
+      "updated_at": "2026-04-24T14:04:06Z",
       "author": "jkotas",
       "assignees": [
         "CarnaViire"
@@ -9853,7 +8540,7 @@
       "url": "https://github.com/dotnet/runtime/issues/121134",
       "state": "OPEN",
       "created_at": "2025-10-28T06:16:53Z",
-      "updated_at": "2026-04-24T11:03:53Z",
+      "updated_at": "2026-04-24T14:04:04Z",
       "author": "noahfalk",
       "assignees": [],
       "labels": [
@@ -9875,7 +8562,7 @@
       "has_blocking_label": false,
       "has_untriaged_label": false,
       "age_days": 178,
-      "last_human_activity_days": 31,
+      "last_human_activity_days": 32,
       "assignee_display": "",
       "urgency_score": 4.0,
       "urgency_breakdown": {
@@ -9973,7 +8660,7 @@
       "url": "https://github.com/dotnet/runtime/issues/120836",
       "state": "OPEN",
       "created_at": "2025-10-17T02:14:49Z",
-      "updated_at": "2026-04-24T11:03:52Z",
+      "updated_at": "2026-04-24T14:04:03Z",
       "author": "jkotas",
       "assignees": [],
       "labels": [
@@ -10093,7 +8780,7 @@
       "url": "https://github.com/dotnet/runtime/issues/120526",
       "state": "OPEN",
       "created_at": "2025-10-08T08:01:03Z",
-      "updated_at": "2026-04-24T11:03:50Z",
+      "updated_at": "2026-04-24T14:04:00Z",
       "author": "kotlarmilos",
       "assignees": [],
       "labels": [
@@ -10214,7 +8901,7 @@
       "url": "https://github.com/dotnet/runtime/issues/120245",
       "state": "OPEN",
       "created_at": "2025-09-30T05:35:29Z",
-      "updated_at": "2026-04-24T11:03:43Z",
+      "updated_at": "2026-04-24T14:03:53Z",
       "author": "jkotas",
       "assignees": [],
       "labels": [
@@ -10334,7 +9021,7 @@
       "url": "https://github.com/dotnet/runtime/issues/120116",
       "state": "OPEN",
       "created_at": "2025-09-25T21:35:24Z",
-      "updated_at": "2026-04-24T11:03:42Z",
+      "updated_at": "2026-04-24T14:03:52Z",
       "author": "AaronRobinsonMSFT",
       "assignees": [],
       "labels": [
@@ -10454,7 +9141,7 @@
       "url": "https://github.com/dotnet/runtime/issues/119948",
       "state": "OPEN",
       "created_at": "2025-09-22T10:17:22Z",
-      "updated_at": "2026-04-24T11:03:41Z",
+      "updated_at": "2026-04-24T14:03:50Z",
       "author": "BrzVlad",
       "assignees": [
         "jkoritzinsky"
@@ -10551,7 +9238,7 @@
       "url": "https://github.com/dotnet/runtime/issues/119763",
       "state": "OPEN",
       "created_at": "2025-09-16T14:07:41Z",
-      "updated_at": "2026-04-24T11:03:40Z",
+      "updated_at": "2026-04-24T14:03:49Z",
       "author": "ManickaP",
       "assignees": [],
       "labels": [
@@ -10571,7 +9258,7 @@
       "build_link": "https://dev.azure.com/dnceng-public/cbb18261-c48f-4abb-8651-8cdcb5474649/_build/results?buildId=1149293",
       "has_blocking_label": false,
       "has_untriaged_label": false,
-      "age_days": 219,
+      "age_days": 220,
       "last_human_activity_days": 108,
       "assignee_display": "",
       "urgency_score": 1.0,
@@ -10670,7 +9357,7 @@
       "url": "https://github.com/dotnet/runtime/issues/119665",
       "state": "OPEN",
       "created_at": "2025-09-12T20:02:46Z",
-      "updated_at": "2026-04-24T11:03:39Z",
+      "updated_at": "2026-04-24T14:03:48Z",
       "author": "mdh1418",
       "assignees": [],
       "labels": [
@@ -10686,7 +9373,7 @@
       "last_human_comment_author": "steveisok",
       "reactions_count": 0,
       "hits_24h": 3,
-      "hits_7d": 24,
+      "hits_7d": 23,
       "hits_30d": 99,
       "error_pattern": "{\n  \"ErrorMessage\": \"APP_LAUNCH_FAILURE\",\n  \"ErrorPattern\": \"\",\n  \"BuildRetry\": false,\n  \"ExcludeConsoleLog\": false\n}",
       "build_link": "https://dev.azure.com/dnceng-public/cbb18261-c48f-4abb-8651-8cdcb5474649/_build/results?buildId=1146594",
@@ -10791,7 +9478,7 @@
       "url": "https://github.com/dotnet/runtime/issues/119520",
       "state": "OPEN",
       "created_at": "2025-09-10T07:24:32Z",
-      "updated_at": "2026-04-24T11:03:36Z",
+      "updated_at": "2026-04-24T14:03:45Z",
       "author": "ManickaP",
       "assignees": [],
       "labels": [
@@ -10911,7 +9598,7 @@
       "url": "https://github.com/dotnet/runtime/issues/119470",
       "state": "OPEN",
       "created_at": "2025-09-08T19:10:18Z",
-      "updated_at": "2026-04-24T11:03:35Z",
+      "updated_at": "2026-04-24T14:03:44Z",
       "author": "ericstj",
       "assignees": [],
       "labels": [
@@ -11031,7 +9718,7 @@
       "url": "https://github.com/dotnet/runtime/issues/119299",
       "state": "OPEN",
       "created_at": "2025-09-03T08:54:29Z",
-      "updated_at": "2026-04-24T11:03:34Z",
+      "updated_at": "2026-04-24T14:03:43Z",
       "author": "pavelsavara",
       "assignees": [
         "pavelsavara"
@@ -11154,7 +9841,7 @@
       "url": "https://github.com/dotnet/runtime/issues/119205",
       "state": "OPEN",
       "created_at": "2025-08-29T13:27:25Z",
-      "updated_at": "2026-04-24T11:03:33Z",
+      "updated_at": "2026-04-24T14:03:42Z",
       "author": "pavelsavara",
       "assignees": [],
       "labels": [
@@ -11176,7 +9863,7 @@
       "build_link": "https://dev.azure.com/dnceng-public/public/_build/results?buildId=1134807&view=results",
       "has_blocking_label": false,
       "has_untriaged_label": false,
-      "age_days": 237,
+      "age_days": 238,
       "last_human_activity_days": null,
       "assignee_display": "",
       "urgency_score": 1.0,
@@ -11275,7 +9962,7 @@
       "url": "https://github.com/dotnet/runtime/issues/119140",
       "state": "OPEN",
       "created_at": "2025-08-27T12:37:30Z",
-      "updated_at": "2026-04-24T11:03:32Z",
+      "updated_at": "2026-04-24T14:03:41Z",
       "author": "jkotas",
       "assignees": [
         "jakobbotsch"
@@ -11299,7 +9986,7 @@
       "build_link": "https://dev.azure.com/dnceng-public/cbb18261-c48f-4abb-8651-8cdcb5474649/_build/results?buildId=1132704",
       "has_blocking_label": true,
       "has_untriaged_label": false,
-      "age_days": 239,
+      "age_days": 240,
       "last_human_activity_days": 16,
       "assignee_display": "jakobbotsch",
       "urgency_score": 4.5,
@@ -11398,7 +10085,7 @@
       "url": "https://github.com/dotnet/runtime/issues/118906",
       "state": "OPEN",
       "created_at": "2025-08-19T21:36:22Z",
-      "updated_at": "2026-04-24T11:03:30Z",
+      "updated_at": "2026-04-24T14:03:38Z",
       "author": "jozkee",
       "assignees": [],
       "labels": [
@@ -11518,7 +10205,7 @@
       "url": "https://github.com/dotnet/runtime/issues/118789",
       "state": "OPEN",
       "created_at": "2025-08-15T17:36:01Z",
-      "updated_at": "2026-04-24T11:03:29Z",
+      "updated_at": "2026-04-24T14:03:37Z",
       "author": "jozkee",
       "assignees": [],
       "labels": [
@@ -11638,7 +10325,7 @@
       "url": "https://github.com/dotnet/runtime/issues/118603",
       "state": "OPEN",
       "created_at": "2025-08-11T20:28:43Z",
-      "updated_at": "2026-04-24T11:03:28Z",
+      "updated_at": "2026-04-24T14:03:36Z",
       "author": "jtschuster",
       "assignees": [],
       "labels": [
@@ -11655,7 +10342,7 @@
       "reactions_count": 0,
       "hits_24h": 0,
       "hits_7d": 2,
-      "hits_30d": 8,
+      "hits_30d": 7,
       "error_pattern": "{\r\n  \"ErrorMessage\": \"lowmemorykiller: Kill 'net.dot.\",\r\n  \"BuildRetry\": false,\r\n  \"ExcludeConsoleLog\": false\r\n}",
       "build_link": "https://dev.azure.com/dnceng-public/public/_build/results?buildId=1119503",
       "has_blocking_label": false,
@@ -11733,7 +10420,7 @@
       "url": "https://github.com/dotnet/runtime/issues/117138",
       "state": "OPEN",
       "created_at": "2025-06-30T02:06:39Z",
-      "updated_at": "2026-04-24T11:03:26Z",
+      "updated_at": "2026-04-24T14:03:34Z",
       "author": "SakeTao",
       "assignees": [
         "EgorBo"
@@ -11856,7 +10543,7 @@
       "url": "https://github.com/dotnet/runtime/issues/117591",
       "state": "OPEN",
       "created_at": "2025-07-14T02:24:32Z",
-      "updated_at": "2026-04-24T11:03:25Z",
+      "updated_at": "2026-04-24T14:03:32Z",
       "author": "SakeTao",
       "assignees": [
         "a74nh"
@@ -11980,7 +10667,7 @@
       "url": "https://github.com/dotnet/runtime/issues/118119",
       "state": "OPEN",
       "created_at": "2025-07-28T10:01:58Z",
-      "updated_at": "2026-04-24T11:03:24Z",
+      "updated_at": "2026-04-24T14:03:31Z",
       "author": "BrzVlad",
       "assignees": [],
       "labels": [
@@ -12075,7 +10762,7 @@
       "url": "https://github.com/dotnet/runtime/issues/118038",
       "state": "OPEN",
       "created_at": "2025-07-24T21:08:18Z",
-      "updated_at": "2026-04-24T11:03:22Z",
+      "updated_at": "2026-04-24T14:03:29Z",
       "author": "tarekgh",
       "assignees": [],
       "labels": [
@@ -12194,7 +10881,7 @@
       "url": "https://github.com/dotnet/runtime/issues/117974",
       "state": "OPEN",
       "created_at": "2025-07-23T09:52:21Z",
-      "updated_at": "2026-04-24T11:03:20Z",
+      "updated_at": "2026-04-24T14:03:28Z",
       "author": "MihaZupan",
       "assignees": [
         "akoeplinger"
@@ -12212,7 +10899,7 @@
       "last_human_comment_date": "2026-03-30T01:05:49Z",
       "last_human_comment_author": "copilot-swe-agent",
       "reactions_count": 0,
-      "hits_24h": 22,
+      "hits_24h": 11,
       "hits_7d": 177,
       "hits_30d": 281,
       "error_pattern": "{\n  \"ErrorMessage\": [\"Done building Helix work items for scenario WasmTestOn\", \"The Operation will be canceled. The next steps may not contain expected logs\"],\n  \"ErrorPattern\": \"\",\n  \"BuildRetry\": false,\n  \"ExcludeConsoleLog\": false\n}",
@@ -12222,7 +10909,7 @@
       "age_days": 275,
       "last_human_activity_days": 25,
       "assignee_display": "akoeplinger",
-      "urgency_score": 7.25,
+      "urgency_score": 6.5,
       "urgency_breakdown": {
         "hits_24h": {
           "value": 1.0,
@@ -12235,9 +10922,9 @@
           "contribution": 2.0
         },
         "hit_trend": {
-          "value": 0.5,
+          "value": 0.0,
           "weight": 1.5,
-          "contribution": 0.75
+          "contribution": 0.0
         },
         "blocking_label": {
           "value": 1.0,
@@ -12318,7 +11005,7 @@
       "url": "https://github.com/dotnet/runtime/issues/117964",
       "state": "OPEN",
       "created_at": "2025-07-23T02:53:29Z",
-      "updated_at": "2026-04-24T11:03:19Z",
+      "updated_at": "2026-04-24T14:03:26Z",
       "author": "elinor-fung",
       "assignees": [
         "pavelsavara",
@@ -12441,7 +11128,7 @@
       "url": "https://github.com/dotnet/runtime/issues/117903",
       "state": "OPEN",
       "created_at": "2025-07-21T23:12:41Z",
-      "updated_at": "2026-04-24T11:03:18Z",
+      "updated_at": "2026-04-24T14:03:25Z",
       "author": "tarekgh",
       "assignees": [
         "matouskozak"
@@ -12538,7 +11225,7 @@
       "url": "https://github.com/dotnet/runtime/issues/117731",
       "state": "OPEN",
       "created_at": "2025-07-16T18:59:30Z",
-      "updated_at": "2026-04-24T11:03:14Z",
+      "updated_at": "2026-04-24T14:03:21Z",
       "author": "tarekgh",
       "assignees": [
         "matouskozak"
@@ -12635,7 +11322,7 @@
       "url": "https://github.com/dotnet/runtime/issues/117666",
       "state": "OPEN",
       "created_at": "2025-07-15T15:43:43Z",
-      "updated_at": "2026-04-24T11:03:13Z",
+      "updated_at": "2026-04-24T14:03:20Z",
       "author": "tarekgh",
       "assignees": [],
       "labels": [
@@ -12754,7 +11441,7 @@
       "url": "https://github.com/dotnet/runtime/issues/117561",
       "state": "OPEN",
       "created_at": "2025-07-11T21:24:22Z",
-      "updated_at": "2026-04-24T11:03:12Z",
+      "updated_at": "2026-04-24T14:03:18Z",
       "author": "amanasifkhalid",
       "assignees": [
         "davidwrighton"
@@ -12780,7 +11467,7 @@
       "has_blocking_label": false,
       "has_untriaged_label": false,
       "age_days": 286,
-      "last_human_activity_days": 276,
+      "last_human_activity_days": 277,
       "assignee_display": "davidwrighton",
       "urgency_score": 0.0,
       "urgency_breakdown": {
@@ -12852,7 +11539,7 @@
       "url": "https://github.com/dotnet/runtime/issues/117546",
       "state": "OPEN",
       "created_at": "2025-07-11T16:11:01Z",
-      "updated_at": "2026-04-24T11:03:11Z",
+      "updated_at": "2026-04-24T14:03:17Z",
       "author": "tarekgh",
       "assignees": [],
       "labels": [
@@ -12971,7 +11658,7 @@
       "url": "https://github.com/dotnet/runtime/issues/117486",
       "state": "OPEN",
       "created_at": "2025-07-09T23:08:51Z",
-      "updated_at": "2026-04-24T11:03:09Z",
+      "updated_at": "2026-04-24T14:03:15Z",
       "author": "tarekgh",
       "assignees": [
         "lewing"
@@ -13093,7 +11780,7 @@
       "url": "https://github.com/dotnet/runtime/issues/117186",
       "state": "OPEN",
       "created_at": "2025-07-01T03:02:29Z",
-      "updated_at": "2026-04-24T11:03:08Z",
+      "updated_at": "2026-04-24T14:03:14Z",
       "author": "jkotas",
       "assignees": [],
       "labels": [
@@ -13213,7 +11900,7 @@
       "url": "https://github.com/dotnet/runtime/issues/117164",
       "state": "OPEN",
       "created_at": "2025-06-30T17:44:06Z",
-      "updated_at": "2026-04-24T11:03:07Z",
+      "updated_at": "2026-04-24T14:03:13Z",
       "author": "jozkee",
       "assignees": [],
       "labels": [
@@ -13227,9 +11914,9 @@
       "last_human_comment_date": "2026-04-17T16:12:12Z",
       "last_human_comment_author": "steveisok",
       "reactions_count": 0,
-      "hits_24h": 8,
-      "hits_7d": 147,
-      "hits_30d": 655,
+      "hits_24h": 13,
+      "hits_7d": 151,
+      "hits_30d": 659,
       "error_pattern": "{\n  \"ErrorMessage\": \"Unable to pull image mcr.microsoft.com/dotnet-buildtools/prereqs\",\n  \"BuildRetry\": true,\n  \"ExcludeConsoleLog\": false\n}",
       "build_link": "https://dev.azure.com/dnceng-public/public/_build/results?buildId=1108670",
       "has_blocking_label": true,
@@ -13237,12 +11924,12 @@
       "age_days": 297,
       "last_human_activity_days": 6,
       "assignee_display": "",
-      "urgency_score": 6.75,
+      "urgency_score": 8.25,
       "urgency_breakdown": {
         "hits_24h": {
-          "value": 0.75,
+          "value": 1.0,
           "weight": 3.0,
-          "contribution": 2.25
+          "contribution": 3.0
         },
         "hits_7d": {
           "value": 1.0,
@@ -13250,9 +11937,9 @@
           "contribution": 2.0
         },
         "hit_trend": {
-          "value": 0.0,
+          "value": 0.5,
           "weight": 1.5,
-          "contribution": 0.0
+          "contribution": 0.75
         },
         "blocking_label": {
           "value": 1.0,
@@ -13333,7 +12020,7 @@
       "url": "https://github.com/dotnet/runtime/issues/117017",
       "state": "OPEN",
       "created_at": "2025-06-25T12:46:32Z",
-      "updated_at": "2026-04-24T11:03:05Z",
+      "updated_at": "2026-04-24T14:03:11Z",
       "author": "stephentoub",
       "assignees": [
         "akoeplinger"
@@ -13357,7 +12044,7 @@
       "build_link": "https://dev.azure.com/dnceng-public/cbb18261-c48f-4abb-8651-8cdcb5474649/_build/results?buildId=1077439&view=logs&j=d4114222-2640-5505-c7da-33ed88276119",
       "has_blocking_label": true,
       "has_untriaged_label": false,
-      "age_days": 302,
+      "age_days": 303,
       "last_human_activity_days": 252,
       "assignee_display": "akoeplinger",
       "urgency_score": 1.5,
@@ -13456,7 +12143,7 @@
       "url": "https://github.com/dotnet/runtime/issues/116760",
       "state": "OPEN",
       "created_at": "2025-06-17T19:12:30Z",
-      "updated_at": "2026-04-24T11:03:01Z",
+      "updated_at": "2026-04-24T14:03:07Z",
       "author": "jozkee",
       "assignees": [],
       "labels": [
@@ -13575,7 +12262,7 @@
       "url": "https://github.com/dotnet/runtime/issues/90458",
       "state": "OPEN",
       "created_at": "2023-08-12T07:39:40Z",
-      "updated_at": "2026-04-24T11:03:00Z",
+      "updated_at": "2026-04-24T14:03:05Z",
       "author": "radical",
       "assignees": [
         "maraf"
@@ -13593,7 +12280,7 @@
       "last_human_comment_author": "radekdoulik",
       "reactions_count": 0,
       "hits_24h": 0,
-      "hits_7d": 58,
+      "hits_7d": 57,
       "hits_30d": 60,
       "error_pattern": "{\n  \"ErrorMessage\": \"\",\n  \"ErrorPattern\": \"WasmApp.Native.targets.+error . Failed to compile \",\n  \"BuildRetry\": false,\n  \"ExcludeConsoleLog\": false\n}",
       "build_link": "https://dev.azure.com/dnceng-public/public/_build/results?buildId=371479&view=results",
@@ -13698,7 +12385,7 @@
       "url": "https://github.com/dotnet/runtime/issues/116719",
       "state": "OPEN",
       "created_at": "2025-06-16T22:35:33Z",
-      "updated_at": "2026-04-24T11:02:59Z",
+      "updated_at": "2026-04-24T14:03:04Z",
       "author": "jozkee",
       "assignees": [],
       "labels": [
@@ -13818,7 +12505,7 @@
       "url": "https://github.com/dotnet/runtime/issues/116697",
       "state": "OPEN",
       "created_at": "2025-06-16T15:49:14Z",
-      "updated_at": "2026-04-24T11:02:58Z",
+      "updated_at": "2026-04-24T14:03:03Z",
       "author": "jozkee",
       "assignees": [],
       "labels": [
@@ -13833,9 +12520,9 @@
       "last_human_comment_date": "2026-03-10T18:39:02Z",
       "last_human_comment_author": "lewing",
       "reactions_count": 0,
-      "hits_24h": 1,
+      "hits_24h": 2,
       "hits_7d": 18,
-      "hits_30d": 252,
+      "hits_30d": 251,
       "error_pattern": "{\n  \"ErrorMessage\": \"Timed out after 10s waiting for 'WASM EXIT' messag\",\n  \"ErrorPattern\": \"\",\n  \"BuildRetry\": true,\n  \"ExcludeConsoleLog\": false\n}",
       "build_link": "https://dev.azure.com/dnceng-public/cbb18261-c48f-4abb-8651-8cdcb5474649/_build/results?buildId=1068222",
       "has_blocking_label": true,
@@ -13843,7 +12530,7 @@
       "age_days": 311,
       "last_human_activity_days": 44,
       "assignee_display": "",
-      "urgency_score": 5.0,
+      "urgency_score": 5.75,
       "urgency_breakdown": {
         "hits_24h": {
           "value": 0.5,
@@ -13856,9 +12543,9 @@
           "contribution": 1.0
         },
         "hit_trend": {
-          "value": 0.0,
+          "value": 0.5,
           "weight": 1.5,
-          "contribution": 0.0
+          "contribution": 0.75
         },
         "blocking_label": {
           "value": 1.0,
@@ -13939,7 +12626,7 @@
       "url": "https://github.com/dotnet/runtime/issues/116558",
       "state": "OPEN",
       "created_at": "2025-06-11T21:07:31Z",
-      "updated_at": "2026-04-24T11:02:56Z",
+      "updated_at": "2026-04-24T14:03:01Z",
       "author": "elinor-fung",
       "assignees": [
         "kotlarmilos"
@@ -14036,7 +12723,7 @@
       "url": "https://github.com/dotnet/runtime/issues/116393",
       "state": "OPEN",
       "created_at": "2025-06-06T20:58:53Z",
-      "updated_at": "2026-04-24T11:02:54Z",
+      "updated_at": "2026-04-24T14:02:58Z",
       "author": "elinor-fung",
       "assignees": [],
       "labels": [
@@ -14156,7 +12843,7 @@
       "url": "https://github.com/dotnet/runtime/issues/116368",
       "state": "OPEN",
       "created_at": "2025-06-06T10:19:25Z",
-      "updated_at": "2026-04-24T11:02:53Z",
+      "updated_at": "2026-04-24T14:02:57Z",
       "author": "simonrozsival",
       "assignees": [],
       "labels": [
@@ -14276,7 +12963,7 @@
       "url": "https://github.com/dotnet/runtime/issues/115467",
       "state": "OPEN",
       "created_at": "2025-05-12T06:57:53Z",
-      "updated_at": "2026-04-24T11:02:48Z",
+      "updated_at": "2026-04-24T14:02:53Z",
       "author": "rzikm",
       "assignees": [],
       "labels": [
@@ -14371,7 +13058,7 @@
       "url": "https://github.com/dotnet/runtime/issues/114924",
       "state": "OPEN",
       "created_at": "2025-04-22T19:11:54Z",
-      "updated_at": "2026-04-24T11:02:46Z",
+      "updated_at": "2026-04-24T14:02:50Z",
       "author": "carlossanlop",
       "assignees": [],
       "labels": [
@@ -14491,7 +13178,7 @@
       "url": "https://github.com/dotnet/runtime/issues/114908",
       "state": "OPEN",
       "created_at": "2025-04-22T11:50:20Z",
-      "updated_at": "2026-04-24T11:02:45Z",
+      "updated_at": "2026-04-24T14:02:49Z",
       "author": "matouskozak",
       "assignees": [
         "BrzVlad"
@@ -14616,7 +13303,7 @@
       "url": "https://github.com/dotnet/runtime/issues/114704",
       "state": "OPEN",
       "created_at": "2025-04-15T17:41:42Z",
-      "updated_at": "2026-04-24T11:02:44Z",
+      "updated_at": "2026-04-24T14:02:48Z",
       "author": "steveharter",
       "assignees": [],
       "labels": [
@@ -14737,7 +13424,7 @@
       "url": "https://github.com/dotnet/runtime/issues/88027",
       "state": "OPEN",
       "created_at": "2023-06-26T01:27:33Z",
-      "updated_at": "2026-04-24T11:02:43Z",
+      "updated_at": "2026-04-24T14:02:47Z",
       "author": "v-wenyuxu",
       "assignees": [],
       "labels": [
@@ -14755,7 +13442,7 @@
       "reactions_count": 0,
       "hits_24h": 0,
       "hits_7d": 0,
-      "hits_30d": 4,
+      "hits_30d": 3,
       "error_pattern": "{\n  \"ErrorMessage\": [\"BasicEventSourceTests.TestsManifestGeneration.Test_EventSource_EtwManifestGeneration\"],\n  \"BuildRetry\" : false,\n  \"ExcludeConsoleLog\" : false\n}",
       "build_link": "https://dev.azure.com/dnceng-public/public/_build/results?buildId=1017103",
       "has_blocking_label": false,
@@ -14859,7 +13546,7 @@
       "url": "https://github.com/dotnet/runtime/issues/114698",
       "state": "OPEN",
       "created_at": "2025-04-15T16:53:21Z",
-      "updated_at": "2026-04-24T11:02:42Z",
+      "updated_at": "2026-04-24T14:02:46Z",
       "author": "carlossanlop",
       "assignees": [
         "pavelsavara"
@@ -14983,7 +13670,7 @@
       "url": "https://github.com/dotnet/runtime/issues/114693",
       "state": "OPEN",
       "created_at": "2025-04-15T15:40:55Z",
-      "updated_at": "2026-04-24T11:02:41Z",
+      "updated_at": "2026-04-24T14:02:44Z",
       "author": "carlossanlop",
       "assignees": [],
       "labels": [
@@ -15104,7 +13791,7 @@
       "url": "https://github.com/dotnet/runtime/issues/114653",
       "state": "OPEN",
       "created_at": "2025-04-14T20:02:33Z",
-      "updated_at": "2026-04-24T11:02:40Z",
+      "updated_at": "2026-04-24T14:02:43Z",
       "author": "carlossanlop",
       "assignees": [],
       "labels": [
@@ -15226,7 +13913,7 @@
       "url": "https://github.com/dotnet/runtime/issues/114450",
       "state": "OPEN",
       "created_at": "2025-04-09T17:08:32Z",
-      "updated_at": "2026-04-24T11:02:38Z",
+      "updated_at": "2026-04-24T14:02:42Z",
       "author": "matouskozak",
       "assignees": [
         "kotlarmilos",
@@ -15245,7 +13932,7 @@
       "last_human_comment_author": "lewing",
       "reactions_count": 0,
       "hits_24h": 1,
-      "hits_7d": 16,
+      "hits_7d": 15,
       "hits_30d": 51,
       "error_pattern": "{\n  \"ErrorPattern\": \"(\\\\[FAIL\\\\] )?System\\\\.Net\\\\.Sockets\\\\.Tests\\\\.SendTo_.+\\\\.Datagram_UDP_AccessDenied_Throws_DoesNotBind( \\\\[FAIL\\\\])?\",\n  \"BuildRetry\": false,\n  \"ExcludeConsoleLog\": false\n}",
       "build_link": "https://dev.azure.com/dnceng-public/public/_build/results?buildId=1009757",
@@ -15324,7 +14011,7 @@
       "url": "https://github.com/dotnet/runtime/issues/114222",
       "state": "OPEN",
       "created_at": "2025-04-03T16:55:44Z",
-      "updated_at": "2026-04-24T11:02:37Z",
+      "updated_at": "2026-04-24T14:02:40Z",
       "author": "carlossanlop",
       "assignees": [],
       "labels": [
@@ -15446,7 +14133,7 @@
       "url": "https://github.com/dotnet/runtime/issues/113686",
       "state": "OPEN",
       "created_at": "2025-03-19T12:38:32Z",
-      "updated_at": "2026-04-24T11:02:34Z",
+      "updated_at": "2026-04-24T14:02:37Z",
       "author": "antonfirsov",
       "assignees": [],
       "labels": [
@@ -15469,7 +14156,7 @@
       "build_link": "https://dev.azure.com/dnceng-public/cbb18261-c48f-4abb-8651-8cdcb5474649/_build/results?buildId=984942",
       "has_blocking_label": false,
       "has_untriaged_label": false,
-      "age_days": 400,
+      "age_days": 401,
       "last_human_activity_days": 33,
       "assignee_display": "",
       "urgency_score": 1.0,
@@ -15568,7 +14255,7 @@
       "url": "https://github.com/dotnet/runtime/issues/29383",
       "state": "OPEN",
       "created_at": "2019-04-26T02:14:18Z",
-      "updated_at": "2026-04-24T11:02:30Z",
+      "updated_at": "2026-04-24T14:02:32Z",
       "author": "AriNuer",
       "assignees": [
         "tmds"
@@ -15691,7 +14378,7 @@
       "url": "https://github.com/dotnet/runtime/issues/113060",
       "state": "OPEN",
       "created_at": "2025-03-03T09:08:48Z",
-      "updated_at": "2026-04-24T11:02:29Z",
+      "updated_at": "2026-04-24T14:02:31Z",
       "author": "simonrozsival",
       "assignees": [],
       "labels": [
@@ -15706,15 +14393,15 @@
       "last_human_comment_date": "2026-02-10T13:44:34Z",
       "last_human_comment_author": "steveisok",
       "reactions_count": 0,
-      "hits_24h": 3,
+      "hits_24h": 4,
       "hits_7d": 20,
-      "hits_30d": 60,
+      "hits_30d": 61,
       "error_pattern": "{\r\n  \"ErrorPattern\": \"Failed to load AOT module '[^']+\\\\/test76531.dll.so' \\\\('[^']+\\\\/test76531.dll'\\\\) in aot-only mode.\",\r\n  \"BuildRetry\": false,\r\n  \"ExcludeConsoleLog\": false\r\n}",
       "build_link": "https://dev.azure.com/dnceng-public/public/_build/results?buildId=966760",
       "has_blocking_label": false,
       "has_untriaged_label": false,
       "age_days": 417,
-      "last_human_activity_days": 72,
+      "last_human_activity_days": 73,
       "assignee_display": "",
       "urgency_score": 4.62,
       "urgency_breakdown": {
@@ -15812,7 +14499,7 @@
       "url": "https://github.com/dotnet/runtime/issues/112946",
       "state": "OPEN",
       "created_at": "2025-02-26T09:58:41Z",
-      "updated_at": "2026-04-24T11:02:28Z",
+      "updated_at": "2026-04-24T14:02:30Z",
       "author": "simonrozsival",
       "assignees": [
         "davidnguyen-tech"
@@ -15935,7 +14622,7 @@
       "url": "https://github.com/dotnet/runtime/issues/112633",
       "state": "OPEN",
       "created_at": "2025-02-17T09:53:00Z",
-      "updated_at": "2026-04-24T11:02:24Z",
+      "updated_at": "2026-04-24T14:02:26Z",
       "author": "ivanpovazan",
       "assignees": [
         "kotlarmilos"
@@ -16057,7 +14744,7 @@
       "url": "https://github.com/dotnet/runtime/issues/112557",
       "state": "OPEN",
       "created_at": "2025-02-14T08:45:34Z",
-      "updated_at": "2026-04-24T11:02:23Z",
+      "updated_at": "2026-04-24T14:02:25Z",
       "author": "kotlarmilos",
       "assignees": [],
       "labels": [
@@ -16072,22 +14759,22 @@
       "last_human_comment_date": "2026-02-10T13:44:34Z",
       "last_human_comment_author": "steveisok",
       "reactions_count": 0,
-      "hits_24h": 0,
+      "hits_24h": 1,
       "hits_7d": 10,
-      "hits_30d": 31,
+      "hits_30d": 32,
       "error_pattern": "{\n  \"ErrorMessage\": [\"Runtime_101731.TestConvertToInt64NativeSingle\", \"App Exit Code: 22\"],\n  \"BuildRetry\": false,\n  \"ExcludeConsoleLog\": false\n}",
       "build_link": "https://dev.azure.com/dnceng-public/public/_build/results?buildId=951764&view=logs&j=d25dc2c0-518b-5583-f661-5ac905106679&t=71272a74-32ba-5286-2b9e-67c15e9af4ee",
       "has_blocking_label": true,
       "has_untriaged_label": false,
       "age_days": 434,
-      "last_human_activity_days": 72,
+      "last_human_activity_days": 73,
       "assignee_display": "",
-      "urgency_score": 3.5,
+      "urgency_score": 5.75,
       "urgency_breakdown": {
         "hits_24h": {
-          "value": 0.0,
+          "value": 0.5,
           "weight": 3.0,
-          "contribution": 0.0
+          "contribution": 1.5
         },
         "hits_7d": {
           "value": 0.5,
@@ -16095,9 +14782,9 @@
           "contribution": 1.0
         },
         "hit_trend": {
-          "value": 0.0,
+          "value": 0.5,
           "weight": 1.5,
-          "contribution": 0.0
+          "contribution": 0.75
         },
         "blocking_label": {
           "value": 1.0,
@@ -16115,12 +14802,12 @@
           "contribution": 1.0
         }
       },
-      "staleness_score": 4.5,
+      "staleness_score": 1.5,
       "staleness_breakdown": {
         "hits_24h_zero": {
-          "value": 1.0,
+          "value": 0.0,
           "weight": 3.0,
-          "contribution": 3.0
+          "contribution": 0.0
         },
         "hits_7d_zero": {
           "value": 0.0,
@@ -16178,7 +14865,7 @@
       "url": "https://github.com/dotnet/runtime/issues/112423",
       "state": "OPEN",
       "created_at": "2025-02-11T16:18:01Z",
-      "updated_at": "2026-04-24T11:02:22Z",
+      "updated_at": "2026-04-24T14:02:23Z",
       "author": "carlossanlop",
       "assignees": [],
       "labels": [
@@ -16300,7 +14987,7 @@
       "url": "https://github.com/dotnet/runtime/issues/112422",
       "state": "OPEN",
       "created_at": "2025-02-11T16:14:31Z",
-      "updated_at": "2026-04-24T11:02:21Z",
+      "updated_at": "2026-04-24T14:02:22Z",
       "author": "carlossanlop",
       "assignees": [],
       "labels": [
@@ -16422,7 +15109,7 @@
       "url": "https://github.com/dotnet/runtime/issues/112360",
       "state": "OPEN",
       "created_at": "2025-02-10T18:48:02Z",
-      "updated_at": "2026-04-24T11:02:20Z",
+      "updated_at": "2026-04-24T14:02:21Z",
       "author": "jkotas",
       "assignees": [],
       "labels": [
@@ -16541,7 +15228,7 @@
       "url": "https://github.com/dotnet/runtime/issues/112093",
       "state": "OPEN",
       "created_at": "2025-02-03T12:24:17Z",
-      "updated_at": "2026-04-24T11:02:19Z",
+      "updated_at": "2026-04-24T14:02:20Z",
       "author": "jkurdek",
       "assignees": [],
       "labels": [
@@ -16554,22 +15241,22 @@
       "last_human_comment_date": "2026-02-10T13:44:34Z",
       "last_human_comment_author": "steveisok",
       "reactions_count": 0,
-      "hits_24h": 0,
+      "hits_24h": 1,
       "hits_7d": 10,
-      "hits_30d": 31,
+      "hits_30d": 32,
       "error_pattern": "{\n  \"ErrorMessage\": \"Failed test: Loader/classloader/explicitlayout/objrefandnonobjrefoverlap/case13/case13.cmd\",\n  \"BuildRetry\": false,\n  \"ExcludeConsoleLog\": false\n}",
       "build_link": "https://dev.azure.com/dnceng-public/public/_build/results?buildId=972237",
       "has_blocking_label": false,
       "has_untriaged_label": false,
-      "age_days": 444,
-      "last_human_activity_days": 72,
+      "age_days": 445,
+      "last_human_activity_days": 73,
       "assignee_display": "",
-      "urgency_score": 2.0,
+      "urgency_score": 4.25,
       "urgency_breakdown": {
         "hits_24h": {
-          "value": 0.0,
+          "value": 0.5,
           "weight": 3.0,
-          "contribution": 0.0
+          "contribution": 1.5
         },
         "hits_7d": {
           "value": 0.5,
@@ -16577,9 +15264,9 @@
           "contribution": 1.0
         },
         "hit_trend": {
-          "value": 0.0,
+          "value": 0.5,
           "weight": 1.5,
-          "contribution": 0.0
+          "contribution": 0.75
         },
         "blocking_label": {
           "value": 0.0,
@@ -16597,12 +15284,12 @@
           "contribution": 1.0
         }
       },
-      "staleness_score": 4.5,
+      "staleness_score": 1.5,
       "staleness_breakdown": {
         "hits_24h_zero": {
-          "value": 1.0,
+          "value": 0.0,
           "weight": 3.0,
-          "contribution": 3.0
+          "contribution": 0.0
         },
         "hits_7d_zero": {
           "value": 0.0,
@@ -16660,7 +15347,7 @@
       "url": "https://github.com/dotnet/runtime/issues/111752",
       "state": "OPEN",
       "created_at": "2025-01-23T17:41:23Z",
-      "updated_at": "2026-04-24T11:02:17Z",
+      "updated_at": "2026-04-24T14:02:17Z",
       "author": "carlossanlop",
       "assignees": [],
       "labels": [
@@ -16783,7 +15470,7 @@
       "url": "https://github.com/dotnet/runtime/issues/111449",
       "state": "OPEN",
       "created_at": "2025-01-15T08:52:01Z",
-      "updated_at": "2026-04-24T11:02:15Z",
+      "updated_at": "2026-04-24T14:02:16Z",
       "author": "MihaZupan",
       "assignees": [
         "pavelsavara"
@@ -16808,7 +15495,7 @@
       "has_blocking_label": false,
       "has_untriaged_label": false,
       "age_days": 464,
-      "last_human_activity_days": 92,
+      "last_human_activity_days": 93,
       "assignee_display": "pavelsavara",
       "urgency_score": 0.0,
       "urgency_breakdown": {
@@ -16906,7 +15593,7 @@
       "url": "https://github.com/dotnet/runtime/issues/110952",
       "state": "OPEN",
       "created_at": "2024-12-26T15:57:28Z",
-      "updated_at": "2026-04-24T11:02:12Z",
+      "updated_at": "2026-04-24T14:02:12Z",
       "author": "jkotas",
       "assignees": [],
       "labels": [
@@ -17025,7 +15712,7 @@
       "url": "https://github.com/dotnet/runtime/issues/110857",
       "state": "OPEN",
       "created_at": "2024-12-20T13:28:44Z",
-      "updated_at": "2026-04-24T11:02:11Z",
+      "updated_at": "2026-04-24T14:02:11Z",
       "author": "matouskozak",
       "assignees": [],
       "labels": [
@@ -17046,7 +15733,7 @@
       "build_link": "https://dev.azure.com/dnceng-public/public/_build/results?buildId=897703",
       "has_blocking_label": false,
       "has_untriaged_label": false,
-      "age_days": 489,
+      "age_days": 490,
       "last_human_activity_days": null,
       "assignee_display": "",
       "urgency_score": 1.0,
@@ -17145,7 +15832,7 @@
       "url": "https://github.com/dotnet/runtime/issues/110643",
       "state": "OPEN",
       "created_at": "2024-12-12T11:27:33Z",
-      "updated_at": "2026-04-24T11:02:09Z",
+      "updated_at": "2026-04-24T14:02:09Z",
       "author": "am11",
       "assignees": [
         "adamsitnik"
@@ -17266,7 +15953,7 @@
       "url": "https://github.com/dotnet/runtime/issues/110173",
       "state": "OPEN",
       "created_at": "2024-11-26T02:17:04Z",
-      "updated_at": "2026-04-24T11:02:07Z",
+      "updated_at": "2026-04-24T14:02:06Z",
       "author": "v-wenyuxu",
       "assignees": [
         "janvorli"
@@ -17367,7 +16054,7 @@
       "url": "https://github.com/dotnet/runtime/issues/109565",
       "state": "OPEN",
       "created_at": "2024-11-05T21:19:25Z",
-      "updated_at": "2026-04-24T11:02:03Z",
+      "updated_at": "2026-04-24T14:02:02Z",
       "author": "carlossanlop",
       "assignees": [],
       "labels": [
@@ -17492,7 +16179,7 @@
       "url": "https://github.com/dotnet/runtime/issues/108832",
       "state": "OPEN",
       "created_at": "2024-10-14T08:55:22Z",
-      "updated_at": "2026-04-24T11:02:02Z",
+      "updated_at": "2026-04-24T14:02:01Z",
       "author": "matouskozak",
       "assignees": [
         "kotlarmilos"
@@ -17590,7 +16277,7 @@
       "url": "https://github.com/dotnet/runtime/issues/108299",
       "state": "OPEN",
       "created_at": "2024-09-26T19:25:26Z",
-      "updated_at": "2026-04-24T11:02:01Z",
+      "updated_at": "2026-04-24T14:01:59Z",
       "author": "carlossanlop",
       "assignees": [],
       "labels": [
@@ -17713,7 +16400,7 @@
       "url": "https://github.com/dotnet/runtime/issues/108103",
       "state": "OPEN",
       "created_at": "2024-09-21T23:32:09Z",
-      "updated_at": "2026-04-24T11:02:00Z",
+      "updated_at": "2026-04-24T14:01:58Z",
       "author": "jkotas",
       "assignees": [
         "kotlarmilos"
@@ -17738,7 +16425,7 @@
       "has_blocking_label": true,
       "has_untriaged_label": false,
       "age_days": 579,
-      "last_human_activity_days": 37,
+      "last_human_activity_days": 38,
       "assignee_display": "kotlarmilos",
       "urgency_score": 4.5,
       "urgency_breakdown": {
@@ -17836,7 +16523,7 @@
       "url": "https://github.com/dotnet/runtime/issues/107933",
       "state": "OPEN",
       "created_at": "2024-09-17T17:28:31Z",
-      "updated_at": "2026-04-24T11:01:57Z",
+      "updated_at": "2026-04-24T14:01:56Z",
       "author": "carlossanlop",
       "assignees": [],
       "labels": [
@@ -17958,7 +16645,7 @@
       "url": "https://github.com/dotnet/runtime/issues/107364",
       "state": "OPEN",
       "created_at": "2024-09-04T17:20:19Z",
-      "updated_at": "2026-04-24T11:01:56Z",
+      "updated_at": "2026-04-24T14:01:55Z",
       "author": "carlossanlop",
       "assignees": [],
       "labels": [
@@ -18078,7 +16765,7 @@
       "url": "https://github.com/dotnet/runtime/issues/104825",
       "state": "OPEN",
       "created_at": "2024-07-12T20:18:31Z",
-      "updated_at": "2026-04-24T11:01:55Z",
+      "updated_at": "2026-04-24T14:01:54Z",
       "author": "carlossanlop",
       "assignees": [
         "maraf"
@@ -18203,7 +16890,7 @@
       "url": "https://github.com/dotnet/runtime/issues/106634",
       "state": "OPEN",
       "created_at": "2024-08-19T14:37:45Z",
-      "updated_at": "2026-04-24T11:01:53Z",
+      "updated_at": "2026-04-24T14:01:51Z",
       "author": "rzikm",
       "assignees": [],
       "labels": [
@@ -18226,7 +16913,7 @@
       "has_blocking_label": false,
       "has_untriaged_label": false,
       "age_days": 612,
-      "last_human_activity_days": 269,
+      "last_human_activity_days": 270,
       "assignee_display": "",
       "urgency_score": 1.0,
       "urgency_breakdown": {
@@ -18298,7 +16985,7 @@
       "url": "https://github.com/dotnet/runtime/issues/106088",
       "state": "OPEN",
       "created_at": "2024-08-07T17:32:03Z",
-      "updated_at": "2026-04-24T11:01:52Z",
+      "updated_at": "2026-04-24T14:01:50Z",
       "author": "steveharter",
       "assignees": [],
       "labels": [
@@ -18418,7 +17105,7 @@
       "url": "https://github.com/dotnet/runtime/issues/106071",
       "state": "OPEN",
       "created_at": "2024-08-07T11:36:25Z",
-      "updated_at": "2026-04-24T11:01:51Z",
+      "updated_at": "2026-04-24T14:01:49Z",
       "author": "matouskozak",
       "assignees": [],
       "labels": [
@@ -18513,7 +17200,7 @@
       "url": "https://github.com/dotnet/runtime/issues/105804",
       "state": "OPEN",
       "created_at": "2024-08-01T13:14:17Z",
-      "updated_at": "2026-04-24T11:01:50Z",
+      "updated_at": "2026-04-24T14:01:48Z",
       "author": "matouskozak",
       "assignees": [
         "kotlarmilos"
@@ -18537,7 +17224,7 @@
       "build_link": "https://dev.azure.com/dnceng-public/public/_build/results?buildId=804204",
       "has_blocking_label": false,
       "has_untriaged_label": false,
-      "age_days": 630,
+      "age_days": 631,
       "last_human_activity_days": 177,
       "assignee_display": "kotlarmilos",
       "urgency_score": 0.0,
@@ -18636,7 +17323,7 @@
       "url": "https://github.com/dotnet/runtime/issues/105265",
       "state": "OPEN",
       "created_at": "2024-07-22T18:05:08Z",
-      "updated_at": "2026-04-24T11:01:47Z",
+      "updated_at": "2026-04-24T14:01:44Z",
       "author": "stephentoub",
       "assignees": [],
       "labels": [
@@ -18756,7 +17443,7 @@
       "url": "https://github.com/dotnet/runtime/issues/104933",
       "state": "OPEN",
       "created_at": "2024-07-16T00:16:08Z",
-      "updated_at": "2026-04-24T11:01:46Z",
+      "updated_at": "2026-04-24T14:01:43Z",
       "author": "carlossanlop",
       "assignees": [],
       "labels": [
@@ -18878,7 +17565,7 @@
       "url": "https://github.com/dotnet/runtime/issues/104889",
       "state": "OPEN",
       "created_at": "2024-07-15T11:56:04Z",
-      "updated_at": "2026-04-24T11:01:45Z",
+      "updated_at": "2026-04-24T14:01:42Z",
       "author": "maraf",
       "assignees": [
         "pavelsavara"
@@ -19001,7 +17688,7 @@
       "url": "https://github.com/dotnet/runtime/issues/104827",
       "state": "OPEN",
       "created_at": "2024-07-12T20:25:02Z",
-      "updated_at": "2026-04-24T11:01:44Z",
+      "updated_at": "2026-04-24T14:01:41Z",
       "author": "carlossanlop",
       "assignees": [
         "radekdoulik"
@@ -19126,7 +17813,7 @@
       "url": "https://github.com/dotnet/runtime/issues/104823",
       "state": "OPEN",
       "created_at": "2024-07-12T19:56:53Z",
-      "updated_at": "2026-04-24T11:01:41Z",
+      "updated_at": "2026-04-24T14:01:38Z",
       "author": "carlossanlop",
       "assignees": [],
       "labels": [
@@ -19249,7 +17936,7 @@
       "url": "https://github.com/dotnet/runtime/issues/104670",
       "state": "OPEN",
       "created_at": "2024-07-10T11:13:01Z",
-      "updated_at": "2026-04-24T11:01:39Z",
+      "updated_at": "2026-04-24T14:01:36Z",
       "author": "jakobbotsch",
       "assignees": [
         "mdh1418"
@@ -19267,7 +17954,7 @@
       "reactions_count": 0,
       "hits_24h": 0,
       "hits_7d": 0,
-      "hits_30d": 8,
+      "hits_30d": 7,
       "error_pattern": "{\r\n  \"ErrorMessage\": \"\",\r\n  \"ErrorPattern\": \"BinderTracingTest.ResolutionFlow.* Timed Out\",\r\n  \"BuildRetry\": false,\r\n  \"ExcludeConsoleLog\": false\r\n}",
       "build_link": "https://dev.azure.com/dnceng-public/cbb18261-c48f-4abb-8651-8cdcb5474649/_build/results?buildId=735589",
       "has_blocking_label": true,
@@ -19371,7 +18058,7 @@
       "url": "https://github.com/dotnet/runtime/issues/104586",
       "state": "OPEN",
       "created_at": "2024-07-09T04:00:36Z",
-      "updated_at": "2026-04-24T11:01:38Z",
+      "updated_at": "2026-04-24T14:01:35Z",
       "author": "elinor-fung",
       "assignees": [],
       "labels": [
@@ -19490,7 +18177,7 @@
       "url": "https://github.com/dotnet/runtime/issues/104572",
       "state": "OPEN",
       "created_at": "2024-07-08T20:03:08Z",
-      "updated_at": "2026-04-24T11:01:37Z",
+      "updated_at": "2026-04-24T14:01:34Z",
       "author": "kouvel",
       "assignees": [],
       "labels": [
@@ -19609,7 +18296,7 @@
       "url": "https://github.com/dotnet/runtime/issues/104333",
       "state": "OPEN",
       "created_at": "2024-07-02T22:27:46Z",
-      "updated_at": "2026-04-24T11:01:36Z",
+      "updated_at": "2026-04-24T14:01:33Z",
       "author": "carlossanlop",
       "assignees": [],
       "labels": [
@@ -19730,7 +18417,7 @@
       "url": "https://github.com/dotnet/runtime/issues/104271",
       "state": "OPEN",
       "created_at": "2024-07-02T01:35:44Z",
-      "updated_at": "2026-04-24T11:01:35Z",
+      "updated_at": "2026-04-24T14:01:32Z",
       "author": "stephentoub",
       "assignees": [
         "pavelsavara"
@@ -19755,7 +18442,7 @@
       "has_blocking_label": false,
       "has_untriaged_label": false,
       "age_days": 661,
-      "last_human_activity_days": 227,
+      "last_human_activity_days": 228,
       "assignee_display": "pavelsavara",
       "urgency_score": 0.0,
       "urgency_breakdown": {
@@ -19827,7 +18514,7 @@
       "url": "https://github.com/dotnet/runtime/issues/103586",
       "state": "OPEN",
       "created_at": "2024-06-17T16:03:05Z",
-      "updated_at": "2026-04-24T11:01:33Z",
+      "updated_at": "2026-04-24T14:01:29Z",
       "author": "jakobbotsch",
       "assignees": [],
       "labels": [
@@ -19947,7 +18634,7 @@
       "url": "https://github.com/dotnet/runtime/issues/103524",
       "state": "OPEN",
       "created_at": "2024-06-15T18:24:05Z",
-      "updated_at": "2026-04-24T11:01:32Z",
+      "updated_at": "2026-04-24T14:01:28Z",
       "author": "jkotas",
       "assignees": [
         "pavelsavara"
@@ -20069,7 +18756,7 @@
       "url": "https://github.com/dotnet/runtime/issues/103520",
       "state": "OPEN",
       "created_at": "2024-06-15T14:48:09Z",
-      "updated_at": "2026-04-24T11:01:31Z",
+      "updated_at": "2026-04-24T14:01:26Z",
       "author": "jkotas",
       "assignees": [
         "radekdoulik"
@@ -20192,7 +18879,7 @@
       "url": "https://github.com/dotnet/runtime/issues/103435",
       "state": "OPEN",
       "created_at": "2024-06-13T18:20:06Z",
-      "updated_at": "2026-04-24T11:01:30Z",
+      "updated_at": "2026-04-24T14:01:25Z",
       "author": "carlossanlop",
       "assignees": [],
       "labels": [
@@ -20315,7 +19002,7 @@
       "url": "https://github.com/dotnet/runtime/issues/103347",
       "state": "OPEN",
       "created_at": "2024-06-12T15:12:55Z",
-      "updated_at": "2026-04-24T11:01:28Z",
+      "updated_at": "2026-04-24T14:01:24Z",
       "author": "stephentoub",
       "assignees": [
         "akoeplinger"
@@ -20340,7 +19027,7 @@
       "has_blocking_label": false,
       "has_untriaged_label": false,
       "age_days": 680,
-      "last_human_activity_days": 66,
+      "last_human_activity_days": 67,
       "assignee_display": "akoeplinger",
       "urgency_score": 3.0,
       "urgency_breakdown": {
@@ -20412,7 +19099,7 @@
       "url": "https://github.com/dotnet/runtime/issues/102150",
       "state": "OPEN",
       "created_at": "2024-05-13T11:34:52Z",
-      "updated_at": "2026-04-24T11:01:24Z",
+      "updated_at": "2026-04-24T14:01:19Z",
       "author": "matouskozak",
       "assignees": [],
       "labels": [
@@ -20506,7 +19193,7 @@
       "url": "https://github.com/dotnet/runtime/issues/89402",
       "state": "OPEN",
       "created_at": "2023-07-24T19:52:12Z",
-      "updated_at": "2026-04-24T11:01:23Z",
+      "updated_at": "2026-04-24T14:01:17Z",
       "author": "pavelsavara",
       "assignees": [
         "pavelsavara"
@@ -20532,7 +19219,7 @@
       "has_blocking_label": false,
       "has_untriaged_label": false,
       "age_days": 1004,
-      "last_human_activity_days": 265,
+      "last_human_activity_days": 266,
       "assignee_display": "pavelsavara",
       "urgency_score": 0.0,
       "urgency_breakdown": {
@@ -20630,7 +19317,7 @@
       "url": "https://github.com/dotnet/runtime/issues/101423",
       "state": "OPEN",
       "created_at": "2024-04-23T12:14:08Z",
-      "updated_at": "2026-04-24T11:01:22Z",
+      "updated_at": "2026-04-24T14:01:16Z",
       "author": "stephentoub",
       "assignees": [],
       "labels": [
@@ -20650,8 +19337,8 @@
       "build_link": "https://dev.azure.com/dnceng-public/cbb18261-c48f-4abb-8651-8cdcb5474649/_build/results?buildId=652889",
       "has_blocking_label": false,
       "has_untriaged_label": false,
-      "age_days": 730,
-      "last_human_activity_days": 526,
+      "age_days": 731,
+      "last_human_activity_days": 527,
       "assignee_display": "",
       "urgency_score": 1.0,
       "urgency_breakdown": {
@@ -20749,7 +19436,7 @@
       "url": "https://github.com/dotnet/runtime/issues/101096",
       "state": "OPEN",
       "created_at": "2024-04-16T00:50:23Z",
-      "updated_at": "2026-04-24T11:01:21Z",
+      "updated_at": "2026-04-24T14:01:15Z",
       "author": "jkotas",
       "assignees": [],
       "labels": [
@@ -20868,7 +19555,7 @@
       "url": "https://github.com/dotnet/runtime/issues/100800",
       "state": "OPEN",
       "created_at": "2024-04-09T02:28:26Z",
-      "updated_at": "2026-04-24T11:01:16Z",
+      "updated_at": "2026-04-24T14:01:09Z",
       "author": "elinor-fung",
       "assignees": [
         "kotlarmilos"
@@ -20990,7 +19677,7 @@
       "url": "https://github.com/dotnet/runtime/issues/100088",
       "state": "OPEN",
       "created_at": "2024-03-21T16:42:36Z",
-      "updated_at": "2026-04-24T11:01:13Z",
+      "updated_at": "2026-04-24T14:01:05Z",
       "author": "jkotas",
       "assignees": [],
       "labels": [
@@ -21109,7 +19796,7 @@
       "url": "https://github.com/dotnet/runtime/issues/99423",
       "state": "OPEN",
       "created_at": "2024-03-07T19:05:06Z",
-      "updated_at": "2026-04-24T11:01:08Z",
+      "updated_at": "2026-04-24T14:01:00Z",
       "author": "carlossanlop",
       "assignees": [
         "ilonatommy"
@@ -21232,7 +19919,7 @@
       "url": "https://github.com/dotnet/runtime/issues/98964",
       "state": "OPEN",
       "created_at": "2024-02-27T01:37:50Z",
-      "updated_at": "2026-04-24T11:01:07Z",
+      "updated_at": "2026-04-24T14:00:59Z",
       "author": "carlossanlop",
       "assignees": [],
       "labels": [
@@ -21356,7 +20043,7 @@
       "url": "https://github.com/dotnet/runtime/issues/97020",
       "state": "OPEN",
       "created_at": "2024-01-16T10:12:27Z",
-      "updated_at": "2026-04-24T11:00:55Z",
+      "updated_at": "2026-04-24T14:00:46Z",
       "author": "MichalStrehovsky",
       "assignees": [],
       "labels": [
@@ -21475,7 +20162,7 @@
       "url": "https://github.com/dotnet/runtime/issues/96879",
       "state": "OPEN",
       "created_at": "2024-01-12T03:46:06Z",
-      "updated_at": "2026-04-24T11:00:54Z",
+      "updated_at": "2026-04-24T14:00:45Z",
       "author": "carlossanlop",
       "assignees": [],
       "labels": [
@@ -21598,7 +20285,7 @@
       "url": "https://github.com/dotnet/runtime/issues/96798",
       "state": "OPEN",
       "created_at": "2024-01-10T18:50:53Z",
-      "updated_at": "2026-04-24T11:00:52Z",
+      "updated_at": "2026-04-24T14:00:44Z",
       "author": "carlossanlop",
       "assignees": [],
       "labels": [
@@ -21615,7 +20302,7 @@
       "last_human_comment_author": "steveisok",
       "reactions_count": 0,
       "hits_24h": 0,
-      "hits_7d": 5,
+      "hits_7d": 4,
       "hits_30d": 30,
       "error_pattern": "{\r\n  \"ErrorMessage\": \"nodename nor servname provided, or not known\",\r\n  \"BuildRetry\": true,\r\n  \"ErrorPattern\": \"\",\r\n  \"ExcludeConsoleLog\": false\r\n}",
       "build_link": "https://dev.azure.com/dnceng-public/public/_build/results?buildId=521880&view=logs&j=d69d97fe-d5be-517f-4ef6-fd1eef0215b1&t=78465c68-a15b-560b-2cb9-0481cc23db72&l=37",
@@ -21706,6 +20393,2171 @@
           "value": 0.5,
           "weight": 1.5,
           "contribution": 0.75
+        },
+        "no_area_label": {
+          "value": 0.0,
+          "weight": 1.0,
+          "contribution": 0.0
+        }
+      }
+    },
+    {
+      "number": 95160,
+      "title": "[8.0] [wasm] [AOT] HTTP Error 500.30 - ASP.NET Core app failed to start",
+      "url": "https://github.com/dotnet/runtime/issues/95160",
+      "state": "OPEN",
+      "created_at": "2023-11-23T02:32:33Z",
+      "updated_at": "2026-04-24T14:00:42Z",
+      "author": "carlossanlop",
+      "assignees": [],
+      "labels": [
+        "os-windows",
+        "area-Infrastructure",
+        "Known Build Error"
+      ],
+      "area_label": "area-Infrastructure",
+      "comment_count": 5,
+      "human_comment_count": 5,
+      "last_human_comment_date": "2026-04-17T16:12:12Z",
+      "last_human_comment_author": "steveisok",
+      "reactions_count": 0,
+      "hits_24h": 0,
+      "hits_7d": 0,
+      "hits_30d": 0,
+      "error_pattern": "{\r\n  \"ErrorMessage\": \"HTTP Error 500.30 - ASP.NET Core app failed to start\",\r\n  \"BuildRetry\": false,\r\n  \"ErrorPattern\": \"\",\r\n  \"ExcludeConsoleLog\": false\r\n}",
+      "build_link": "https://dev.azure.com/dnceng-public/public/_build/results?buildId=478676",
+      "has_blocking_label": false,
+      "has_untriaged_label": false,
+      "age_days": 883,
+      "last_human_activity_days": 6,
+      "assignee_display": "",
+      "urgency_score": 1.0,
+      "urgency_breakdown": {
+        "hits_24h": {
+          "value": 0.0,
+          "weight": 3.0,
+          "contribution": 0.0
+        },
+        "hits_7d": {
+          "value": 0.0,
+          "weight": 2.0,
+          "contribution": 0.0
+        },
+        "hit_trend": {
+          "value": 0.0,
+          "weight": 1.5,
+          "contribution": 0.0
+        },
+        "blocking_label": {
+          "value": 0.0,
+          "weight": 1.5,
+          "contribution": 0.0
+        },
+        "age_vs_hits": {
+          "value": 0.0,
+          "weight": 1.0,
+          "contribution": 0.0
+        },
+        "no_assignee": {
+          "value": 1.0,
+          "weight": 1.0,
+          "contribution": 1.0
+        }
+      },
+      "staleness_score": 8.0,
+      "staleness_breakdown": {
+        "hits_24h_zero": {
+          "value": 1.0,
+          "weight": 3.0,
+          "contribution": 3.0
+        },
+        "hits_7d_zero": {
+          "value": 1.0,
+          "weight": 2.5,
+          "contribution": 2.5
+        },
+        "days_since_update": {
+          "value": 0.0,
+          "weight": 2.0,
+          "contribution": 0.0
+        },
+        "issue_age": {
+          "value": 1.0,
+          "weight": 1.5,
+          "contribution": 1.5
+        },
+        "monthly_count_low": {
+          "value": 1.0,
+          "weight": 1.0,
+          "contribution": 1.0
+        }
+      },
+      "neglect_score": 0.75,
+      "neglect_breakdown": {
+        "hits_no_assignee": {
+          "value": 0.0,
+          "weight": 3.0,
+          "contribution": 0.0
+        },
+        "hits_no_human_comments": {
+          "value": 0.0,
+          "weight": 2.5,
+          "contribution": 0.0
+        },
+        "high_hits_untriaged": {
+          "value": 0.0,
+          "weight": 2.0,
+          "contribution": 0.0
+        },
+        "days_since_human_comment": {
+          "value": 0.5,
+          "weight": 1.5,
+          "contribution": 0.75
+        },
+        "no_area_label": {
+          "value": 0.0,
+          "weight": 1.0,
+          "contribution": 0.0
+        }
+      }
+    },
+    {
+      "number": 91987,
+      "title": "The system cannot open the device or file specified 'NuGet-Migrations'",
+      "url": "https://github.com/dotnet/runtime/issues/91987",
+      "state": "OPEN",
+      "created_at": "2023-09-13T06:55:59Z",
+      "updated_at": "2026-04-24T14:00:41Z",
+      "author": "lonix1",
+      "assignees": [],
+      "labels": [
+        "area-System.Threading",
+        "in-pr",
+        "Known Build Error"
+      ],
+      "area_label": "area-System.Threading",
+      "comment_count": 30,
+      "human_comment_count": 30,
+      "last_human_comment_date": "2026-04-08T21:45:49Z",
+      "last_human_comment_author": "ericstj",
+      "reactions_count": 1,
+      "hits_24h": 0,
+      "hits_7d": 0,
+      "hits_30d": 0,
+      "error_pattern": "{\r\n  \"ErrorMessage\": \"The system cannot open the device or file specified. : 'NuGet-Migrations'\",\r\n  \"BuildRetry\": false,\r\n  \"ErrorPattern\": \"\",\r\n  \"ExcludeConsoleLog\": false\r\n}",
+      "build_link": "https://dev.azure.com/dnceng-public/public/_build/results?buildId=426482",
+      "has_blocking_label": false,
+      "has_untriaged_label": false,
+      "age_days": 954,
+      "last_human_activity_days": 15,
+      "assignee_display": "",
+      "urgency_score": 1.0,
+      "urgency_breakdown": {
+        "hits_24h": {
+          "value": 0.0,
+          "weight": 3.0,
+          "contribution": 0.0
+        },
+        "hits_7d": {
+          "value": 0.0,
+          "weight": 2.0,
+          "contribution": 0.0
+        },
+        "hit_trend": {
+          "value": 0.0,
+          "weight": 1.5,
+          "contribution": 0.0
+        },
+        "blocking_label": {
+          "value": 0.0,
+          "weight": 1.5,
+          "contribution": 0.0
+        },
+        "age_vs_hits": {
+          "value": 0.0,
+          "weight": 1.0,
+          "contribution": 0.0
+        },
+        "no_assignee": {
+          "value": 1.0,
+          "weight": 1.0,
+          "contribution": 1.0
+        }
+      },
+      "staleness_score": 8.0,
+      "staleness_breakdown": {
+        "hits_24h_zero": {
+          "value": 1.0,
+          "weight": 3.0,
+          "contribution": 3.0
+        },
+        "hits_7d_zero": {
+          "value": 1.0,
+          "weight": 2.5,
+          "contribution": 2.5
+        },
+        "days_since_update": {
+          "value": 0.0,
+          "weight": 2.0,
+          "contribution": 0.0
+        },
+        "issue_age": {
+          "value": 1.0,
+          "weight": 1.5,
+          "contribution": 1.5
+        },
+        "monthly_count_low": {
+          "value": 1.0,
+          "weight": 1.0,
+          "contribution": 1.0
+        }
+      },
+      "neglect_score": 1.5,
+      "neglect_breakdown": {
+        "hits_no_assignee": {
+          "value": 0.0,
+          "weight": 3.0,
+          "contribution": 0.0
+        },
+        "hits_no_human_comments": {
+          "value": 0.0,
+          "weight": 2.5,
+          "contribution": 0.0
+        },
+        "high_hits_untriaged": {
+          "value": 0.0,
+          "weight": 2.0,
+          "contribution": 0.0
+        },
+        "days_since_human_comment": {
+          "value": 1.0,
+          "weight": 1.5,
+          "contribution": 1.5
+        },
+        "no_area_label": {
+          "value": 0.0,
+          "weight": 1.0,
+          "contribution": 0.0
+        }
+      }
+    },
+    {
+      "number": 92420,
+      "title": "[8.0] coreclr test failure: readytorun_GenericCycleDetection._Depth3Test_Depth3Test_._Depth3Test_Depth3Test_sh()",
+      "url": "https://github.com/dotnet/runtime/issues/92420",
+      "state": "OPEN",
+      "created_at": "2023-09-21T16:54:20Z",
+      "updated_at": "2026-04-24T14:00:36Z",
+      "author": "carlossanlop",
+      "assignees": [
+        "trylek"
+      ],
+      "labels": [
+        "arch-arm64",
+        "os-linux",
+        "area-ReadyToRun",
+        "runtime-coreclr",
+        "Known Build Error"
+      ],
+      "area_label": "area-ReadyToRun",
+      "comment_count": 5,
+      "human_comment_count": 5,
+      "last_human_comment_date": "2024-02-19T17:32:04Z",
+      "last_human_comment_author": "jeffschwMSFT",
+      "reactions_count": 0,
+      "hits_24h": 0,
+      "hits_7d": 0,
+      "hits_30d": 0,
+      "error_pattern": "{\r\n  \"ErrorMessage\": \"at readytorun_GenericCycleDetection._Depth3Test_Depth3Test_._Depth3Test_Depth3Test_sh()\",\r\n  \"BuildRetry\": false,\r\n  \"ErrorPattern\": \"\",\r\n  \"ExcludeConsoleLog\": true\r\n}",
+      "build_link": "https://dev.azure.com/dnceng-public/public/_build/results?buildId=413445&view=logs&j=15d7b3ca-f7a5-5373-9266-3c1554d785ae&t=419130a4-49ed-506c-d64d-960f64a7e2f4",
+      "has_blocking_label": false,
+      "has_untriaged_label": false,
+      "age_days": 945,
+      "last_human_activity_days": 794,
+      "assignee_display": "trylek",
+      "urgency_score": 0.0,
+      "urgency_breakdown": {
+        "hits_24h": {
+          "value": 0.0,
+          "weight": 3.0,
+          "contribution": 0.0
+        },
+        "hits_7d": {
+          "value": 0.0,
+          "weight": 2.0,
+          "contribution": 0.0
+        },
+        "hit_trend": {
+          "value": 0.0,
+          "weight": 1.5,
+          "contribution": 0.0
+        },
+        "blocking_label": {
+          "value": 0.0,
+          "weight": 1.5,
+          "contribution": 0.0
+        },
+        "age_vs_hits": {
+          "value": 0.0,
+          "weight": 1.0,
+          "contribution": 0.0
+        },
+        "no_assignee": {
+          "value": 0.0,
+          "weight": 1.0,
+          "contribution": 0.0
+        }
+      },
+      "staleness_score": 8.0,
+      "staleness_breakdown": {
+        "hits_24h_zero": {
+          "value": 1.0,
+          "weight": 3.0,
+          "contribution": 3.0
+        },
+        "hits_7d_zero": {
+          "value": 1.0,
+          "weight": 2.5,
+          "contribution": 2.5
+        },
+        "days_since_update": {
+          "value": 0.0,
+          "weight": 2.0,
+          "contribution": 0.0
+        },
+        "issue_age": {
+          "value": 1.0,
+          "weight": 1.5,
+          "contribution": 1.5
+        },
+        "monthly_count_low": {
+          "value": 1.0,
+          "weight": 1.0,
+          "contribution": 1.0
+        }
+      },
+      "neglect_score": 1.5,
+      "neglect_breakdown": {
+        "hits_no_assignee": {
+          "value": 0.0,
+          "weight": 3.0,
+          "contribution": 0.0
+        },
+        "hits_no_human_comments": {
+          "value": 0.0,
+          "weight": 2.5,
+          "contribution": 0.0
+        },
+        "high_hits_untriaged": {
+          "value": 0.0,
+          "weight": 2.0,
+          "contribution": 0.0
+        },
+        "days_since_human_comment": {
+          "value": 1.0,
+          "weight": 1.5,
+          "contribution": 1.5
+        },
+        "no_area_label": {
+          "value": 0.0,
+          "weight": 1.0,
+          "contribution": 0.0
+        }
+      }
+    },
+    {
+      "number": 92290,
+      "title": "MSBuild crashing in the build",
+      "url": "https://github.com/dotnet/runtime/issues/92290",
+      "state": "OPEN",
+      "created_at": "2023-09-19T17:58:14Z",
+      "updated_at": "2026-04-24T14:00:35Z",
+      "author": "jkoritzinsky",
+      "assignees": [],
+      "labels": [
+        "blocking-clean-ci",
+        "area-Infrastructure",
+        "in-pr",
+        "Known Build Error"
+      ],
+      "area_label": "area-Infrastructure",
+      "comment_count": 16,
+      "human_comment_count": 16,
+      "last_human_comment_date": "2026-04-17T16:12:12Z",
+      "last_human_comment_author": "steveisok",
+      "reactions_count": 0,
+      "hits_24h": 0,
+      "hits_7d": 2,
+      "hits_30d": 13,
+      "error_pattern": "{\r\n  \"ErrorMessage\": \"\",\r\n  \"ErrorPattern\": \"Child Node \\\"[0-9]+\\\" exited prematurely.\",\r\n  \"BuildRetry\": true,\r\n  \"ExcludeConsoleLog\": false\r\n}",
+      "build_link": "https://dev.azure.com/dnceng-public/cbb18261-c48f-4abb-8651-8cdcb5474649/_build/results?buildId=410579",
+      "has_blocking_label": true,
+      "has_untriaged_label": false,
+      "age_days": 947,
+      "last_human_activity_days": 6,
+      "assignee_display": "",
+      "urgency_score": 2.5,
+      "urgency_breakdown": {
+        "hits_24h": {
+          "value": 0.0,
+          "weight": 3.0,
+          "contribution": 0.0
+        },
+        "hits_7d": {
+          "value": 0.0,
+          "weight": 2.0,
+          "contribution": 0.0
+        },
+        "hit_trend": {
+          "value": 0.0,
+          "weight": 1.5,
+          "contribution": 0.0
+        },
+        "blocking_label": {
+          "value": 1.0,
+          "weight": 1.5,
+          "contribution": 1.5
+        },
+        "age_vs_hits": {
+          "value": 0.0,
+          "weight": 1.0,
+          "contribution": 0.0
+        },
+        "no_assignee": {
+          "value": 1.0,
+          "weight": 1.0,
+          "contribution": 1.0
+        }
+      },
+      "staleness_score": 5.0,
+      "staleness_breakdown": {
+        "hits_24h_zero": {
+          "value": 1.0,
+          "weight": 3.0,
+          "contribution": 3.0
+        },
+        "hits_7d_zero": {
+          "value": 0.0,
+          "weight": 2.5,
+          "contribution": 0.0
+        },
+        "days_since_update": {
+          "value": 0.0,
+          "weight": 2.0,
+          "contribution": 0.0
+        },
+        "issue_age": {
+          "value": 1.0,
+          "weight": 1.5,
+          "contribution": 1.5
+        },
+        "monthly_count_low": {
+          "value": 0.5,
+          "weight": 1.0,
+          "contribution": 0.5
+        }
+      },
+      "neglect_score": 3.75,
+      "neglect_breakdown": {
+        "hits_no_assignee": {
+          "value": 1.0,
+          "weight": 3.0,
+          "contribution": 3.0
+        },
+        "hits_no_human_comments": {
+          "value": 0.0,
+          "weight": 2.5,
+          "contribution": 0.0
+        },
+        "high_hits_untriaged": {
+          "value": 0.0,
+          "weight": 2.0,
+          "contribution": 0.0
+        },
+        "days_since_human_comment": {
+          "value": 0.5,
+          "weight": 1.5,
+          "contribution": 0.75
+        },
+        "no_area_label": {
+          "value": 0.0,
+          "weight": 1.0,
+          "contribution": 0.0
+        }
+      }
+    },
+    {
+      "number": 92148,
+      "title": "AzDo uploading failure: \"Blob is incomplete\"",
+      "url": "https://github.com/dotnet/runtime/issues/92148",
+      "state": "OPEN",
+      "created_at": "2023-09-15T18:47:38Z",
+      "updated_at": "2026-04-24T14:00:34Z",
+      "author": "agocke",
+      "assignees": [],
+      "labels": [
+        "os-android",
+        "area-Infrastructure-mono",
+        "Known Build Error"
+      ],
+      "area_label": "area-Infrastructure-mono",
+      "comment_count": 4,
+      "human_comment_count": 3,
+      "last_human_comment_date": "2026-01-05T17:34:34Z",
+      "last_human_comment_author": "jeffschwMSFT",
+      "reactions_count": 0,
+      "hits_24h": 0,
+      "hits_7d": 1,
+      "hits_30d": 4,
+      "error_pattern": "{\r\n  \"ErrorMessage\": \"Blob is incomplete\",\r\n  \"ErrorPattern\": \"\",\r\n  \"BuildRetry\": false,\r\n  \"ExcludeConsoleLog\": false\r\n}",
+      "build_link": "https://dev.azure.com/dnceng/internal/_build/results?buildId=2267710&view=results",
+      "has_blocking_label": false,
+      "has_untriaged_label": false,
+      "age_days": 951,
+      "last_human_activity_days": 108,
+      "assignee_display": "",
+      "urgency_score": 1.0,
+      "urgency_breakdown": {
+        "hits_24h": {
+          "value": 0.0,
+          "weight": 3.0,
+          "contribution": 0.0
+        },
+        "hits_7d": {
+          "value": 0.0,
+          "weight": 2.0,
+          "contribution": 0.0
+        },
+        "hit_trend": {
+          "value": 0.0,
+          "weight": 1.5,
+          "contribution": 0.0
+        },
+        "blocking_label": {
+          "value": 0.0,
+          "weight": 1.5,
+          "contribution": 0.0
+        },
+        "age_vs_hits": {
+          "value": 0.0,
+          "weight": 1.0,
+          "contribution": 0.0
+        },
+        "no_assignee": {
+          "value": 1.0,
+          "weight": 1.0,
+          "contribution": 1.0
+        }
+      },
+      "staleness_score": 5.5,
+      "staleness_breakdown": {
+        "hits_24h_zero": {
+          "value": 1.0,
+          "weight": 3.0,
+          "contribution": 3.0
+        },
+        "hits_7d_zero": {
+          "value": 0.0,
+          "weight": 2.5,
+          "contribution": 0.0
+        },
+        "days_since_update": {
+          "value": 0.0,
+          "weight": 2.0,
+          "contribution": 0.0
+        },
+        "issue_age": {
+          "value": 1.0,
+          "weight": 1.5,
+          "contribution": 1.5
+        },
+        "monthly_count_low": {
+          "value": 1.0,
+          "weight": 1.0,
+          "contribution": 1.0
+        }
+      },
+      "neglect_score": 4.5,
+      "neglect_breakdown": {
+        "hits_no_assignee": {
+          "value": 1.0,
+          "weight": 3.0,
+          "contribution": 3.0
+        },
+        "hits_no_human_comments": {
+          "value": 0.0,
+          "weight": 2.5,
+          "contribution": 0.0
+        },
+        "high_hits_untriaged": {
+          "value": 0.0,
+          "weight": 2.0,
+          "contribution": 0.0
+        },
+        "days_since_human_comment": {
+          "value": 1.0,
+          "weight": 1.5,
+          "contribution": 1.5
+        },
+        "no_area_label": {
+          "value": 0.0,
+          "weight": 1.0,
+          "contribution": 0.0
+        }
+      }
+    },
+    {
+      "number": 53420,
+      "title": "Compiler crashes when failing to release Mutex",
+      "url": "https://github.com/dotnet/runtime/issues/53420",
+      "state": "OPEN",
+      "created_at": "2021-05-28T10:57:31Z",
+      "updated_at": "2026-04-24T14:00:32Z",
+      "author": "ViktorHofer",
+      "assignees": [
+        "jkoritzinsky"
+      ],
+      "labels": [
+        "bug",
+        "os-linux",
+        "area-VM-coreclr",
+        "Known Build Error"
+      ],
+      "area_label": "area-VM-coreclr",
+      "comment_count": 54,
+      "human_comment_count": 53,
+      "last_human_comment_date": "2026-02-13T15:40:15Z",
+      "last_human_comment_author": "am11",
+      "reactions_count": 0,
+      "hits_24h": 0,
+      "hits_7d": 0,
+      "hits_30d": 0,
+      "error_pattern": "{\r\n  \"ErrorMessage\": \"ReleaseMutex failed. WaitOne Id:\",\r\n  \"BuildRetry\": true,\r\n  \"ErrorPattern\": \"\",\r\n  \"ExcludeConsoleLog\": true\r\n}",
+      "build_link": "https://dev.azure.com/dnceng/public/_build/results?buildId=1161146&view=logs&j=1a1e7658-955a-5bfe-8410-74fa4a1a1fbf&t=9528cbd6-a8dd-5006-9c48-38938c12a3af",
+      "has_blocking_label": false,
+      "has_untriaged_label": false,
+      "age_days": 1792,
+      "last_human_activity_days": 69,
+      "assignee_display": "jkoritzinsky",
+      "urgency_score": 0.0,
+      "urgency_breakdown": {
+        "hits_24h": {
+          "value": 0.0,
+          "weight": 3.0,
+          "contribution": 0.0
+        },
+        "hits_7d": {
+          "value": 0.0,
+          "weight": 2.0,
+          "contribution": 0.0
+        },
+        "hit_trend": {
+          "value": 0.0,
+          "weight": 1.5,
+          "contribution": 0.0
+        },
+        "blocking_label": {
+          "value": 0.0,
+          "weight": 1.5,
+          "contribution": 0.0
+        },
+        "age_vs_hits": {
+          "value": 0.0,
+          "weight": 1.0,
+          "contribution": 0.0
+        },
+        "no_assignee": {
+          "value": 0.0,
+          "weight": 1.0,
+          "contribution": 0.0
+        }
+      },
+      "staleness_score": 8.0,
+      "staleness_breakdown": {
+        "hits_24h_zero": {
+          "value": 1.0,
+          "weight": 3.0,
+          "contribution": 3.0
+        },
+        "hits_7d_zero": {
+          "value": 1.0,
+          "weight": 2.5,
+          "contribution": 2.5
+        },
+        "days_since_update": {
+          "value": 0.0,
+          "weight": 2.0,
+          "contribution": 0.0
+        },
+        "issue_age": {
+          "value": 1.0,
+          "weight": 1.5,
+          "contribution": 1.5
+        },
+        "monthly_count_low": {
+          "value": 1.0,
+          "weight": 1.0,
+          "contribution": 1.0
+        }
+      },
+      "neglect_score": 1.5,
+      "neglect_breakdown": {
+        "hits_no_assignee": {
+          "value": 0.0,
+          "weight": 3.0,
+          "contribution": 0.0
+        },
+        "hits_no_human_comments": {
+          "value": 0.0,
+          "weight": 2.5,
+          "contribution": 0.0
+        },
+        "high_hits_untriaged": {
+          "value": 0.0,
+          "weight": 2.0,
+          "contribution": 0.0
+        },
+        "days_since_human_comment": {
+          "value": 1.0,
+          "weight": 1.5,
+          "contribution": 1.5
+        },
+        "no_area_label": {
+          "value": 0.0,
+          "weight": 1.0,
+          "contribution": 0.0
+        }
+      }
+    },
+    {
+      "number": 90803,
+      "title": "Address race in PerformanceCounterLib",
+      "url": "https://github.com/dotnet/runtime/issues/90803",
+      "state": "OPEN",
+      "created_at": "2023-08-18T15:14:23Z",
+      "updated_at": "2026-04-24T14:00:31Z",
+      "author": "BruceForstall",
+      "assignees": [],
+      "labels": [
+        "arch-arm64",
+        "os-windows",
+        "help wanted",
+        "blocking-clean-ci-optional",
+        "needs-further-triage",
+        "area-System.Diagnostics.PerformanceCounter",
+        "Known Build Error"
+      ],
+      "area_label": "area-System.Diagnostics.PerformanceCounter",
+      "comment_count": 21,
+      "human_comment_count": 21,
+      "last_human_comment_date": "2026-04-20T13:28:30Z",
+      "last_human_comment_author": "yw13931835525-cyber",
+      "reactions_count": 0,
+      "hits_24h": 0,
+      "hits_7d": 0,
+      "hits_30d": 0,
+      "error_pattern": "{\r\n  \"ErrorMessage\": \"System.InvalidOperationException : Category 'PerformanceCounterCategory_GetCounters_Category' does not exist.\",\r\n  \"BuildRetry\": false,\r\n  \"ErrorPattern\": \"\",\r\n  \"ExcludeConsoleLog\": true\r\n}",
+      "build_link": "https://dev.azure.com/dnceng-public/public/_build/results?buildId=378388&view=ms.vss-test-web.build-test-results-tab&runId=8058808&paneView=debug&resultId=124445",
+      "has_blocking_label": false,
+      "has_untriaged_label": false,
+      "age_days": 979,
+      "last_human_activity_days": 4,
+      "assignee_display": "",
+      "urgency_score": 1.0,
+      "urgency_breakdown": {
+        "hits_24h": {
+          "value": 0.0,
+          "weight": 3.0,
+          "contribution": 0.0
+        },
+        "hits_7d": {
+          "value": 0.0,
+          "weight": 2.0,
+          "contribution": 0.0
+        },
+        "hit_trend": {
+          "value": 0.0,
+          "weight": 1.5,
+          "contribution": 0.0
+        },
+        "blocking_label": {
+          "value": 0.0,
+          "weight": 1.5,
+          "contribution": 0.0
+        },
+        "age_vs_hits": {
+          "value": 0.0,
+          "weight": 1.0,
+          "contribution": 0.0
+        },
+        "no_assignee": {
+          "value": 1.0,
+          "weight": 1.0,
+          "contribution": 1.0
+        }
+      },
+      "staleness_score": 8.0,
+      "staleness_breakdown": {
+        "hits_24h_zero": {
+          "value": 1.0,
+          "weight": 3.0,
+          "contribution": 3.0
+        },
+        "hits_7d_zero": {
+          "value": 1.0,
+          "weight": 2.5,
+          "contribution": 2.5
+        },
+        "days_since_update": {
+          "value": 0.0,
+          "weight": 2.0,
+          "contribution": 0.0
+        },
+        "issue_age": {
+          "value": 1.0,
+          "weight": 1.5,
+          "contribution": 1.5
+        },
+        "monthly_count_low": {
+          "value": 1.0,
+          "weight": 1.0,
+          "contribution": 1.0
+        }
+      },
+      "neglect_score": 0.75,
+      "neglect_breakdown": {
+        "hits_no_assignee": {
+          "value": 0.0,
+          "weight": 3.0,
+          "contribution": 0.0
+        },
+        "hits_no_human_comments": {
+          "value": 0.0,
+          "weight": 2.5,
+          "contribution": 0.0
+        },
+        "high_hits_untriaged": {
+          "value": 0.0,
+          "weight": 2.0,
+          "contribution": 0.0
+        },
+        "days_since_human_comment": {
+          "value": 0.5,
+          "weight": 1.5,
+          "contribution": 0.75
+        },
+        "no_area_label": {
+          "value": 0.0,
+          "weight": 1.0,
+          "contribution": 0.0
+        }
+      }
+    },
+    {
+      "number": 29683,
+      "title": "STATUS_UNSUCCESSFUL in  RsaCryptRoundtrip_OaepSHA1",
+      "url": "https://github.com/dotnet/runtime/issues/29683",
+      "state": "OPEN",
+      "created_at": "2019-05-28T20:54:50Z",
+      "updated_at": "2026-04-24T14:00:30Z",
+      "author": "danmoseley",
+      "assignees": [],
+      "labels": [
+        "area-System.Security",
+        "tracking-external-issue",
+        "Known Build Error"
+      ],
+      "area_label": "area-System.Security",
+      "comment_count": 99,
+      "human_comment_count": 99,
+      "last_human_comment_date": "2025-12-04T17:01:34Z",
+      "last_human_comment_author": "steveisok",
+      "reactions_count": 1,
+      "hits_24h": 0,
+      "hits_7d": 0,
+      "hits_30d": 0,
+      "error_pattern": "{\r\n  \"ErrorMessage\": \"CryptographicException : Unknown error (0x\",\r\n  \"BuildRetry\": false,\r\n  \"ExcludeConsoleLog\": false\r\n}",
+      "build_link": "https://dev.azure.com/dnceng-public/public/_build/results?buildId=565017&view=results",
+      "has_blocking_label": false,
+      "has_untriaged_label": false,
+      "age_days": 2522,
+      "last_human_activity_days": 140,
+      "assignee_display": "",
+      "urgency_score": 1.0,
+      "urgency_breakdown": {
+        "hits_24h": {
+          "value": 0.0,
+          "weight": 3.0,
+          "contribution": 0.0
+        },
+        "hits_7d": {
+          "value": 0.0,
+          "weight": 2.0,
+          "contribution": 0.0
+        },
+        "hit_trend": {
+          "value": 0.0,
+          "weight": 1.5,
+          "contribution": 0.0
+        },
+        "blocking_label": {
+          "value": 0.0,
+          "weight": 1.5,
+          "contribution": 0.0
+        },
+        "age_vs_hits": {
+          "value": 0.0,
+          "weight": 1.0,
+          "contribution": 0.0
+        },
+        "no_assignee": {
+          "value": 1.0,
+          "weight": 1.0,
+          "contribution": 1.0
+        }
+      },
+      "staleness_score": 8.0,
+      "staleness_breakdown": {
+        "hits_24h_zero": {
+          "value": 1.0,
+          "weight": 3.0,
+          "contribution": 3.0
+        },
+        "hits_7d_zero": {
+          "value": 1.0,
+          "weight": 2.5,
+          "contribution": 2.5
+        },
+        "days_since_update": {
+          "value": 0.0,
+          "weight": 2.0,
+          "contribution": 0.0
+        },
+        "issue_age": {
+          "value": 1.0,
+          "weight": 1.5,
+          "contribution": 1.5
+        },
+        "monthly_count_low": {
+          "value": 1.0,
+          "weight": 1.0,
+          "contribution": 1.0
+        }
+      },
+      "neglect_score": 1.5,
+      "neglect_breakdown": {
+        "hits_no_assignee": {
+          "value": 0.0,
+          "weight": 3.0,
+          "contribution": 0.0
+        },
+        "hits_no_human_comments": {
+          "value": 0.0,
+          "weight": 2.5,
+          "contribution": 0.0
+        },
+        "high_hits_untriaged": {
+          "value": 0.0,
+          "weight": 2.0,
+          "contribution": 0.0
+        },
+        "days_since_human_comment": {
+          "value": 1.0,
+          "weight": 1.5,
+          "contribution": 1.5
+        },
+        "no_area_label": {
+          "value": 0.0,
+          "weight": 1.0,
+          "contribution": 0.0
+        }
+      }
+    },
+    {
+      "number": 90605,
+      "title": "tracing/runtimeeventsource/nativeruntimeeventsource/nativeruntimeeventsource failing in CI",
+      "url": "https://github.com/dotnet/runtime/issues/90605",
+      "state": "OPEN",
+      "created_at": "2023-08-15T16:02:45Z",
+      "updated_at": "2026-04-24T14:00:29Z",
+      "author": "ericstj",
+      "assignees": [],
+      "labels": [
+        "disabled-test",
+        "blocking-clean-ci",
+        "area-Tracing-mono",
+        "Known Build Error"
+      ],
+      "area_label": "area-Tracing-mono",
+      "comment_count": 20,
+      "human_comment_count": 20,
+      "last_human_comment_date": "2026-04-14T01:36:16Z",
+      "last_human_comment_author": "VincentBu",
+      "reactions_count": 0,
+      "hits_24h": 1,
+      "hits_7d": 2,
+      "hits_30d": 10,
+      "error_pattern": "{\r\n  \"ErrorMessage\": \"System.Exception: Condition 'listener.EventCount > 0' is not true\",\r\n  \"ErrorPattern\": \"\",\r\n  \"BuildRetry\": false,\r\n  \"ExcludeConsoleLog\": false\r\n}",
+      "build_link": "https://dev.azure.com/dnceng-public/cbb18261-c48f-4abb-8651-8cdcb5474649/_build/results?buildId=374041",
+      "has_blocking_label": true,
+      "has_untriaged_label": false,
+      "age_days": 982,
+      "last_human_activity_days": 10,
+      "assignee_display": "",
+      "urgency_score": 5.5,
+      "urgency_breakdown": {
+        "hits_24h": {
+          "value": 0.5,
+          "weight": 3.0,
+          "contribution": 1.5
+        },
+        "hits_7d": {
+          "value": 0.0,
+          "weight": 2.0,
+          "contribution": 0.0
+        },
+        "hit_trend": {
+          "value": 1.0,
+          "weight": 1.5,
+          "contribution": 1.5
+        },
+        "blocking_label": {
+          "value": 1.0,
+          "weight": 1.5,
+          "contribution": 1.5
+        },
+        "age_vs_hits": {
+          "value": 0.0,
+          "weight": 1.0,
+          "contribution": 0.0
+        },
+        "no_assignee": {
+          "value": 1.0,
+          "weight": 1.0,
+          "contribution": 1.0
+        }
+      },
+      "staleness_score": 0.0,
+      "staleness_breakdown": {},
+      "neglect_score": 4.12,
+      "neglect_breakdown": {
+        "hits_no_assignee": {
+          "value": 1.0,
+          "weight": 3.0,
+          "contribution": 3.0
+        },
+        "hits_no_human_comments": {
+          "value": 0.0,
+          "weight": 2.5,
+          "contribution": 0.0
+        },
+        "high_hits_untriaged": {
+          "value": 0.0,
+          "weight": 2.0,
+          "contribution": 0.0
+        },
+        "days_since_human_comment": {
+          "value": 0.75,
+          "weight": 1.5,
+          "contribution": 1.125
+        },
+        "no_area_label": {
+          "value": 0.0,
+          "weight": 1.0,
+          "contribution": 0.0
+        }
+      }
+    },
+    {
+      "number": 90019,
+      "title": "Crash in Microsoft.Extensions.Logging.Generators.Roslyn4.0.Tests.WorkItemExecution",
+      "url": "https://github.com/dotnet/runtime/issues/90019",
+      "state": "OPEN",
+      "created_at": "2023-08-04T13:17:00Z",
+      "updated_at": "2026-04-24T14:00:27Z",
+      "author": "stephentoub",
+      "assignees": [],
+      "labels": [
+        "area-VM-meta-mono",
+        "Known Build Error"
+      ],
+      "area_label": "area-VM-meta-mono",
+      "comment_count": 15,
+      "human_comment_count": 15,
+      "last_human_comment_date": "2025-04-21T15:59:43Z",
+      "last_human_comment_author": "jeffschwMSFT",
+      "reactions_count": 0,
+      "hits_24h": 0,
+      "hits_7d": 0,
+      "hits_30d": 0,
+      "error_pattern": "{\r\n  \"ErrorMessage\": \"System.Object:__icall_wrapper_mono_marshal_isinst_with_cache\",\r\n  \"ErrorPattern\": \"\",\r\n  \"BuildRetry\": false,\r\n  \"ExcludeConsoleLog\": false\r\n}",
+      "build_link": "https://dev.azure.com/dnceng-public/cbb18261-c48f-4abb-8651-8cdcb5474649/_build/results?buildId=363089",
+      "has_blocking_label": false,
+      "has_untriaged_label": false,
+      "age_days": 994,
+      "last_human_activity_days": 367,
+      "assignee_display": "",
+      "urgency_score": 1.0,
+      "urgency_breakdown": {
+        "hits_24h": {
+          "value": 0.0,
+          "weight": 3.0,
+          "contribution": 0.0
+        },
+        "hits_7d": {
+          "value": 0.0,
+          "weight": 2.0,
+          "contribution": 0.0
+        },
+        "hit_trend": {
+          "value": 0.0,
+          "weight": 1.5,
+          "contribution": 0.0
+        },
+        "blocking_label": {
+          "value": 0.0,
+          "weight": 1.5,
+          "contribution": 0.0
+        },
+        "age_vs_hits": {
+          "value": 0.0,
+          "weight": 1.0,
+          "contribution": 0.0
+        },
+        "no_assignee": {
+          "value": 1.0,
+          "weight": 1.0,
+          "contribution": 1.0
+        }
+      },
+      "staleness_score": 8.0,
+      "staleness_breakdown": {
+        "hits_24h_zero": {
+          "value": 1.0,
+          "weight": 3.0,
+          "contribution": 3.0
+        },
+        "hits_7d_zero": {
+          "value": 1.0,
+          "weight": 2.5,
+          "contribution": 2.5
+        },
+        "days_since_update": {
+          "value": 0.0,
+          "weight": 2.0,
+          "contribution": 0.0
+        },
+        "issue_age": {
+          "value": 1.0,
+          "weight": 1.5,
+          "contribution": 1.5
+        },
+        "monthly_count_low": {
+          "value": 1.0,
+          "weight": 1.0,
+          "contribution": 1.0
+        }
+      },
+      "neglect_score": 1.5,
+      "neglect_breakdown": {
+        "hits_no_assignee": {
+          "value": 0.0,
+          "weight": 3.0,
+          "contribution": 0.0
+        },
+        "hits_no_human_comments": {
+          "value": 0.0,
+          "weight": 2.5,
+          "contribution": 0.0
+        },
+        "high_hits_untriaged": {
+          "value": 0.0,
+          "weight": 2.0,
+          "contribution": 0.0
+        },
+        "days_since_human_comment": {
+          "value": 1.0,
+          "weight": 1.5,
+          "contribution": 1.5
+        },
+        "no_area_label": {
+          "value": 0.0,
+          "weight": 1.0,
+          "contribution": 0.0
+        }
+      }
+    },
+    {
+      "number": 88272,
+      "title": "OOM on  System.Text.Json.Tests.Utf8JsonWriterTests.WriteRawLargeJsonToStreamWithoutFlushing",
+      "url": "https://github.com/dotnet/runtime/issues/88272",
+      "state": "OPEN",
+      "created_at": "2023-06-30T21:02:50Z",
+      "updated_at": "2026-04-24T14:00:26Z",
+      "author": "steveharter",
+      "assignees": [],
+      "labels": [
+        "test-failure",
+        "area-System.Text.Json",
+        "disabled-test",
+        "Known Build Error"
+      ],
+      "area_label": "area-System.Text.Json",
+      "comment_count": 5,
+      "human_comment_count": 5,
+      "last_human_comment_date": "2026-03-03T15:17:08Z",
+      "last_human_comment_author": "copilot-swe-agent",
+      "reactions_count": 0,
+      "hits_24h": 0,
+      "hits_7d": 0,
+      "hits_30d": 0,
+      "error_pattern": "{\r\n  \"ErrorMessage\": \"\",\r\n  \"ErrorPattern\": \"System.Text.Json.Tests.Utf8JsonWriterTests.WriteRawLargeJsonToStreamWithoutFlushing.*System.OutOfMemoryException : Exception of type 'System.OutOfMemoryException' was thrown\",\r\n  \"BuildRetry\": false,\r\n  \"ExcludeConsoleLog\": false\r\n}",
+      "build_link": "https://dev.azure.com/dnceng-public/cbb18261-c48f-4abb-8651-8cdcb5474649/_build/results?buildId=326554",
+      "has_blocking_label": false,
+      "has_untriaged_label": false,
+      "age_days": 1028,
+      "last_human_activity_days": 51,
+      "assignee_display": "",
+      "urgency_score": 1.0,
+      "urgency_breakdown": {
+        "hits_24h": {
+          "value": 0.0,
+          "weight": 3.0,
+          "contribution": 0.0
+        },
+        "hits_7d": {
+          "value": 0.0,
+          "weight": 2.0,
+          "contribution": 0.0
+        },
+        "hit_trend": {
+          "value": 0.0,
+          "weight": 1.5,
+          "contribution": 0.0
+        },
+        "blocking_label": {
+          "value": 0.0,
+          "weight": 1.5,
+          "contribution": 0.0
+        },
+        "age_vs_hits": {
+          "value": 0.0,
+          "weight": 1.0,
+          "contribution": 0.0
+        },
+        "no_assignee": {
+          "value": 1.0,
+          "weight": 1.0,
+          "contribution": 1.0
+        }
+      },
+      "staleness_score": 0.0,
+      "staleness_breakdown": {},
+      "neglect_score": 1.5,
+      "neglect_breakdown": {
+        "hits_no_assignee": {
+          "value": 0.0,
+          "weight": 3.0,
+          "contribution": 0.0
+        },
+        "hits_no_human_comments": {
+          "value": 0.0,
+          "weight": 2.5,
+          "contribution": 0.0
+        },
+        "high_hits_untriaged": {
+          "value": 0.0,
+          "weight": 2.0,
+          "contribution": 0.0
+        },
+        "days_since_human_comment": {
+          "value": 1.0,
+          "weight": 1.5,
+          "contribution": 1.5
+        },
+        "no_area_label": {
+          "value": 0.0,
+          "weight": 1.0,
+          "contribution": 0.0
+        }
+      }
+    },
+    {
+      "number": 82837,
+      "title": "System.Security.Cryptography.X509Certificates.Tests.ChainTests.BuildInvalidSignatureTwice failure",
+      "url": "https://github.com/dotnet/runtime/issues/82837",
+      "state": "OPEN",
+      "created_at": "2023-03-01T15:28:40Z",
+      "updated_at": "2026-04-24T14:00:25Z",
+      "author": "steveisok",
+      "assignees": [],
+      "labels": [
+        "area-System.Security",
+        "disabled-test",
+        "runtime-mono",
+        "Known Build Error"
+      ],
+      "area_label": "area-System.Security",
+      "comment_count": 11,
+      "human_comment_count": 11,
+      "last_human_comment_date": "2023-08-24T19:54:35Z",
+      "last_human_comment_author": "elinor-fung",
+      "reactions_count": 0,
+      "hits_24h": 0,
+      "hits_7d": 1,
+      "hits_30d": 3,
+      "error_pattern": "{\r\n  \"ErrorMessage\": \"Chain is valid on execution 1\",\r\n  \"BuildRetry\": false,\r\n  \"ErrorPattern\": \"\",\r\n  \"ExcludeConsoleLog\": false\r\n}",
+      "build_link": "https://dev.azure.com/dnceng-public/cbb18261-c48f-4abb-8651-8cdcb5474649/_build/results?buildId=189217",
+      "has_blocking_label": false,
+      "has_untriaged_label": false,
+      "age_days": 1149,
+      "last_human_activity_days": 973,
+      "assignee_display": "",
+      "urgency_score": 1.0,
+      "urgency_breakdown": {
+        "hits_24h": {
+          "value": 0.0,
+          "weight": 3.0,
+          "contribution": 0.0
+        },
+        "hits_7d": {
+          "value": 0.0,
+          "weight": 2.0,
+          "contribution": 0.0
+        },
+        "hit_trend": {
+          "value": 0.0,
+          "weight": 1.5,
+          "contribution": 0.0
+        },
+        "blocking_label": {
+          "value": 0.0,
+          "weight": 1.5,
+          "contribution": 0.0
+        },
+        "age_vs_hits": {
+          "value": 0.0,
+          "weight": 1.0,
+          "contribution": 0.0
+        },
+        "no_assignee": {
+          "value": 1.0,
+          "weight": 1.0,
+          "contribution": 1.0
+        }
+      },
+      "staleness_score": 0.0,
+      "staleness_breakdown": {},
+      "neglect_score": 4.5,
+      "neglect_breakdown": {
+        "hits_no_assignee": {
+          "value": 1.0,
+          "weight": 3.0,
+          "contribution": 3.0
+        },
+        "hits_no_human_comments": {
+          "value": 0.0,
+          "weight": 2.5,
+          "contribution": 0.0
+        },
+        "high_hits_untriaged": {
+          "value": 0.0,
+          "weight": 2.0,
+          "contribution": 0.0
+        },
+        "days_since_human_comment": {
+          "value": 1.0,
+          "weight": 1.5,
+          "contribution": 1.5
+        },
+        "no_area_label": {
+          "value": 0.0,
+          "weight": 1.0,
+          "contribution": 0.0
+        }
+      }
+    },
+    {
+      "number": 83422,
+      "title": "[6.0] Android test failure: Failed to install mobile app",
+      "url": "https://github.com/dotnet/runtime/issues/83422",
+      "state": "OPEN",
+      "created_at": "2023-03-14T21:53:07Z",
+      "updated_at": "2026-04-24T14:00:24Z",
+      "author": "carlossanlop",
+      "assignees": [],
+      "labels": [
+        "arch-x64",
+        "os-android",
+        "area-VM-meta-mono",
+        "Known Build Error"
+      ],
+      "area_label": "area-VM-meta-mono",
+      "comment_count": 23,
+      "human_comment_count": 23,
+      "last_human_comment_date": "2024-07-26T16:14:12Z",
+      "last_human_comment_author": "fanyang-mono",
+      "reactions_count": 0,
+      "hits_24h": 0,
+      "hits_7d": 1,
+      "hits_30d": 5,
+      "error_pattern": "{\r\n  \"ErrorMessage\": \"The following constructor parameters did not have matching fixture data: _Global globalVar\",\r\n  \"BuildRetry\": false,\r\n  \"ErrorPattern\": \"\",\r\n  \"ExcludeConsoleLog\": false\r\n}",
+      "build_link": "https://dev.azure.com/dnceng-public/public/_build/results?buildId=204115&view=logs&j=b6f63eff-75cc-59ca-fdbf-d2121601a613&t=92df95dc-ad7c-5fec-a8b4-c8301b7a2225",
+      "has_blocking_label": false,
+      "has_untriaged_label": false,
+      "age_days": 1136,
+      "last_human_activity_days": 636,
+      "assignee_display": "",
+      "urgency_score": 1.0,
+      "urgency_breakdown": {
+        "hits_24h": {
+          "value": 0.0,
+          "weight": 3.0,
+          "contribution": 0.0
+        },
+        "hits_7d": {
+          "value": 0.0,
+          "weight": 2.0,
+          "contribution": 0.0
+        },
+        "hit_trend": {
+          "value": 0.0,
+          "weight": 1.5,
+          "contribution": 0.0
+        },
+        "blocking_label": {
+          "value": 0.0,
+          "weight": 1.5,
+          "contribution": 0.0
+        },
+        "age_vs_hits": {
+          "value": 0.0,
+          "weight": 1.0,
+          "contribution": 0.0
+        },
+        "no_assignee": {
+          "value": 1.0,
+          "weight": 1.0,
+          "contribution": 1.0
+        }
+      },
+      "staleness_score": 5.0,
+      "staleness_breakdown": {
+        "hits_24h_zero": {
+          "value": 1.0,
+          "weight": 3.0,
+          "contribution": 3.0
+        },
+        "hits_7d_zero": {
+          "value": 0.0,
+          "weight": 2.5,
+          "contribution": 0.0
+        },
+        "days_since_update": {
+          "value": 0.0,
+          "weight": 2.0,
+          "contribution": 0.0
+        },
+        "issue_age": {
+          "value": 1.0,
+          "weight": 1.5,
+          "contribution": 1.5
+        },
+        "monthly_count_low": {
+          "value": 0.5,
+          "weight": 1.0,
+          "contribution": 0.5
+        }
+      },
+      "neglect_score": 4.5,
+      "neglect_breakdown": {
+        "hits_no_assignee": {
+          "value": 1.0,
+          "weight": 3.0,
+          "contribution": 3.0
+        },
+        "hits_no_human_comments": {
+          "value": 0.0,
+          "weight": 2.5,
+          "contribution": 0.0
+        },
+        "high_hits_untriaged": {
+          "value": 0.0,
+          "weight": 2.0,
+          "contribution": 0.0
+        },
+        "days_since_human_comment": {
+          "value": 1.0,
+          "weight": 1.5,
+          "contribution": 1.5
+        },
+        "no_area_label": {
+          "value": 0.0,
+          "weight": 1.0,
+          "contribution": 0.0
+        }
+      }
+    },
+    {
+      "number": 81383,
+      "title": "[6.0] GC test failures: Handle collector count overflows or underflows",
+      "url": "https://github.com/dotnet/runtime/issues/81383",
+      "state": "OPEN",
+      "created_at": "2023-01-30T22:11:40Z",
+      "updated_at": "2026-04-24T14:00:23Z",
+      "author": "buyaa-n",
+      "assignees": [],
+      "labels": [
+        "area-GC-coreclr",
+        "Known Build Error"
+      ],
+      "area_label": "area-GC-coreclr",
+      "comment_count": 18,
+      "human_comment_count": 18,
+      "last_human_comment_date": "2024-09-02T03:32:57Z",
+      "last_human_comment_author": "jeffhandley",
+      "reactions_count": 0,
+      "hits_24h": 0,
+      "hits_7d": 0,
+      "hits_30d": 0,
+      "error_pattern": "{\r\n  \"ErrorMessage\": \"System.InvalidOperationException: Handle collector count overflows or underflows.\",\r\n  \"BuildRetry\": false,\r\n  \"ErrorPattern\": \"\",\r\n  \"ExcludeConsoleLog\": false\r\n}",
+      "build_link": "https://dev.azure.com/dnceng-public/public/_build/results?buildId=603897",
+      "has_blocking_label": false,
+      "has_untriaged_label": false,
+      "age_days": 1179,
+      "last_human_activity_days": 599,
+      "assignee_display": "",
+      "urgency_score": 1.0,
+      "urgency_breakdown": {
+        "hits_24h": {
+          "value": 0.0,
+          "weight": 3.0,
+          "contribution": 0.0
+        },
+        "hits_7d": {
+          "value": 0.0,
+          "weight": 2.0,
+          "contribution": 0.0
+        },
+        "hit_trend": {
+          "value": 0.0,
+          "weight": 1.5,
+          "contribution": 0.0
+        },
+        "blocking_label": {
+          "value": 0.0,
+          "weight": 1.5,
+          "contribution": 0.0
+        },
+        "age_vs_hits": {
+          "value": 0.0,
+          "weight": 1.0,
+          "contribution": 0.0
+        },
+        "no_assignee": {
+          "value": 1.0,
+          "weight": 1.0,
+          "contribution": 1.0
+        }
+      },
+      "staleness_score": 8.0,
+      "staleness_breakdown": {
+        "hits_24h_zero": {
+          "value": 1.0,
+          "weight": 3.0,
+          "contribution": 3.0
+        },
+        "hits_7d_zero": {
+          "value": 1.0,
+          "weight": 2.5,
+          "contribution": 2.5
+        },
+        "days_since_update": {
+          "value": 0.0,
+          "weight": 2.0,
+          "contribution": 0.0
+        },
+        "issue_age": {
+          "value": 1.0,
+          "weight": 1.5,
+          "contribution": 1.5
+        },
+        "monthly_count_low": {
+          "value": 1.0,
+          "weight": 1.0,
+          "contribution": 1.0
+        }
+      },
+      "neglect_score": 1.5,
+      "neglect_breakdown": {
+        "hits_no_assignee": {
+          "value": 0.0,
+          "weight": 3.0,
+          "contribution": 0.0
+        },
+        "hits_no_human_comments": {
+          "value": 0.0,
+          "weight": 2.5,
+          "contribution": 0.0
+        },
+        "high_hits_untriaged": {
+          "value": 0.0,
+          "weight": 2.0,
+          "contribution": 0.0
+        },
+        "days_since_human_comment": {
+          "value": 1.0,
+          "weight": 1.5,
+          "contribution": 1.5
+        },
+        "no_area_label": {
+          "value": 0.0,
+          "weight": 1.0,
+          "contribution": 0.0
+        }
+      }
+    },
+    {
+      "number": 69101,
+      "title": "`System.IO.Pipes.Tests.NamedPipeTest_Specific.ClientConnectAsync_Cancel_With_InfiniteTimeout` failing on `Libraries Test Run release coreclr windows x86 Release`",
+      "url": "https://github.com/dotnet/runtime/issues/69101",
+      "state": "OPEN",
+      "created_at": "2022-05-10T04:50:28Z",
+      "updated_at": "2026-04-24T14:00:19Z",
+      "author": "radical",
+      "assignees": [],
+      "labels": [
+        "test-failure",
+        "area-System.IO",
+        "disabled-test",
+        "os-windows",
+        "Known Build Error"
+      ],
+      "area_label": "area-System.IO",
+      "comment_count": 11,
+      "human_comment_count": 11,
+      "last_human_comment_date": "2024-03-01T18:26:08Z",
+      "last_human_comment_author": "jeffschwMSFT",
+      "reactions_count": 0,
+      "hits_24h": 0,
+      "hits_7d": 0,
+      "hits_30d": 0,
+      "error_pattern": "{\r\n  \"ErrorMessage\": \"System.IO.Pipes.Tests.NamedPipeTest_Specific.ClientConnectAsync_Cancel_With_InfiniteTimeout [FAIL]\",\r\n  \"BuildRetry\": false\r\n}",
+      "build_link": "https://dev.azure.com/dnceng/public/_build/results?buildId=1761080&view=logs&jobId=ab70ab4f-0cf4-5814-7190-28e4ead6a7bf&j=ab70ab4f-0cf4-5814-7190-28e4ead6a7bf&t=7397d5bd-c86f-542b-6ad4-5cdbdcdf155e",
+      "has_blocking_label": false,
+      "has_untriaged_label": false,
+      "age_days": 1445,
+      "last_human_activity_days": 783,
+      "assignee_display": "",
+      "urgency_score": 1.0,
+      "urgency_breakdown": {
+        "hits_24h": {
+          "value": 0.0,
+          "weight": 3.0,
+          "contribution": 0.0
+        },
+        "hits_7d": {
+          "value": 0.0,
+          "weight": 2.0,
+          "contribution": 0.0
+        },
+        "hit_trend": {
+          "value": 0.0,
+          "weight": 1.5,
+          "contribution": 0.0
+        },
+        "blocking_label": {
+          "value": 0.0,
+          "weight": 1.5,
+          "contribution": 0.0
+        },
+        "age_vs_hits": {
+          "value": 0.0,
+          "weight": 1.0,
+          "contribution": 0.0
+        },
+        "no_assignee": {
+          "value": 1.0,
+          "weight": 1.0,
+          "contribution": 1.0
+        }
+      },
+      "staleness_score": 0.0,
+      "staleness_breakdown": {},
+      "neglect_score": 1.5,
+      "neglect_breakdown": {
+        "hits_no_assignee": {
+          "value": 0.0,
+          "weight": 3.0,
+          "contribution": 0.0
+        },
+        "hits_no_human_comments": {
+          "value": 0.0,
+          "weight": 2.5,
+          "contribution": 0.0
+        },
+        "high_hits_untriaged": {
+          "value": 0.0,
+          "weight": 2.0,
+          "contribution": 0.0
+        },
+        "days_since_human_comment": {
+          "value": 1.0,
+          "weight": 1.5,
+          "contribution": 1.5
+        },
+        "no_area_label": {
+          "value": 0.0,
+          "weight": 1.0,
+          "contribution": 0.0
+        }
+      }
+    },
+    {
+      "number": 76488,
+      "title": "Intermittent build failure in AfterSourceBuild: \"Could not write state file\"",
+      "url": "https://github.com/dotnet/runtime/issues/76488",
+      "state": "OPEN",
+      "created_at": "2022-10-01T17:52:48Z",
+      "updated_at": "2026-04-24T14:00:18Z",
+      "author": "jkotas",
+      "assignees": [],
+      "labels": [
+        "area-Infrastructure",
+        "Known Build Error"
+      ],
+      "area_label": "area-Infrastructure",
+      "comment_count": 3,
+      "human_comment_count": 3,
+      "last_human_comment_date": "2026-04-17T16:12:12Z",
+      "last_human_comment_author": "steveisok",
+      "reactions_count": 0,
+      "hits_24h": 0,
+      "hits_7d": 2,
+      "hits_30d": 2,
+      "error_pattern": "{\r\n    \"ErrorMessage\" : \"Could not write state file\",\r\n    \"BuildRetry\": true\r\n }",
+      "build_link": "https://dev.azure.com/dnceng-public/cbb18261-c48f-4abb-8651-8cdcb5474649/_apis/build/builds/37592/logs/106",
+      "has_blocking_label": false,
+      "has_untriaged_label": false,
+      "age_days": 1300,
+      "last_human_activity_days": 6,
+      "assignee_display": "",
+      "urgency_score": 1.0,
+      "urgency_breakdown": {
+        "hits_24h": {
+          "value": 0.0,
+          "weight": 3.0,
+          "contribution": 0.0
+        },
+        "hits_7d": {
+          "value": 0.0,
+          "weight": 2.0,
+          "contribution": 0.0
+        },
+        "hit_trend": {
+          "value": 0.0,
+          "weight": 1.5,
+          "contribution": 0.0
+        },
+        "blocking_label": {
+          "value": 0.0,
+          "weight": 1.5,
+          "contribution": 0.0
+        },
+        "age_vs_hits": {
+          "value": 0.0,
+          "weight": 1.0,
+          "contribution": 0.0
+        },
+        "no_assignee": {
+          "value": 1.0,
+          "weight": 1.0,
+          "contribution": 1.0
+        }
+      },
+      "staleness_score": 5.5,
+      "staleness_breakdown": {
+        "hits_24h_zero": {
+          "value": 1.0,
+          "weight": 3.0,
+          "contribution": 3.0
+        },
+        "hits_7d_zero": {
+          "value": 0.0,
+          "weight": 2.5,
+          "contribution": 0.0
+        },
+        "days_since_update": {
+          "value": 0.0,
+          "weight": 2.0,
+          "contribution": 0.0
+        },
+        "issue_age": {
+          "value": 1.0,
+          "weight": 1.5,
+          "contribution": 1.5
+        },
+        "monthly_count_low": {
+          "value": 1.0,
+          "weight": 1.0,
+          "contribution": 1.0
+        }
+      },
+      "neglect_score": 3.75,
+      "neglect_breakdown": {
+        "hits_no_assignee": {
+          "value": 1.0,
+          "weight": 3.0,
+          "contribution": 3.0
+        },
+        "hits_no_human_comments": {
+          "value": 0.0,
+          "weight": 2.5,
+          "contribution": 0.0
+        },
+        "high_hits_untriaged": {
+          "value": 0.0,
+          "weight": 2.0,
+          "contribution": 0.0
+        },
+        "days_since_human_comment": {
+          "value": 0.5,
+          "weight": 1.5,
+          "contribution": 0.75
+        },
+        "no_area_label": {
+          "value": 0.0,
+          "weight": 1.0,
+          "contribution": 0.0
+        }
+      }
+    },
+    {
+      "number": 76140,
+      "title": "3 System.Diagnostics tests failing - System.FormatException : The input is not a valid Base-64",
+      "url": "https://github.com/dotnet/runtime/issues/76140",
+      "state": "OPEN",
+      "created_at": "2022-09-24T21:53:44Z",
+      "updated_at": "2026-04-24T14:00:16Z",
+      "author": "karelz",
+      "assignees": [],
+      "labels": [
+        "area-System.Diagnostics.Process",
+        "disabled-test",
+        "os-android",
+        "Known Build Error"
+      ],
+      "area_label": "area-System.Diagnostics.Process",
+      "comment_count": 14,
+      "human_comment_count": 14,
+      "last_human_comment_date": "2023-05-12T08:39:59Z",
+      "last_human_comment_author": "adamsitnik",
+      "reactions_count": 0,
+      "hits_24h": 1,
+      "hits_7d": 1,
+      "hits_30d": 2,
+      "error_pattern": "{\r\n    \"ErrorMessage\" : \" The input is not a valid Base-64 string as it contains a non-base 64 character\",\r\n    \"BuildRetry\": false\r\n }",
+      "build_link": "https://dev.azure.com/dnceng-public/public/_build/results?buildId=1393710",
+      "has_blocking_label": false,
+      "has_untriaged_label": false,
+      "age_days": 1307,
+      "last_human_activity_days": 1078,
+      "assignee_display": "",
+      "urgency_score": 4.0,
+      "urgency_breakdown": {
+        "hits_24h": {
+          "value": 0.5,
+          "weight": 3.0,
+          "contribution": 1.5
+        },
+        "hits_7d": {
+          "value": 0.0,
+          "weight": 2.0,
+          "contribution": 0.0
+        },
+        "hit_trend": {
+          "value": 1.0,
+          "weight": 1.5,
+          "contribution": 1.5
+        },
+        "blocking_label": {
+          "value": 0.0,
+          "weight": 1.5,
+          "contribution": 0.0
+        },
+        "age_vs_hits": {
+          "value": 0.0,
+          "weight": 1.0,
+          "contribution": 0.0
+        },
+        "no_assignee": {
+          "value": 1.0,
+          "weight": 1.0,
+          "contribution": 1.0
+        }
+      },
+      "staleness_score": 0.0,
+      "staleness_breakdown": {},
+      "neglect_score": 4.5,
+      "neglect_breakdown": {
+        "hits_no_assignee": {
+          "value": 1.0,
+          "weight": 3.0,
+          "contribution": 3.0
+        },
+        "hits_no_human_comments": {
+          "value": 0.0,
+          "weight": 2.5,
+          "contribution": 0.0
+        },
+        "high_hits_untriaged": {
+          "value": 0.0,
+          "weight": 2.0,
+          "contribution": 0.0
+        },
+        "days_since_human_comment": {
+          "value": 1.0,
+          "weight": 1.5,
+          "contribution": 1.5
+        },
+        "no_area_label": {
+          "value": 0.0,
+          "weight": 1.0,
+          "contribution": 0.0
+        }
+      }
+    },
+    {
+      "number": 48070,
+      "title": "Build on Windows Fails sometimes with fatal error C1090: PDB API call failed",
+      "url": "https://github.com/dotnet/runtime/issues/48070",
+      "state": "OPEN",
+      "created_at": "2021-02-09T18:58:14Z",
+      "updated_at": "2026-04-24T14:00:15Z",
+      "author": "Anipik",
+      "assignees": [],
+      "labels": [
+        "area-Infrastructure",
+        "Known Build Error"
+      ],
+      "area_label": "area-Infrastructure",
+      "comment_count": 21,
+      "human_comment_count": 20,
+      "last_human_comment_date": "2026-04-17T16:12:12Z",
+      "last_human_comment_author": "steveisok",
+      "reactions_count": 0,
+      "hits_24h": 0,
+      "hits_7d": 0,
+      "hits_30d": 0,
+      "error_pattern": "{\r\n  \"ErrorMessage\": \"fatal error C1090: PDB API call failed, error code '23'\",\r\n  \"BuildRetry\": true\r\n}",
+      "build_link": "https://dev.azure.com/dnceng/internal/_build/results?buildId=984686&view=logs&j=128f4634-3e62-52f1-6764-cb4c2b8330d4&t=32fccdd3-9e64-5af0-1f0d-f65712c6c51a",
+      "has_blocking_label": false,
+      "has_untriaged_label": false,
+      "age_days": 1899,
+      "last_human_activity_days": 6,
+      "assignee_display": "",
+      "urgency_score": 1.0,
+      "urgency_breakdown": {
+        "hits_24h": {
+          "value": 0.0,
+          "weight": 3.0,
+          "contribution": 0.0
+        },
+        "hits_7d": {
+          "value": 0.0,
+          "weight": 2.0,
+          "contribution": 0.0
+        },
+        "hit_trend": {
+          "value": 0.0,
+          "weight": 1.5,
+          "contribution": 0.0
+        },
+        "blocking_label": {
+          "value": 0.0,
+          "weight": 1.5,
+          "contribution": 0.0
+        },
+        "age_vs_hits": {
+          "value": 0.0,
+          "weight": 1.0,
+          "contribution": 0.0
+        },
+        "no_assignee": {
+          "value": 1.0,
+          "weight": 1.0,
+          "contribution": 1.0
+        }
+      },
+      "staleness_score": 8.0,
+      "staleness_breakdown": {
+        "hits_24h_zero": {
+          "value": 1.0,
+          "weight": 3.0,
+          "contribution": 3.0
+        },
+        "hits_7d_zero": {
+          "value": 1.0,
+          "weight": 2.5,
+          "contribution": 2.5
+        },
+        "days_since_update": {
+          "value": 0.0,
+          "weight": 2.0,
+          "contribution": 0.0
+        },
+        "issue_age": {
+          "value": 1.0,
+          "weight": 1.5,
+          "contribution": 1.5
+        },
+        "monthly_count_low": {
+          "value": 1.0,
+          "weight": 1.0,
+          "contribution": 1.0
+        }
+      },
+      "neglect_score": 0.75,
+      "neglect_breakdown": {
+        "hits_no_assignee": {
+          "value": 0.0,
+          "weight": 3.0,
+          "contribution": 0.0
+        },
+        "hits_no_human_comments": {
+          "value": 0.0,
+          "weight": 2.5,
+          "contribution": 0.0
+        },
+        "high_hits_untriaged": {
+          "value": 0.0,
+          "weight": 2.0,
+          "contribution": 0.0
+        },
+        "days_since_human_comment": {
+          "value": 0.5,
+          "weight": 1.5,
+          "contribution": 0.75
+        },
+        "no_area_label": {
+          "value": 0.0,
+          "weight": 1.0,
+          "contribution": 0.0
+        }
+      }
+    },
+    {
+      "number": 75417,
+      "title": "System.Diagnostics.Tests.InstanceDataTests.InstanceDataCollectionCollection tests failing in CI ",
+      "url": "https://github.com/dotnet/runtime/issues/75417",
+      "state": "OPEN",
+      "created_at": "2022-09-11T15:13:40Z",
+      "updated_at": "2026-04-24T14:00:14Z",
+      "author": "jkotas",
+      "assignees": [],
+      "labels": [
+        "needs-further-triage",
+        "area-System.Diagnostics.PerformanceCounter",
+        "Known Build Error"
+      ],
+      "area_label": "area-System.Diagnostics.PerformanceCounter",
+      "comment_count": 5,
+      "human_comment_count": 5,
+      "last_human_comment_date": "2025-04-11T23:10:37Z",
+      "last_human_comment_author": "jkotas",
+      "reactions_count": 0,
+      "hits_24h": 0,
+      "hits_7d": 0,
+      "hits_30d": 0,
+      "error_pattern": "{ \"ErrorMessage\":\"System.Diagnostics.Tests.InstanceDataTests.InstanceDataCollectionCollection_CopyTo [FAIL]\" }",
+      "build_link": null,
+      "has_blocking_label": false,
+      "has_untriaged_label": false,
+      "age_days": 1320,
+      "last_human_activity_days": 377,
+      "assignee_display": "",
+      "urgency_score": 1.0,
+      "urgency_breakdown": {
+        "hits_24h": {
+          "value": 0.0,
+          "weight": 3.0,
+          "contribution": 0.0
+        },
+        "hits_7d": {
+          "value": 0.0,
+          "weight": 2.0,
+          "contribution": 0.0
+        },
+        "hit_trend": {
+          "value": 0.0,
+          "weight": 1.5,
+          "contribution": 0.0
+        },
+        "blocking_label": {
+          "value": 0.0,
+          "weight": 1.5,
+          "contribution": 0.0
+        },
+        "age_vs_hits": {
+          "value": 0.0,
+          "weight": 1.0,
+          "contribution": 0.0
+        },
+        "no_assignee": {
+          "value": 1.0,
+          "weight": 1.0,
+          "contribution": 1.0
+        }
+      },
+      "staleness_score": 8.0,
+      "staleness_breakdown": {
+        "hits_24h_zero": {
+          "value": 1.0,
+          "weight": 3.0,
+          "contribution": 3.0
+        },
+        "hits_7d_zero": {
+          "value": 1.0,
+          "weight": 2.5,
+          "contribution": 2.5
+        },
+        "days_since_update": {
+          "value": 0.0,
+          "weight": 2.0,
+          "contribution": 0.0
+        },
+        "issue_age": {
+          "value": 1.0,
+          "weight": 1.5,
+          "contribution": 1.5
+        },
+        "monthly_count_low": {
+          "value": 1.0,
+          "weight": 1.0,
+          "contribution": 1.0
+        }
+      },
+      "neglect_score": 1.5,
+      "neglect_breakdown": {
+        "hits_no_assignee": {
+          "value": 0.0,
+          "weight": 3.0,
+          "contribution": 0.0
+        },
+        "hits_no_human_comments": {
+          "value": 0.0,
+          "weight": 2.5,
+          "contribution": 0.0
+        },
+        "high_hits_untriaged": {
+          "value": 0.0,
+          "weight": 2.0,
+          "contribution": 0.0
+        },
+        "days_since_human_comment": {
+          "value": 1.0,
+          "weight": 1.5,
+          "contribution": 1.5
         },
         "no_area_label": {
           "value": 0.0,
@@ -22112,7 +22964,7 @@
       "build_link": "https://dev.azure.com/dnceng-public/public/_build/results?buildId=1271766",
       "has_blocking_label": false,
       "has_untriaged_label": false,
-      "age_days": 83,
+      "age_days": 84,
       "last_human_activity_days": 34,
       "assignee_display": "wfurt, Copilot",
       "urgency_score": 0.0,
